@@ -30,3 +30,6 @@ URL que nos ayudaron a elegir :
 ==> https://www.gmp.com.ar/ (Organización de las categorías)
 
 ==> https://mirfitness.com.ar/ (Diseño)
+
+Tabelro de trabajo: 
+https://trello.com/fitxperience
