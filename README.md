@@ -31,5 +31,5 @@ URL que nos ayudaron a elegir :
 
 ==> https://mirfitness.com.ar/ (Diseño)
 
-Tabelro de trabajo: 
+Tablero de trabajo: 
 https://trello.com/fitxperience
