@@ -4,14 +4,14 @@
 
 |Público destinado: De 15 años hasta 50 años|
 
-_____________________
+
 |Integrantes :      |
 |--> Fiorella Aboy  |
 |--> Mila Hermida   |
 |--> Agustin Alsina |
 |--> Juan Bogliacino|
 |--> Uriel Garmendia|
-|___________________|
+
 
 URL : https://github.com/UrielGarmendia/grupo-3
 
@@ -30,3 +30,8 @@ URL que nos ayudaron a elegir :
 ==> https://www.gmp.com.ar/ (Organización de las categorías)
 
 ==> https://mirfitness.com.ar/ (Diseño)
+
+_______________________________________________________________________________________________
+
+Tablero de trabajo: 
+https://trello.com/fitxperience
