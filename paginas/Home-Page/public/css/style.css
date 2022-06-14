@@ -1,0 +1,59 @@
+*{
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    color: #000;
+    background-image: url('../images/pexels-victor-freitas-841130.jpg') ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    right: 92%;
+    top: 5%;
+    font-size: 1.5rem;
+}
+
+.encabezado h1{
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    font-size: 7rem;
+    font-style: italic;
+    color: #fff;
+    font-weight: 800;
+}
+
+.encabezado h1 b {
+    color: rgb(251, 255, 0);
+}
+
+.encabezado a{
+    position: absolute;
+    top: 75%;
+    text-align: center;
+    background-color: rgb(255, 234, 0);
+    padding: 12px 26px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.encabezado a:hover {
+    background-color: rgb(255, 187, 0);
+}
+
+.description{
+    margin-top: 70px;
+}
