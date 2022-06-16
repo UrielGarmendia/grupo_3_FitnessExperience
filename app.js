@@ -7,8 +7,12 @@ app.use( express.static(publicFolderPath) );
 
 app.use(express.static(path.resolve(__dirname, './public')));
 
+// app.get('/', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, './paginas/Home-Page/views/index.html'));
+// });
+
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './paginas/Home-Page/views/index.html'));
+    res.sendFile(path.resolve(__dirname, './paginas/Home-Page/views/detalleDeProducto.html'));
 });
 
 app.listen(8000, () => {
