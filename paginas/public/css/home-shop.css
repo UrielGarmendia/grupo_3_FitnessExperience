@@ -6,6 +6,7 @@
 
 body {
     min-width: 320px;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav {
@@ -17,20 +18,35 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
     width: 30px;
     height: 100%;
+    display: flex;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.logo p {
+    display: none;
 }
 
 .barra-navegacion {
     border-radius: 10px;
     padding: 3px 8px;
     background-color:#fff;
-    flex-grow: 0.5;
+    flex-grow: 0.3;
     display: flex;
     justify-content: space-between;
+}
+
+.barra-navegacion:hover {
+    border: 2px solid rgb(255, 230, 0);
 }
 
 .barra-navegacion input {
@@ -43,8 +59,20 @@ nav {
     color: #000;
 }
 
-.icono-bars {
-    
+.barra-navegacion i:hover {
+    color: rgb(255, 230, 2);
+}
+
+.movil-icons a {
+    color: #fff;
+}
+
+.icono-carrito {
+    margin-right: 5px;
+}
+
+.icono-carrito:hover, .icono-bars:hover {
+    color: rgb(255, 230, 2);
 }
 
 .icono-user {
@@ -59,10 +87,70 @@ nav {
 }
 
 @media (min-width: 420px) {
+
+    .sub-nav {
+        display: flex;
+        justify-content: space-between;
+        background: #555;
+        width: 100%;
+        padding: 0;
+    }
+
+    .sub-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .sub-nav li {
+        margin: 0 5px;
+    }
+
+    .sub-nav li i {
+        margin-left: 3px;
+    }
+
+    .sub-nav ul a {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    .sub-nav ul a:hover {
+        color:rgb(255, 230, 2)
+    }
+
+    .link-logo {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .logo {
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+        left: -8px;
+    }
+
+    .logo p {
+        display: block;
+        font-size: 11px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
     .barra-navegacion {
         border-radius: 0;
         border-bottom: 4px solid rgb(255, 230, 0);
-        background-color: rgba(204, 204, 204, 0.884);
+        background-color: rgba(204, 204, 204, 0.952);
+    }
+
+    .barra-navegacion:hover {
+        border: none;
+        border-bottom: 4px solid rgb(255, 230, 0);
     }
 
     .barra-navegacion input {
@@ -79,11 +167,12 @@ nav {
         margin-top: 2px;
     }
 
-    .icono-bars {
+    .icono-bars, .icono-carrito {
         display: none;
     }
     
     .icono-user {
         display: block;
+        font-size: 20px;
     }
 }
