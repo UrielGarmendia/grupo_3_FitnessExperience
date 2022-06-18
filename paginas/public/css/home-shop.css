@@ -88,15 +88,12 @@ nav {
 .sub-nav {
     display: none;
 }
+
 .bannner {
     width: 100%;
     display: block;
     margin: auto;
 }
-
-
-
-
 
 main {
     width: 90%;
@@ -113,7 +110,7 @@ section {
 }
 
 main section article {
-    background-color: #fff;    
+    background-color: #fff;
     margin: 10px 0px;
     margin-bottom: 20px;
     outline:  rgb(255, 230, 2) 1px solid;
@@ -155,12 +152,12 @@ main section article img {
 
 main section article i,
 .descuento {
-    color: #39b54a;
+    color: #39B54A;
 }
 
 article .main-article{
     width: 100%;
-    background-color: #ddd;
+    border-top: 2px solid #ebebebdc;
     position: relative;
     padding: 5px;
 }
@@ -180,10 +177,74 @@ article .main-article .div-precio-descuento {
     margin-left: 10px;
 }
 
+.descripcion {
+    font-size: 12px;
+}
+
+        footer {
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding: 2rem 8%;
+            background-color: #0E0E0E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: 0.5s;
+        }
+
+        .social-icons-container,
+        .footer-menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .social-icon {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            border: 1px solid #F2F2F2;
+            margin: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .social-icon:hover {
+            background-color: #002FFF;
+            filter: invert(1);
+        }
+        .social-icon i {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .footer-menu-container {
+            list-style-type: none;
+            color: #F2F2F2;
+            font-size: 18px;
+        }
+        .footer-menu-container li:hover {
+            color: rgb(255, 251, 0);
+        }
+        .menu-item {
+            margin: 1rem 1.5rem;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+        .menu-item:hover {
+            opacity: 1;
+        }
+        .copyright {
+            color: #F2F2F2;
+            opacity: 0.3;
+            text-align: center;
+        }
 
 
 @media (min-width: 420px) {
-
     .sub-nav {
         display: flex;
         justify-content: space-between;
@@ -258,7 +319,6 @@ article .main-article .div-precio-descuento {
     .barra-navegacion input:focus {
         background: linear-gradient(to top, #ccc, #fff);
     }
-
     .barra-navegacion i {
         margin-left: 7px;
         margin-top: 2px;
@@ -267,7 +327,7 @@ article .main-article .div-precio-descuento {
     .icono-bars, .icono-carrito {
         display: none;
     }
-    
+
     .icono-user {
         display: block;
         font-size: 20px;
@@ -276,9 +336,6 @@ article .main-article .div-precio-descuento {
     .bannner {
         width:90%;
     }
-
-
-
 
     main {
         margin: 30px auto;
@@ -295,6 +352,13 @@ article .main-article .div-precio-descuento {
 
     main section article {
         box-shadow: none;
+        width: 100px;
+        height: 200%;
+    }
+
+    main section article img {
+        object-fit: cover;
+        height: 100%;
     }
 
     main section article .descripcion{
@@ -312,7 +376,7 @@ article .main-article .div-precio-descuento {
         justify-content: space-between;
         align-items: flex-start;
     }
-    
+
     main section .productos article{
         width: 45%;
     }
@@ -320,6 +384,10 @@ article .main-article .div-precio-descuento {
     .precio,
     .descuento{
         width: 50%;
+    }
+
+    .descripcion {
+        font-size: 1rem;
     }
 }
 
