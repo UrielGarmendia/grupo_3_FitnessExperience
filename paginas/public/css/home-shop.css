@@ -103,14 +103,31 @@ main {
     margin: 15px auto;
 }
 
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 main section article {
     background-color: #fff;    
     margin: 10px 0px;
     margin-bottom: 20px;
     outline:  rgb(255, 230, 2) 1px solid;
-    width: 70%;
-    margin: 10px 0;
+    width: 60%;
+    margin: 10px auto;
     margin-bottom: 20px;
+}
+
+main section article a {
+    color: #000;
+}
+
+main section article {
+    width: 90%;
+}
+
+main section article p, main section article h4 {
+    font-size: 14px;
 }
 
 main section a {
@@ -137,11 +154,21 @@ article .main-article{
     border-top: 1px solid #ebebeb;
     position: relative;
     padding: 0 5px;
-    
+}
+
+article .main-article .div-precio-descuento {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .precio, .descuento, .descripcion {
     margin-bottom: 5px;
+}
+
+.descuento {
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 
@@ -154,7 +181,7 @@ article .main-article{
         background: #555;
         border-bottom: 2px solid rgb(255, 230, 0);
         width: 100%;
-        padding: 0;
+        padding: 0 5px;
     }
 
     .sub-nav ul {
@@ -285,5 +312,9 @@ article .main-article{
 @media (min-width: 769px){
     main section .productos article{
         width: 22%;
+    }
+
+    main section h3 {
+        font-size: 23px;
     }
 }
