@@ -10,6 +10,7 @@
 body {
     background-color: #555;
     font-family: 'Roboto', sans-serif;
+    min-width: 320px;
 }
 
 
@@ -47,7 +48,8 @@ nav {
 /* FORMULARIO */
 
 .form-register {
-    width: 400px;
+    min-width: 270px;
+    width: 30%;
     background: #222;
     padding: 30px;
     margin: auto;
@@ -121,6 +123,7 @@ nav {
 
 i {
     padding: 6px;
+    margin-left: 3px;
 }
 
 .botons:focus {
