@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
-    <link rel="stylesheet" href="/css/register.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Formulario Registro</title>
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/64cf8f81a0.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
-register
+    <header>
+        <nav>
+            <a href="/home-shop" class="link-logo">
+                <div class="logo">
+                    <img src="/images/logoX.png">
+                    <p>FitXperience</p>
+                </div>
+            </a>
+        </nav>
+    </header>
+  <section class="form-register">
+    <h4>Formulario Registro</h4>
+    <div class="user-name">
+    <input class="controls" type="text" name="nombres" placeholder="Nombre de usuario" required><i class="fa-solid fa-user"></i>
+</div>
+    <div class="correo-electronico">
+    <input class="controls" type="email" name="correo" placeholder=" Correo" required><i class="fa-solid fa-envelope"></i>
+    </div>
+    <div class="contrasenia">
+    <input class="controls" type="password" name="contrasenia" placeholder="Contraseña" required><i class="fa-solid fa-key"></i>
+    </div>
+    <div class="contrasenia">
+        <input class="controls" type="password" name="contrasenia" placeholder="Confirme su contraseña" required><i class="fa-solid fa-key"></i>
+        </div>
+        <div class="telefono">
+    <input class="controls" type="text" name="telefono" placeholder=" Teléfono"><i class="fa-solid fa-phone"></i>
+</div>
+    <input class="botons" type="submit" value="Registrar">
+    <p><a href="/login">¿Ya tengo Cuenta?</a></p>
+  </section>
+
 </body>
 </html>

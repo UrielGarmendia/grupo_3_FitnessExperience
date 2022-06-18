@@ -1,3 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: aqua;
+    background-color: #555;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    padding: 8px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid rgb(255, 251, 0);
+}
+
+.logo {
+    width: 30px;
+    height: 100%;
+    display: flex;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.logo p {
+    display: none;
+}
+
+.form-register {
+    width: 400px;
+    background: #222;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 6px;
+    font-family: 'calibri';
+    color: rgb(255, 251, 0);
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls {
+    width: 86.5%;
+    background: #333;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(255, 251, 0);
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-register a {
+    color: rgb(255, 251, 0);
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.form-register .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+/* ICONOS DE INPUTS */
+.correo-electronico,
+.user-name,
+.contrasenia,
+.telefono {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+i {
+    padding: 6px;
+}
+
+@media (min-width: 420px) {
+    .link-logo {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .logo {
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+        left: -8px;
+    }
+
+    .logo p {
+        display: block;
+        font-size: 11px;
+        font-style: italic;
+        font-weight: bold;
+    }
 }

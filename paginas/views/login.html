@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
-    <link rel="stylesheet" href="/css/login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Login</title>
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/64cf8f81a0.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
-login
+    <header>
+        <nav>
+            <a href="/home-shop" class="link-logo">
+                <div class="logo">
+                    <img src="/images/logoX.png">
+                    <p>FitXperience</p>
+                </div>
+            </a>
+        </nav>
+    </header>
+  <section class="form-register">
+    <h4>Inicio de Sesión</h4>
+    <div class="correo-electronico">
+    <input class="controls" type="email" name="correo" placeholder=" Correo" required><i class="fa-solid fa-envelope"></i>
+    </div>
+    <div class="contrasenia">
+    <input class="controls" type="password" name="contrasenia" placeholder="Contraseña" required><i class="fa-solid fa-key"></i>
+    </div>
+    <input class="botons" type="submit" value="Ingresar">
+    <p><a href="/register">Crear cuenta</a></p>
+  </section>
+
 </body>
 </html>
