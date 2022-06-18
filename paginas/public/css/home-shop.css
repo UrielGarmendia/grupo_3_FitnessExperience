@@ -160,9 +160,9 @@ main section article i,
 
 article .main-article{
     width: 100%;
-    border-top: 1px solid #ebebeb;
+    background-color: #ddd;
     position: relative;
-    padding: 0 5px;
+    padding: 5px;
 }
 
 article .main-article .div-precio-descuento {
