@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: transparent;
 }
 
 body {
@@ -60,10 +61,14 @@ nav {
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid rgb(255, 251, 0);
+    border-bottom: 1px solid rgb(255, 251, 0);
     font-family: 'calibri';
     font-size: 18px;
     color: white;
+}
+
+.controls:focus {
+    border: 1px solid rgb(255, 251, 0);
 }
 
 .form-register p {
@@ -106,6 +111,10 @@ nav {
 
 i {
     padding: 6px;
+}
+
+.botons:focus {
+    background: linear-gradient(to bottom,#446ef7,#1f53c5);
 }
 
 @media (min-width: 420px) {
