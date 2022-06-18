@@ -7,6 +7,7 @@
 body {
     min-width: 320px;
     font-family: 'Roboto', sans-serif;
+    background: #333;
 }
 
 nav {
@@ -55,6 +56,10 @@ nav {
     flex-grow: 1;
 }
 
+.barra-navegacion input::placeholder {
+    color: #555;
+}
+
 .barra-navegacion i {
     color: #000;
 }
@@ -80,11 +85,67 @@ nav {
     color: #fff;
 }
 
-
-
 .sub-nav {
     display: none;
 }
+.bannner {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+main {
+    width: 90%;
+    margin: 15px auto;
+}
+
+main section article {
+    background-color: #fff;    
+    margin: 10px 0px;
+    margin-bottom: 20px;
+    outline:  rgb(255, 230, 2) 1px solid;
+    width: 70%;
+    margin: 10px 0;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 5px #ccc;;
+}
+
+main section a {
+    text-decoration: none;
+}
+
+main section h3 {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+}
+
+main section article img {
+    width: 100%;
+}
+
+main section article i,
+.descuento {
+    color: #39b54a;
+}
+
+article .main-article{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 0 5px;
+    
+}
+
+.precio, .descuento, .descripcion {
+    margin-bottom: 5px;
+}
+
+
 
 @media (min-width: 420px) {
 
@@ -92,6 +153,7 @@ nav {
         display: flex;
         justify-content: space-between;
         background: #555;
+        border-bottom: 2px solid rgb(255, 230, 0);
         width: 100%;
         padding: 0;
     }
@@ -138,7 +200,7 @@ nav {
     .logo p {
         display: block;
         font-size: 11px;
-        font-style: italic;
+        font-family: 'IBM Plex Sans', sans-serif;
         font-weight: bold;
     }
 
@@ -174,5 +236,55 @@ nav {
     .icono-user {
         display: block;
         font-size: 20px;
+    }
+
+    .bannner {
+        width:90%;
+    }
+
+
+
+
+    main {
+        margin: 30px auto;
+    }
+
+    main section h3 {
+        font-size: 20px;
+    }
+
+    main section article {
+        box-shadow: none;
+    }
+
+    main section article .descripcion{
+        display: block;
+    }
+
+    main section article:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section .productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section .productos article{
+        width: 45%;
+    }
+
+    .precio,
+    .descuento{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section .productos article{
+        width: 22%;
     }
 }

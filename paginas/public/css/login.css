@@ -6,6 +6,7 @@
 
 body {
     background-color: #555;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* BARRA DE NAVEGACION */
@@ -128,7 +129,7 @@ i {
     .logo p {
         display: block;
         font-size: 11px;
-        font-style: italic;
         font-weight: bold;
+        font-family: 'IBM Plex Sans', sans-serif;
     }
 }
