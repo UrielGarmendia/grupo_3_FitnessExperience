@@ -2,11 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
+
+
 
 body {
     background-color: #555;
+    font-family: 'Kanit', sans-serif;
 }
+
 
 /* BARRA DE NAVEGACION */
 
@@ -27,6 +32,7 @@ nav {
     width: 30px;
     height: 100%;
     display: flex;
+    
 }
 
 .logo img {
@@ -46,7 +52,7 @@ nav {
     padding: 30px;
     margin: auto;
     margin-top: 100px;
-    border-radius: 40%;
+    border-radius: 16px;
     font-family: 'calibri';
     color: rgb(255, 251, 0);
     box-shadow: 7px 13px 37px #000;
@@ -128,7 +134,7 @@ i {
     .logo p {
         display: block;
         font-size: 11px;
-        font-style: italic;
         font-weight: bold;
+        font-family: 'IBM Plex Sans', sans-serif;
     }
 }
