@@ -68,12 +68,13 @@ nav {
 
 .controls {
     width: 86.5%;
-    background: rgba(34, 34, 34, 0);
+    background: rgba(248, 0, 0, 0);
     padding: 10px;
     margin-bottom: 16px;
     border-bottom: 1.5px solid rgb(255, 251, 0);
     font-family: 'calibri';
     font-size: 18px;
+    outline: transparent;
     color: white;
 }
 
@@ -111,9 +112,7 @@ nav {
 
 /* ICONOS DE INPUTS */
 .correo-electronico,
-.user-name,
-.contrasenia,
-.telefono {
+.contrasenia{
     display: flex;
     justify-content: space-between;
     align-items: center;

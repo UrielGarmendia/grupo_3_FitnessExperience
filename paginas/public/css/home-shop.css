@@ -10,6 +10,8 @@ body {
     background: #333;
 }
 
+/* BARRA DE NAVEGACION */
+
 nav {
     height: 50px;
     width: 100%;
@@ -40,7 +42,7 @@ nav {
 .barra-navegacion {
     border-radius: 10px;
     padding: 3px 8px;
-    background-color:#fff;
+    background-color: #fff;
     flex-grow: 0.3;
     display: flex;
     justify-content: space-between;
@@ -76,7 +78,8 @@ nav {
     margin-right: 5px;
 }
 
-.icono-carrito:hover, .icono-bars:hover {
+.icono-carrito:hover,
+.icono-bars:hover {
     color: rgb(255, 230, 2);
 }
 
@@ -88,6 +91,8 @@ nav {
 .sub-nav {
     display: none;
 }
+
+/* MAIN */
 
 .bannner {
     width: 100%;
@@ -113,7 +118,7 @@ main section article {
     background-color: #fff;
     margin: 10px 0px;
     margin-bottom: 20px;
-    outline:  rgb(255, 230, 2) 1px solid;
+    outline: rgb(255, 230, 2) 1px solid;
     width: 60%;
     margin: 10px auto;
     margin-bottom: 20px;
@@ -127,7 +132,8 @@ main section article {
     width: 90%;
 }
 
-main section article p, main section article h4 {
+main section article p,
+main section article h4 {
     font-size: 14px;
 }
 
@@ -155,7 +161,7 @@ main section article i,
     color: #39B54A;
 }
 
-article .main-article{
+article .main-article {
     width: 100%;
     border-top: 2px solid #777;
     position: relative;
@@ -168,7 +174,9 @@ article .main-article .div-precio-descuento {
     justify-content: flex-start;
 }
 
-.precio, .descuento, .descripcion {
+.precio,
+.descuento,
+.descripcion {
     margin-bottom: 5px;
 }
 
@@ -181,70 +189,88 @@ article .main-article .div-precio-descuento {
     font-size: 12px;
 }
 
-        footer {
-            width: 100%;
-            bottom: 0;
-            left: 0;
-            padding: 2rem 8%;
-            background-color: #0E0E0E;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            transition: 0.5s;
-        }
+/* FOOTER */
 
-        .social-icons-container,
-        .footer-menu-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-        }
-        .social-icon {
-            height: 50px;
-            width: 50px;
-            border-radius: 50px;
-            border: 1px solid #F2F2F2;
-            margin: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-        }
-        .social-icon:hover {
-            background-color: #002FFF;
-            filter: invert(1);
-        }
-        .social-icon i {
-            color: #fff;
-            font-size: 1.5rem;
-        }
-        .footer-menu-container {
-            list-style-type: none;
-            color: #F2F2F2;
-            font-size: 18px;
-        }
-        .footer-menu-container li:hover {
-            color: rgb(255, 251, 0);
-        }
-        .menu-item {
-            margin: 1rem 1.5rem;
-            cursor: pointer;
-            opacity: 0.6;
-        }
-        .menu-item:hover {
-            opacity: 1;
-        }
-        .copyright {
-            color: #F2F2F2;
-            opacity: 0.3;
-            text-align: center;
-        }
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #0E0E0E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
 
+.social-icons-container,
+.footer-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #F2F2F2;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.social-icon:hover {
+    background-color: #002FFF;
+    filter: invert(1);
+}
+
+.social-icon i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.footer-menu-container {
+    list-style-type: none;
+    color: #F2F2F2;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+.footer-menu-container li {
+    transition: all 0.4s ease;
+}
+
+.footer-menu-container li:hover {
+    color: rgb(255, 251, 0);
+}
+
+.menu-item {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover {
+    opacity: 1;
+}
+
+.copyright {
+    color: #F2F2F2;
+    opacity: 0.3;
+    text-align: center;
+}
+
+/* MEDIA QUERYS */
 
 @media (min-width: 420px) {
+    
     .sub-nav {
         display: flex;
         justify-content: space-between;
@@ -278,7 +304,7 @@ article .main-article .div-precio-descuento {
     }
 
     .sub-nav ul a:hover {
-        color:rgb(255, 230, 2)
+        color: rgb(255, 230, 2)
     }
 
     .link-logo {
@@ -319,12 +345,14 @@ article .main-article .div-precio-descuento {
     .barra-navegacion input:focus {
         background: linear-gradient(to top, #ccc, #fff);
     }
+
     .barra-navegacion i {
         margin-left: 7px;
         margin-top: 2px;
     }
 
-    .icono-bars, .icono-carrito {
+    .icono-bars,
+    .icono-carrito {
         display: none;
     }
 
@@ -334,7 +362,7 @@ article .main-article .div-precio-descuento {
     }
 
     .bannner {
-        width:90%;
+        width: 90%;
     }
 
     main {
@@ -361,7 +389,7 @@ article .main-article .div-precio-descuento {
         height: 100%;
     }
 
-    main section article .descripcion{
+    main section article .descripcion {
         display: block;
     }
 
@@ -369,7 +397,7 @@ article .main-article .div-precio-descuento {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    main section .productos{
+    main section .productos {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -377,12 +405,12 @@ article .main-article .div-precio-descuento {
         align-items: flex-start;
     }
 
-    main section .productos article{
+    main section .productos article {
         width: 45%;
     }
 
     .precio,
-    .descuento{
+    .descuento {
         width: 50%;
     }
 
@@ -391,8 +419,10 @@ article .main-article .div-precio-descuento {
     }
 }
 
-@media (min-width: 769px){
-    main section .productos article{
+@media (min-width: 769px) {
+
+    
+    main section .productos article {
         width: 22%;
     }
 
