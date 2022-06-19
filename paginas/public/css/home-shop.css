@@ -157,7 +157,7 @@ main section article i,
 
 article .main-article{
     width: 100%;
-    border-top: 2px solid #ebebebdc;
+    border-top: 2px solid #777;
     position: relative;
     padding: 5px;
 }
