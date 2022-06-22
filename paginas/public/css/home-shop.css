@@ -201,7 +201,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
 .social-icons-container,
@@ -270,7 +270,7 @@ footer {
 /* MEDIA QUERYS */
 
 @media (min-width: 420px) {
-    
+
     .sub-nav {
         display: flex;
         justify-content: space-between;
@@ -421,7 +421,7 @@ footer {
 
 @media (min-width: 769px) {
 
-    
+
     main section .productos article {
         width: 22%;
     }
