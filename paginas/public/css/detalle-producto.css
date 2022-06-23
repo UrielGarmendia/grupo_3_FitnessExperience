@@ -159,10 +159,15 @@ main {
     background-color: rgba(0, 0, 0, 0.793);
     border-radius: 4px;
     box-shadow: 4px 4px 6px #000;
-    margin-top: 20px;
+    margin: 20px auto;
     padding: 1.5rem;
-    margin-bottom: 12px;
 }
+
+.detalle:hover,
+.productos-relacionados:hover {
+    background-color: rgb(0, 0, 0);
+}
+
 .detalle h3 {
     font-size: 1.4rem;
     color: rgb(251, 255, 0);
@@ -237,6 +242,7 @@ main {
     margin-top: 20px;
     padding: 1.5rem;
     margin-bottom: 12px;
+    margin: auto;
 }
 
 .productos-relacionados h4 {
@@ -248,12 +254,21 @@ main {
 .carrusel2 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .product {
-    width: -50%    
+    width: -50%;
 }
 
+.product img {
+    margin: 0 12px;
+    margin-bottom: 10px;
+}
+
+.productos-relacionados a i {
+    display: none;
+}
 /* FOOTER */
 
 footer {
@@ -330,4 +345,107 @@ footer {
     color: #F2F2F2;
     opacity: 0.3;
     text-align: center;
+}
+
+/*  M    E    D    I    A    Q    U    E   R    Y     S */
+/* Tablet */
+@media (min-width:420px) {
+    .sub-nav {
+        display: flex;
+        justify-content: space-between;
+        background: #555;
+        border-bottom: 2px solid rgb(255, 230, 0);
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .sub-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .sub-nav li {
+        margin: 0 5px;
+    }
+
+    .sub-nav li i {
+        margin-left: 3px;
+    }
+
+    .sub-nav ul a {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    .sub-nav ul a:hover {
+        color: rgb(255, 230, 2)
+    }
+
+    .barra-navegacion {
+        border-radius: 0;
+        border-bottom: 4px solid rgb(255, 230, 0);
+        background-color: rgba(204, 204, 204, 0.952);
+    }
+
+    .barra-navegacion:hover {
+        border: none;
+        border-bottom: 4px solid rgb(255, 230, 0);
+    }
+
+    .barra-navegacion input {
+        padding: 3px;
+        background-color: transparent;
+    }
+
+    .barra-navegacion input:focus {
+        background: linear-gradient(to top, #ccc, #fff);
+    }
+
+    .barra-navegacion i {
+        margin-left: 7px;
+        margin-top: 2px;
+    }
+
+    .icono-bars,
+    .icono-carrito {
+        display: none;
+    }
+
+    .icono-user {
+        display: block;
+        font-size: 20px;
+    }
+}
+/* Tablet Horizontal */
+@media (min-width:769px) {
+    .logo p {
+        display: block;
+        align-self: center;
+        color: #fff;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .link-logo {
+        text-decoration: none;
+    }
+}
+/* Escrtitorio */
+@media (min-width:1200px) {
+    .productos-relacionados a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        margin: 0 10px;
+        align-self: center;
+    }
+
+    .productos-relacionados a i {
+        display: block;
+        color:#fff;
+    }
 }
