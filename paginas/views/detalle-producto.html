@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carrito</title>
-        <link rel="stylesheet" href="/css/carrito.css">
+        <title>Detalle de Productos</title>
+        <link rel="stylesheet" href="/css/detalle-producto.css">
         <!-- GOOGLE FONTS -->
         <link
             href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200&family=IBM+Plex+Sans:ital,wght@1,200&family=M+PLUS+1+Code:wght@300&family=Roboto:wght@300&family=Rubik:wght@500&family=Shippori+Antique&display=swap"
@@ -56,47 +56,53 @@
 
 
 <main>
-    <section class="pueba">
-        
-        <h2>Nombre del producto</h2>
-        
+    <div class="NombreDeProducto">
+        <h2 >Nombre del producto</h2>
+    </div>
+
+    <section class="imagen-producto">
         <img src="/images/colchonetas.webp" alt="imagen de producto">
     </section>
     
     <!-- carrusel -->
     <section>
-        <article id="carrusel">
+
+        <div class="contenedor-carrusel">
             <a href="#" class="left-arrow"><i class="fa-solid fa-angles-left"></i></a>
+            
             <div class="carrusel">
                 
-                <div class="product" id="product_0">
+                <div class="productos-carrusel">
                     <img src="/images/colchonetas.webp" width="195" height="100" />
                 </div>
                 
-                <div class="product" id="product_1">
+                <div class="productos-carrusel">
                     <img src="/images/colchonetas.webp" width="195" height="100" />
                 </div>
                 
-                <div class="product" id="product_2">
+                <div class="productos-carrusel">
                     <img src="/images/colchonetas.webp" width="195" height="100" />
                 </div>
+
             </div>
+            
             <a href="#" class="right-arrow"><i class="fa-solid fa-angles-right"></i></a>
-        </article>
+        </div>
     </section>
-<section>
-    <article>
+
+<section class="detalle">
+    <article class="detalle-de-producto">
         <h3>Detalle del Producto</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A optio eligendi est repellat cupiditate ipsam obcaecati animi numquam ratione praesentium fugiat aspernatur facilis, distinctio, vero, in voluptas fuga minima possimus?</p>
     </article>
 
-    <article>
-        <div>
-            <h3>Precio</h3>
-            <p class="precio">$230.000</p>
+    <article class="precio-forma-de-pago">
+        <div class="precio">
+            <h3 >Precio</h3>
+            <p >$230.000</p>
         </div>
 
-        <div>
+        <div class="formas-de-pago">
             <h3>Formas de Pago</h3>
         <select name="Formas de pago" id="formas de pago">
             <option value="Tarjeta de credito">Tarjeta de Credito</option>
