@@ -168,7 +168,7 @@ color: rgb(255, 230, 2);
 
 .producto {
     max-width: 400px;
-    margin: auto;
+    margin: 50px auto;
     margin-bottom: 8px;
     background-color: rgba(255, 255, 255, 0.505);
     border-radius: 2%;
@@ -428,15 +428,7 @@ footer {
     .producto img {
         border-radius: 0;
     }
-    
-    /* .textos {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: none;
 
-    } */
 
     .contenedor-icono-eliminar {
         height: 100%;
@@ -456,7 +448,7 @@ footer {
         
     }
 
-    .icono-eliminar:hover {
+    .icono-eliminar i:hover {
         color: #000;
     }
 
