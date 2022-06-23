@@ -99,6 +99,34 @@ main {
     padding: 14px;
 }
 
+
+
+.article-resumen-de-compra{
+    max-width: 90%;
+    justify-content: center;
+    margin: auto;
+    margin-bottom:20px;
+    text-align: center;
+}
+
+.boton-enviar {
+background: rgba(0, 0, 0, 0.793);
+
+color: #fff;
+font-size: 1em;
+font-weight: bold;
+margin: 1rem;
+padding: 1rem;
+border-radius: 10%;
+box-shadow: 4px 4px 4px #000;
+}
+
+.boton-enviar:hover {
+color: rgb(255, 230, 2);
+}
+
+
+
 .icono-eliminar {
     position: absolute;
     right: 18px;
@@ -139,6 +167,8 @@ main {
 
 
 .producto {
+    max-width: 400px;
+    margin: auto;
     margin-bottom: 8px;
     background-color: rgba(255, 255, 255, 0.505);
     border-radius: 2%;
@@ -352,11 +382,83 @@ footer {
         font-size: 20px;
     }
     /* M    A    I    N */
-    .producto {
-        display: flex;
-    }
+
+
+    
 }
 
 @media (min-width: 769px) {
 
+    .article-resumen-de-compra{
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-bottom:20px;
+    }
+
+   .boton-enviar {
+    background: rgba(0, 0, 0, 0.793);
+    
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10%;
+    box-shadow: 4px 4px 4px #000;
+   }
+
+   .boton-enviar:hover {
+    color: rgb(255, 230, 2);
+   }
+
+    .section-productos {
+        max-width: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .producto {
+        max-width: none;
+        margin: 8px;
+        border-radius: 0;
+    }
+
+    .producto img {
+        border-radius: 0;
+    }
+    
+    /* .textos {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: none;
+
+    } */
+
+    .contenedor-icono-eliminar {
+        height: 100%;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .contenedor-icono-eliminar:hover {
+        background-color: rgba(206, 47, 47, 0.863);
+    }
+
+    .icono-eliminar {
+        position: static;
+        
+        
+    }
+
+    .icono-eliminar:hover {
+        color: #000;
+    }
+
+  
 }

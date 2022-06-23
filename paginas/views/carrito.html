@@ -33,8 +33,8 @@
                 <a href="#"><i class="fa-solid fa-search"></i></a>
             </div>
             <div class="movil-icons">
-                <a href="/carrito"><i class="fa-solid fa-cart-shopping icono-carrito"></i></a>
-                <i class="fa-solid fa-bars icono-bars"></i>
+                <a href="/carrito" class="icono-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#" class="icono-bars"><i class="fa-solid fa-bars"></i></a>
                 <a href="/login" class="icono-user"><i class="fa-solid fa-circle-user"></i></a>
             </div>
         </nav>
@@ -56,70 +56,84 @@
     <!-- M    A    I    N -->
     <main>
         <!-- RESUMEN DE COMPRA -->
-        <div class="resumen-de-compra">
-            <h2>
-                RESUMEN DE COMPRA
-            </h2>
-            <input type="text" name="cupon" placeholder="Cupon de descuento">
-            <input type="text" name="total" placeholder="Total">
-        </div>
+        <article class="article-resumen-de-compra">
+            <div class="resumen-de-compra">
+                <h2>
+                    RESUMEN DE COMPRA
+                </h2>
+                <input type="text" name="cupon" placeholder="Cupon de descuento">
+                <input type="text" name="total" placeholder="Total">
+            </div>
+    
+            <button type="submit" class="boton-enviar">FINALIZAR COMPRA</button>
+        </article>
         <!-- PRODUCTOS -->
 
-        <div class="producto">
-            <img src="/images/colchonetas.webp" alt="colchoneta">
-            <div class="textos">
-                <div class="icono-eliminar">
-                    <i class="fa-solid fa-trash-can"></i></div>
-                <h2 class="titulo">
-                    Colchoneta
-                </h2>
-
-                <p class="cantidad">
-                    1 unidad
-                </p>
-                <p class="precio">
-                    $1000
-                </p>
-            </div>
-        </div>
-
-        <div class="producto">
-            <img src="/images/cuerdas.webp" alt="cuerda">
-            <div class="textos">
-                <div class="icono-eliminar">
-                    <i class="fa-solid fa-trash-can"></i>
+        <section class="section-productos">
+            <div class="producto">
+                <img src="/images/colchonetas.webp" alt="colchoneta">
+                <div class="textos">
+                    <div class="contenedor-icono-eliminar">
+                        <div class="icono-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </div>
+                    <h2 class="titulo">
+                        Colchoneta
+                    </h2>
+    
+                    <p class="cantidad">
+                        1 unidad
+                    </p>
+                    <p class="precio">
+                        $1000
+                    </p>
                 </div>
-                <h2 class="titulo">
-                    Cuerda
-                </h2>
-
-                <p class="cantidad">
-                    1 unidad
-                </p>
-                <p class="precio">
-                    $1000
-                </p>
             </div>
-        </div>
-
-        <div class="producto">
-            <img src="/images/pesas(1).webp" alt="pesas">
-            <div class="textos">
-                <div class="icono-eliminar">
-                    <i class="fa-solid fa-trash-can"></i></div>
-                <h2 class="titulo">
-                    Pesas
-                </h2>
-
-                <p class="cantidad">
-                    1 unidad
-                </p>
-                <p class="precio">
-                    $1000
-                </p>
+    
+            <div class="producto">
+                <img src="/images/cuerdas.webp" alt="cuerda">
+                <div class="textos">
+                    <div class="contenedor-icono-eliminar">
+                        <div class="icono-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </div>
+                    <h2 class="titulo">
+                        Cuerda
+                    </h2>
+    
+                    <p class="cantidad">
+                        1 unidad
+                    </p>
+                    <p class="precio">
+                        $1000
+                    </p>
+                </div>
             </div>
-        </div>
-        </div>
+    
+            <div class="producto">
+                <img src="/images/pesas(1).webp" alt="pesas">
+                <div class="textos">
+                    <div class="contenedor-icono-eliminar">
+                        <div class="icono-eliminar">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </div>
+                    <h2 class="titulo">
+                        Pesas
+                    </h2>
+    
+                    <p class="cantidad">
+                        1 unidad
+                    </p>
+                    <p class="precio">
+                        $1000
+                    </p>
+                </div>
+            </div>
+            </div>
+        </section>
 
     </main>
     <!-- FOOTER -->
