@@ -8,7 +8,7 @@ app.use( express.static(publicFolderPath) );
 app.use(express.static(path.join(__dirname, './public')));
 
 app.listen(8000, () => {
-    console.log('servidor funcionando');
+    console.log('servidor funcionando http://localhost:8000/');
 });
 
 app.get('/', (req, res) => {

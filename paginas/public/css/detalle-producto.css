@@ -104,11 +104,11 @@ nav {
     margin: 15px auto;
   }
   
-  section {
+  /* section {
     margin-bottom: 20px;
-  }
+  } */
   
-  main section {
+  /* main section {
     background-color: #fff;
     margin: 10px 0px;
     margin-bottom: 20px;
@@ -116,8 +116,61 @@ nav {
     width: 60%;
     margin: 10px auto;
     margin-bottom: 20px;
+  } */
+
+.NombreDeProducto {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
   }
-  
+
+.imagen-producto img{ 
+        width: 100%;
+        max-width: 400px;
+        border-radius: 2%;
+    }
+
+    .imagen-producto{
+        max-width: 400px;
+        margin: 50px auto;
+        border-radius: 2%;
+        border: 2px solid rgb(255, 230, 0);
+        box-shadow: 4px 4px 4px #000;
+    }
+
+.contenedor-carrusel{
+    display: flex;
+    max-width: max-content;
+}
+
+.carrusel {
+    display: flex;
+    max-width: 200px;
+}
+
+.detalle{
+    display: flex;
+    max-width: max-content;
+    padding: 10px;
+}
+
+.detalle-de-producto{
+    border-right: 2px solid #F2F2F2;
+}
+
+.detalle-de-producto h3 {
+    padding-bottom: 15px;
+}
+
+.precio-forma-de-pago{
+    display: grid;
+    padding-left: 10px;
+}
+.precio-forma-de-pago h3 {
+    padding-bottom: 10px;
+}
+
+
 
 
 
