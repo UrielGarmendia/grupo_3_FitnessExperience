@@ -57,31 +57,35 @@
 
 <main>
     <div class="NombreDeProducto">
-        <h2 >Nombre del producto</h2>
+        <h2 >Colchoneta</h2>
     </div>
-
-    <section class="imagen-producto">
+    
+    <section class="imagen-producto carrusel-mobile">
         <img src="/images/colchonetas.webp" alt="imagen de producto">
+        <div class="icono-flex">
+        <div class="icono"><i class="fa-solid fa-angles-left"></i></div>
+        <div class="icono"><i class="fa-solid fa-angles-right"></i></div>
+    </div>
     </section>
     
     <!-- carrusel -->
-    <section>
+    <section class="contenedor-carrusel">
 
-        <div class="contenedor-carrusel">
+        <div class="flechas-carrusel">
             <a href="#" class="left-arrow"><i class="fa-solid fa-angles-left"></i></a>
             
             <div class="carrusel">
                 
                 <div class="productos-carrusel">
-                    <img src="/images/colchonetas.webp" width="195" height="100" />
+                    <img src="/images/colchonetas.webp"/>
                 </div>
                 
                 <div class="productos-carrusel">
-                    <img src="/images/colchonetas.webp" width="195" height="100" />
+                    <img src="/images/colchonetas.webp"/>
                 </div>
                 
                 <div class="productos-carrusel">
-                    <img src="/images/colchonetas.webp" width="195" height="100" />
+                    <img src="/images/colchonetas.webp"/>
                 </div>
 
             </div>
@@ -93,8 +97,16 @@
 <section class="detalle">
     <article class="detalle-de-producto">
         <h3>Detalle del Producto</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A optio eligendi est repellat cupiditate ipsam obcaecati animi numquam ratione praesentium fugiat aspernatur facilis, distinctio, vero, in voluptas fuga minima possimus?</p>
-    </article>
+            <h4>ESPECIFICACIONES:</h4>
+            <ul>
+                <li>-MATERIAL EXTERNO: BAGUN 100% DE AMBOS LADOS</li>
+                <li>-MATERIAL INTERNO: ESPUMA DE POLIETILENO DE ALTA DENSIDAD</li>
+                <li>-MEDIDAS: 100 CM X 45 CM X 3 CM</li>
+                <li>-COLOR: NEGRO - ROJO - AZUL - GRIS</li>
+                <li>-LAVABLE Y SUPER RESISTENTE</li>
+            </ul>
+
+    </article> 
 
     <article class="precio-forma-de-pago">
         <div class="precio">
@@ -102,39 +114,36 @@
             <p >$230.000</p>
         </div>
 
-        <div class="formas-de-pago">
+        <div class="pago">
             <h3>Formas de Pago</h3>
-        <select name="Formas de pago" id="formas de pago">
+        <select name="Formas de pago" class="formas-de-pago">
             <option value="Tarjeta de credito">Tarjeta de Credito</option>
             <option value="Tarjeta de Debito">Tarjeta de Debito</option>
             <option value="Transferencia Bancaria">Transferencia Bancaria</option>
         </select>
         </div>
-
     </article>
 </section>
 
-<section>
-    <div>
+<section class="productos-relacionados-container">
+    <div class="productos-relacionados">
         <h4>Productos relacionados</h4>
-        <div id="carrusel2">
-            <a href="#" class="left-arrow"><i class="fa-solid fa-angles-left"></i></a>
-            <div class="carrusel">
-                
-                <div class="product" id="product_0">
-                    <img src="/images/pexels-pixabay-221247.jpg" width="195" height="100" />
+            <div class="carrusel2">
+                <div class="product product_1">
+                    <img src="/images/banco-press.webp"/>
                 </div>
                 
-                <div class="product" id="product_1">
-                    <img src="/images/banner-proteina.jpg" width="195" height="100" />
+                <div class="product product_2">
+                    <img src="/images/pesas-rojo.webp"/>
                 </div>
                 
-                <div class="product" id="product_2">
-                    <img src="/images/pesa10kg.webp" width="195" height="100" />
+                <div class="product product_3">
+                    <img src="/images/multigimnasio.webp"/>
+                </div>
+                <div class="product product_4">
+                    <img src="/images/caminadora.webp"/>
                 </div>
             </div>
-            <a href="#" class="right-arrow"><i class="fa-solid fa-angles-right"></i></a>
-        </div>
     </div>
 </section>
 
