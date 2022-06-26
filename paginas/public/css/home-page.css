@@ -68,7 +68,7 @@ img{
     align-items: center;
     }
      */
-    .article-encabezado{
+    /* .article-encabezado{ */
         /* background-image: url(/images/pexels-victor-freitas-841130.jpg);
         position: relative;
         background-size: cover;
@@ -76,7 +76,7 @@ img{
         border: 2px dashed red;
         height: 100%;
          */
-    }
+    
     
 /* .div-article-encabezado{
             background-color: blue;
@@ -85,14 +85,14 @@ img{
         } */
 
 
-.encabezado-img{
+/* .encabezado-img{ */
     /* background-image: url(/images/pexels-victor-freitas-841130.jpg);
     position: relative;
     background-size: cover;
     background-position: center;
     border: 2px dashed red; */
 
-}
+
 
 
 
@@ -108,14 +108,14 @@ img{
 
 
 
-/* body{
+/* body
     width: 100%;
     background-image: url(/images/pexels-victor-freitas-841130.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-color: rgb(61, 61, 61);
     border: 5px dashed red;
-}
+
 
 /* .logo{
     /* border: dashed 2px red; */
@@ -150,6 +150,4 @@ main {
 .frase-vos{
     color: white;
     position: relative;
-
-}
- */ 
+    
