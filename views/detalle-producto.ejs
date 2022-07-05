@@ -2,20 +2,9 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%- include('./partials/head') %>
         <title>Detalle de Productos</title>
         <link rel="stylesheet" href="/css/detalle-producto.css">
-
-        <!-- GOOGLE FONTS -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200&family=IBM+Plex+Sans:ital,wght@1,200&family=M+PLUS+1+Code:wght@300&family=Roboto:wght@300&family=Rubik:wght@500&family=Shippori+Antique&display=swap"
-            rel="stylesheet">
-        <!-- FONT AWESOME -->
-        <script src="https://kit.fontawesome.com/0442526d0c.js" crossorigin="anonymous"></script>
-        <!-- ICONO -->
-        <link rel="icon" type="text/css" href="/images/logoX-icono.png">
     
     </head>
 
@@ -23,7 +12,7 @@
     <!-- H    E    A    D     E    R -->
     <header>
         <nav>
-            <a href="/home-shop" class="link-logo">
+            <a href="/" class="link-logo">
                 <div class="logo">
                     <img src="/images/logoX.png">
                     <p>FitXperience</p>
@@ -153,22 +142,8 @@
 
 
     <!-- FOOTER -->
-    <footer>
-        <div class="social-icons-container">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-        </div>
-        <ul class="footer-menu-container">
-            <li class="menu-item">Legal</li>
-            <li class="menu-item">Cookies</li>
-            <li class="menu-item">Privacidad</li>
-            <li class="menu-item">Envíos</li>
-            <li class="menu-item">Devoluciones</li>
-        </ul>
-        <span class="copyright">&copy;2022, FitXperience. All rights reserved.</span>
-    </footer>
-
+    <%- include('./partials/footer') %>
+    
 </body>
 
 </html>
