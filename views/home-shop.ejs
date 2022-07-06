@@ -52,54 +52,22 @@
                 <h3>Productos en oferta</h3>
             </a>
             <div class="productos">
-                <article>
-                    <a href="/detalle-producto">
-                        <img src="/images/pesas(1).webp" alt="pesas-negro">
-                        <div class="main-article">
-                            <div class="div-precio-descuento">
-                                <p class="precio">$12.518</p>
-                                <p class="descuento">40% off</p>
+
+                <article>  
+                    <% for(let index = 0; index < productosOferta.length; index++) { %>
+                        <a href="/detalle-producto">
+                            <img src="/images/<%= productosOferta[index].image %>" alt="pesas-negro">
+                            <div class="main-article">
+                                <div class="div-precio-descuento">
+                                    <p class="precio"><%= productosOferta[index].price %></p>
+                                    <p class="descuento"><%= productosOferta[index].descuento %></p>
+                                </div>
+                                <h4 class="descripcion"><%= productosOferta[index].titulo %></h4>
                             </div>
-                            <h4 class="descripcion">Barra + 2 mancuernas</h4>
-                        </div>
-                    </a>
+                        </a>
+                   <% } %> 
                 </article>
-                <article>
-                    <a href="/detalle-producto">
-                        <img src="/images/pesas-rojo.webp" alt="pesas-rojo">
-                        <div class="main-article">
-                            <div class="div-precio-descuento">
-                                <p class="precio">$14.560</p>
-                                <p class="descuento">35% off</p>
-                            </div>
-                            <h4 class="descripcion">Barra kit 30kg</h4>
-                        </div>
-                    </a>
-                </article>
-                <article>
-                    <a href="/detalle-producto">
-                        <img src="/images/banco-press.webp" alt="banco-press">
-                        <div class="main-article">
-                            <div class="div-precio-descuento">
-                                <p class="precio">$70.500</p>
-                                <p class="descuento">30% off</p>
-                            </div>
-                            <h4 class="descripcion">Press-banco</h4>
-                        </div>
-                    </a>
-                </article>
-                <article>
-                    <a href="/detalle-producto">
-                        <img src="/images/discos.webp" alt="discos">
-                        <div class="main-article">
-                            <div class="div-precio-descuento">
-                                <p class="precio">$23.200</p>
-                                <p class="descuento">45% off</p>
-                            </div>
-                            <h4 class="descripcion">Barra Recta + Kit Discos</h4>
-                        </div>
-                    </a>
-                </article>
+                
             </div>
         </section>
         <section class="ult-visita">
@@ -108,52 +76,20 @@
             </a>
             <div class="productos">
                 <article>
-                    <a href="/detalle-producto">
-                        <img src="/images/multigimnasio.webp" alt="multigimnasio">
-                        <div class="main-article">
-                            <div class="div-precio-descuento">
-                                <p class="precio">$84.999</p>
-                                <p class="descuento">20% off</p>
+
+                    <% for(let index = 0; index < productosUlt.length; index++) { %>
+                        <a href="/detalle-producto">
+                            <img src="/images/<%= productosUlt[index].image %>" alt="pesas-negro">
+                            <div class="main-article">
+                                <div class="div-precio-descuento">
+                                    <p class="precio"><%= productosUlt[index].price %></p>
+                                    <p class="descuento"><%= productosUlt[index].descuento %></p>
+                                </div>
+                                <h4 class="descripcion"><%= productosUlt[index].titulo %></h4>
                             </div>
-                            <h4 class="descripcion">Multigimnasio 75kg</h4>
-                        </div>
-                    </a>
-                </article>
-                <article>
-                    <a href="/detalle-producto">
-                        <img src="/images/caminadora.webp" alt="caminadora">
-                        <div class="main-article">
-                            <div class="div-precio-descuento">
-                                <p class="precio">$56.999</p>
-                                <p class="descuento">15% off</p>
-                            </div>
-                            <h4 class="descripcion">Cinta de correr eléctrica</h4>
-                        </div>
-                    </a>
-                </article>
-                <article>
-                    <a href="/detalle-producto">
-                        <img src="/images/cuerdas.webp" alt="cuerdas">
-                        <div class="main-article">
-                            <div class="div-precio-descuento">
-                                <p class="precio">$2.399</p>
-                                <p class="descuento">10% off</p>
-                            </div>
-                            <h4 class="descripcion">Cuerda De Saltar Aluminio</h4>
-                        </div>
-                    </a>
-                </article>
-                <article>
-                    <a href="/detalle-producto">
-                        <img src="/images/colchonetas.webp" alt="colchonetas">
-                        <div class="main-article">
-                            <div class="div-precio-descuento">
-                                <p class="precio">$1.416</p>
-                                <p class="descuento">5% off</p>
-                            </div>
-                            <h4 class="descripcion">Colchoneta Gimnasia</h4>
-                        </div>
-                    </a>
+                        </a>
+                   <% } %> 
+
                 </article>
             </div>
         </section>

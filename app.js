@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8000;
 
 app.set('view engine', 'ejs');
 
-app.set("views", "./views");
+app.set('views', path.join(__dirname, 'views'));
 
 const publicFolderPath = path.join(__dirname, './public');
 app.use( express.static(publicFolderPath) );
