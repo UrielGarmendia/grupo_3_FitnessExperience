@@ -53,8 +53,8 @@
             </a>
             <div class="productos">
 
+                <% for(let index = 0; index < productosOferta.length; index++) { %>
                 <article>  
-                    <% for(let index = 0; index < productosOferta.length; index++) { %>
                         <a href="/detalle-producto">
                             <img src="/images/<%= productosOferta[index].image %>" alt="pesas-negro">
                             <div class="main-article">
@@ -65,9 +65,9 @@
                                 <h4 class="descripcion"><%= productosOferta[index].titulo %></h4>
                             </div>
                         </a>
-                   <% } %> 
                 </article>
-                
+                <% } %>
+
             </div>
         </section>
         <section class="ult-visita">
@@ -75,9 +75,9 @@
                 <h3>Basado en tu última visita</h3>
             </a>
             <div class="productos">
-                <article>
 
-                    <% for(let index = 0; index < productosUlt.length; index++) { %>
+                <% for(let index = 0; index < productosUlt.length; index++) { %>
+                <article>
                         <a href="/detalle-producto">
                             <img src="/images/<%= productosUlt[index].image %>" alt="pesas-negro">
                             <div class="main-article">
@@ -88,9 +88,9 @@
                                 <h4 class="descripcion"><%= productosUlt[index].titulo %></h4>
                             </div>
                         </a>
-                   <% } %> 
-
                 </article>
+                <% } %> 
+
             </div>
         </section>
     </main>

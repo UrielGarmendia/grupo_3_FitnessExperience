@@ -12,7 +12,7 @@ router.get('/login', mainController.login);
 
 router.get('/carrito', mainController.carrito);
 
-router.get('/detalle-producto/:id', mainController.detalle);
+router.get('/detalle-producto', mainController.detalle);
 
 module.exports = router;
 
