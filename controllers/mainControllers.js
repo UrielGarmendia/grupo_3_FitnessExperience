@@ -1,6 +1,6 @@
 const path = require('path');
 
-const listProductosOferta = [
+const listProductos = [
     {
         id: 1,
         titulo:"Barra + 2 mancuernas",
@@ -33,12 +33,9 @@ const listProductosOferta = [
         price: "$65.50",
         image: "discos.webp",
         descripcion: "- Kit de barra abs a rosca + discos engomados e importados. Incluye 20 discos de entre 2,5kg y 5kg."
-    }
-]
-
-const listProductosUlt = [
+    },
     {
-        id: 1,
+        id: 5,
         titulo:"Multigimnasio 75kg",
         descuento: "20% off",
         price: "$84.999",
@@ -46,7 +43,7 @@ const listProductosUlt = [
         descripcion: "- Kit de barras y mancuernas de color rojo. Incluye 6 discos de 3kg + 2 discos de 1,5kg"
     },
     {
-        id: 2,
+        id: 6,
         titulo:"Cinta de correr eléctrica",
         descuento: "20% off",
         price: "$56.999",
@@ -54,7 +51,7 @@ const listProductosUlt = [
         descripcion: "- Multigimnasio con estructura reforzada preparada para soportar peso y exigencia de uso. Con caños de 60mm de diametro, con 50kg de pesas en lingotes recubiertos en vinilo para evitar ruidos molestos. Permite trabajar: dorsales, bíceps, tríceps, cuadríceps, espalda, pecho, aductores."
     },
     {
-        id: 3,
+        id: 7,
         titulo:"Cuerda De Saltar Aluminio",
         descuento: "20% off",
         price: "$2.399",
@@ -62,7 +59,7 @@ const listProductosUlt = [
         descripcion: "- Soga Cuerda Saltar Speed Rope Rogue Fenix Crossfit Boxeo Gym"
     },
     {
-        id: 4,
+        id: 8,
         titulo:"Colchoneta Gimnasia",
         descuento: "20% off",
         price: "$1.416",
@@ -73,7 +70,7 @@ const listProductosUlt = [
 
 const mainController = {
     index: (req, res) => {
-        res.render("home-shop", {productosOferta: listProductosOferta, productosUlt: listProductosUlt});
+        res.render("home-shop", {productos: listProductos});
     },
     register: (req, res) => {
         res.render("register");
@@ -86,9 +83,8 @@ const mainController = {
     },
     detalle: (req, res) => {
         const id = req.params.id;
-        const productoOferta = listProductosOferta.find(productoOferta => productoOferta.id == id);
-        const productoUlt = listProductosUlt.find(productoUlt => productoUlt.id == id);
-        res.render("detalle-producto", {productoOferta});
+        const producto = listProductos.find(producto => producto.id == id);
+        res.render("detalle-producto", {producto, productos: listProductos});
     },
     crearProducto: (req, res) => {
         res.render("formulario-de-carga");

@@ -54,16 +54,22 @@
             </a>
             <div class="productos">
 
-                <% for(let index = 0; index < productosOferta.length; index++) { %>
+                <% for(let index = 0; index < productos.length; index++) { %>
+                    <!-- <% let productoNum = productos[index].id %> 
+                    <% if (productoNum == 5) { %> 
+                    <a href="#">
+                        <h3 class="h3-ult-visita">Basado en tu última visita</h3>
+                    </a>
+                 <% } %> -->
                 <article>  
-                        <a href="/detalle-producto/<%= productosOferta[index].id %>">
-                            <img src="/images/<%= productosOferta[index].image %>" alt="pesas-negro">
+                        <a href="/detalle-producto/<%= productos[index].id %>">
+                            <img src="/images/<%= productos[index].image %>" alt="pesas-negro">
                             <div class="main-article">
                                 <div class="div-precio-descuento">
-                                    <p class="precio"><%= productosOferta[index].price %></p>
-                                    <p class="descuento"><%= productosOferta[index].descuento %></p>
+                                    <p class="precio"><%= productos[index].price %></p>
+                                    <p class="descuento"><%= productos[index].descuento %></p>
                                 </div>
-                                <h4 class="descripcion"><%= productosOferta[index].titulo %></h4>
+                                <h4 class="descripcion"><%= productos[index].titulo %></h4>
                             </div>
                         </a>
                 </article>
@@ -71,29 +77,9 @@
 
             </div>
         </section>
-        <section class="ult-visita">
-            <a href="/detalle-producto">
-                <h3>Basado en tu última visita</h3>
-            </a>
-            <div class="productos">
 
-                <% for(let index = 0; index < productosUlt.length; index++) { %>
-                <article>
-                        <a href="/detalle-producto">
-                            <img src="/images/<%= productosUlt[index].image %>" alt="pesas-negro">
-                            <div class="main-article">
-                                <div class="div-precio-descuento">
-                                    <p class="precio"><%= productosUlt[index].price %></p>
-                                    <p class="descuento"><%= productosUlt[index].descuento %></p>
-                                </div>
-                                <h4 class="descripcion"><%= productosUlt[index].titulo %></h4>
-                            </div>
-                        </a>
-                </article>
-                <% } %> 
 
-            </div>
-        </section>
+        
     </main>
     <!-- FOOTER -->
     <%- include('./partials/footer') %>

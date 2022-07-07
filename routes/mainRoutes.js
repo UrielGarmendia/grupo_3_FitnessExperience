@@ -17,20 +17,3 @@ router.get('/detalle-producto/:id', mainController.detalle);
 router.get('/crear-producto', mainController.crearProducto);
 
 module.exports = router;
-
-
-// app.get('/register', (req, res) => {
-//     router.get(path.join(__dirname, './views/register.html'));
-// });
-
-// app.get('/login', (req, res) => {
-//     router.get(path.join(__dirname, './views/login.html'));
-// });
-
-// app.get('/carrito', (req, res) => {
-//     router.get(path.join(__dirname, './views/carrito.html'));
-// });
-
-// app.get('/detalle-producto', (req, res) => {
-//     router.get(path.join(__dirname, './views/detalle-producto.html'));
-// });

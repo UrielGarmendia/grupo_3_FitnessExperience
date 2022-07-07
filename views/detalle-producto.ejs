@@ -47,20 +47,18 @@
 
 <main>
     <div class="NombreDeProducto">
-        <h2><%= productoOferta.titulo%></h2>
+        <h2><%= producto.titulo%></h2>
     </div>
     
     <section class="imagen-producto carrusel-mobile">
-        <img src="/images/<%= productoOferta.image %>">
+        <img src="/images/<%= producto.image %>">
         <div class="icono-flex">
         <div class="icono"><i class="fa-solid fa-angles-left"></i></div>
         <div class="icono"><i class="fa-solid fa-angles-right"></i></div>
     </div>
     </section>
     
-    <!-- carrusel -->
     <section class="contenedor-carrusel">
-
         <div class="flechas-carrusel">
             <a href="#" class="left-arrow"><i class="fa-solid fa-angles-left"></i></a>
             
@@ -73,16 +71,14 @@
         <h3>Detalle del Producto</h3>
             <h4>DESCRIPCIÓN:</h4>
                 <div class="descripcion">
-                    <p><%= productoOferta.descripcion%></p>
+                    <p><%= producto.descripcion%></p>
                 </div>
-            
-
     </article> 
 
     <article class="precio-forma-de-pago">
         <div class="precio">
             <h3 >Precio</h3>
-            <p ><%= productoOferta.price%></p>
+            <p ><%= producto.price%></p>
         </div>
 
         <div class="pago">
@@ -100,24 +96,18 @@
     <div class="productos-relacionados">
         <h4>Productos relacionados</h4>
             <div class="carrusel2">
-                <div class="product product_1">
-                    <img src="/images/banco-press.webp"/>
-                </div>
-                
-                <div class="product product_2">
-                    <img src="/images/pesas-rojo.webp"/>
-                </div>
-                
-                <div class="product product_3">
-                    <img src="/images/multigimnasio.webp"/>
-                </div>
-                <div class="product product_4">
-                    <img src="/images/caminadora.webp"/>
-                </div>
+                <% for(let index = 0; index < 4 ; index++) { %>
+                    <a href="/detalle-producto/<%= productos[index].id %>">
+                    <div class="product product_1">
+                        <img src="/images/<%= productos[index].image %>"">
+                    </div>
+                </a>
+                <% } %>
                 <a href="#"><i class="fa-solid fa-angles-right"></i></a>
             </div>
     </div>
 </section>
+
 
 </main>
 
