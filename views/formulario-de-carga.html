@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../public/css/formulario-de-carga.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="link-logo">
+                <div class="logo">
+                    <img src="../public/images/logoX.png">
+                    <p>FitXperience</p>
+                </div>
+            </a>
+        </nav>
+    </header>
+<form class="datos">
+<input class="controls imagen-producto" name="imagen-producto " type="file">
+    <h2>Mas datos sobre el producto a subir</h2>
+<div class="datos-adicionales">
+    <input type="text" name="description" placeholder="Nombre del producto">
+    <input type="text" name="description" placeholder="Precio del producto (solo dolares)">
+    <input type="text" name="description" placeholder="Descripcion del producto">
+</div>
+
+</section>
+<input class="controls" type="submit" value="Subir">
+</form>
+
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+</body>
+</html>
