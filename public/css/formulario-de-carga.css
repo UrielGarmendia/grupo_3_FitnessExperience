@@ -92,10 +92,6 @@ h2 {
     margin-bottom: 12px;
 }
 
-.datos-adicionales input:hover {
-    
-}
-
 @media (min-width: 420px) {
     .link-logo {
         text-decoration: none;

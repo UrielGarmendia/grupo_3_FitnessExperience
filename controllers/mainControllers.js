@@ -89,6 +89,9 @@ const mainController = {
         const productoOferta = listProductosOferta.find(productoOferta => productoOferta.id == id);
         const productoUlt = listProductosUlt.find(productoUlt => productoUlt.id == id);
         res.render("detalle-producto", {productoOferta});
+    },
+    crearProducto: (req, res) => {
+        res.render("formulario-de-carga");
     }
 }
 

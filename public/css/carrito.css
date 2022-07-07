@@ -321,7 +321,9 @@ footer {
         color: #fff;
         display: inline-block;
         padding: 5px 0;
-        font-size: 14px;
+        font-size: 11px;
+        font-weight: bold;
+        text-shadow: 2px 2px #000;
     }
 
     .sub-nav ul a:hover {
@@ -388,6 +390,10 @@ footer {
 }
 
 @media (min-width: 769px) {
+    
+    .sub-nav ul a {
+        font-size: 14px;
+    }
 
     .article-resumen-de-compra{
         max-width: 50%;
