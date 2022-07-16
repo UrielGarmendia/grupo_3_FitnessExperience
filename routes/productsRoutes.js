@@ -6,27 +6,23 @@ const productsControllers = require ("../controllers/productsControllers");
 
 
 
+
 // requerir todos los productos
 
-router.get("/", productsControllers.index)
+router.get("/", productsControllers.index);
+// crear productos
+router.get('/create', productsControllers.createProducts);
+router.post("/",productsControllers.newProducts);
 
 
 router.get('/:id', productsControllers.productsId);
+//modificar productos
+router.get("/edit/:id",productsControllers.modifyProducts);
+router.put("/update/:id", productsControllers.updateProducts);
 
-// crear productos
-
-router.get('/create', productsControllers.createProducts);
-router.post("/",productsControllers.newProducts)
+//eliminar productos
+router.delete("/:id", productsControllers.deleteProducts);
 
 //requerir producto por id
 
-
-//modificar productos
-router.get("/:id/edit",productsControllers.modifyProducts)
-router.put("/:id", productsControllers.updateProducts)
-
-//eliminar productos
-router.delete("/:id", productsControllers.deleteProducts)
-
-
-module.exports = router
+module.exports = router;

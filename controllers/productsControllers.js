@@ -10,6 +10,7 @@ const productsControllers = {
         //enviara la lista de todos los productos
     },
 
+
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
         res.render("formulario-de-carga");
@@ -19,8 +20,8 @@ const productsControllers = {
         //enviara la informacion de un producto segun su ID
         const id = req.params.id;
         const producto = productsList.find(producto => producto.id == id);
-        console.log('------Si aparece: Cannot read properties of undefined. Ignorar el error--------');
-        res.render("detalle-producto", {producto, productos: productsList});
+        // console.log('------Si aparece: Cannot read properties of undefined. Ignorar el error--------');
+        res.render("detalle-producto", { producto, productos: productsList });
     },
 
     newProducts: (req,res) => {

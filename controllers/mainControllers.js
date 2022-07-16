@@ -6,10 +6,10 @@ const productsList = JSON.parse(fs.readFileSync(productsListPath,"utf-8"));
 
 
 
-const mainController = {
+const mainControllers = {
     index: (req, res) => {
         res.render("home-shop", {productos: productsList});
     },
 }
 
-module.exports = mainController;
+module.exports = mainControllers;

@@ -3,19 +3,13 @@
 <head>
   <%- include('./partials/head') %>
   <title>Login</title>
-  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="header.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="link-logo">
-                <div class="logo">
-                    <img src="/images/logoX.png">
-                    <p>FitXperience</p>
-                </div>
-            </a>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <%- include('./partials/reducedHeader')  %>
+  <!-- FORMULARIO -->
   <form class="form-register">
     <h4>Inicio de Sesión</h4>
     <div class="correo-electronico">

@@ -11,35 +11,6 @@ body {
     min-width: 320px;
 }
 
-nav {
-    height: 50px;
-    width: 100%;
-    padding: 8px;
-    background: #000;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    border-bottom: 2px solid rgb(255, 251, 0);
-}
-
-.logo {
-    width: 30px;
-    height: 100%;
-    display: flex;
-    
-}
-
-.logo img {
-    height: 100%;
-    width: 100%;
-}
-
-.logo p {
-    display: none;
-}
-
 .controls {
     width: 65%;
     background: #333;
@@ -101,25 +72,4 @@ h2 {
     border-bottom: 1px solid rgb(255, 251, 0);
     color: #fff;
     margin-bottom: 12px;
-}
-
-@media (min-width: 420px) {
-    .link-logo {
-        text-decoration: none;
-        color: #fff;
-    }
-
-    .logo {
-        align-items: center;
-        margin-right: 20px;
-        position: relative;
-        left: -8px;
-    }
-
-    .logo p {
-        display: block;
-        font-size: 11px;
-        font-weight: bold;
-        font-family: 'Roboto', sans-serif;
-    }
 }

@@ -10,40 +10,7 @@
 
 <body>
     <!-- H    E    A    D     E    R -->
-    <header>
-        <nav>
-            <a href="/" class="link-logo">
-                <div class="logo">
-                    <img src="/images/logoX.png">
-                    <p>FitXperience</p>
-                </div>
-            </a>
-            <div class="barra-navegacion">
-                <input type="text" placeholder="Buscar producto">
-                <a href="#"><i class="fa-solid fa-search"></i></a>
-            </div>
-            <div class="movil-icons">
-                <a href="/carrito" class="icono-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="#" class="icono-bars"><i class="fa-solid fa-bars"></i></a>
-                <a href="/login" class="icono-user"><i class="fa-solid fa-circle-user"></i></a>
-            </div>
-        </nav>
-        <div class="sub-nav">
-            <ul class="left-ul">
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Ofertas</a></li>
-            </ul>
-            <ul class="right-ul">
-                <li><a href="/crear-producto">Crear producto</a></li>
-                <li><a href="/register">Creá tu cuenta</a></li>
-                <li><a href="#">
-                        <i class="fa-solid fa-heart"></i></a></li>
-                <li>
-                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
-            </ul>
-        </div>
-    </header>
+    <%- include('./partials/header')  %> 
     <!-- M    A    I    N -->
     <main>
         <!-- RESUMEN DE COMPRA -->
