@@ -84,6 +84,7 @@ const mainController = {
     detalle: (req, res) => {
         const id = req.params.id;
         const producto = listProductos.find(producto => producto.id == id);
+        console.log('------Si aparece: Cannot read properties of undefined. Ignorar el error--------');
         res.render("detalle-producto", {producto, productos: listProductos});
     },
     crearProducto: (req, res) => {
