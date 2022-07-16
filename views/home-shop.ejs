@@ -35,7 +35,7 @@
                 <li><a href="#">Ofertas</a></li>
             </ul>
             <ul class="right-ul">
-                <li><a href="/crear-producto">Crear producto</a></li>
+                <li><a href="/products/create">Crear producto</a></li>
                 <li><a href="/register">Creá tu cuenta</a></li>
                 <li><a href="#">
                         <i class="fa-solid fa-heart"></i></a></li>
@@ -55,13 +55,7 @@
             <div class="productos">
 
                 <% for(let index = 0; index < productos.length; index++) { %>
-                    <!-- <% let productoNum = productos[index].id %> 
-                    <% if (productoNum == 5) { %> 
-                    <a href="#">
-                        <h3 class="h3-ult-visita">Basado en tu última visita</h3>
-                    </a>
-                 <% } %> -->
-                <article>  
+                    <article>  
                         <a href="/detalle-producto/<%= productos[index].id %>">
                             <img src="/images/<%= productos[index].image %>" alt="pesas-negro">
                             <div class="main-article">

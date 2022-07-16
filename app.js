@@ -3,6 +3,9 @@ const app = express();
 const path = require('path');
 
 const mainRoutes = require('./routes/mainRoutes');
+const productsRoutes = require('./routes/productsRoutes');
+const usersRoutes = require('./routes/usersRoutes');
+
 const PORT = process.env.PORT || 8000;
 const publicFolderPath = path.join(__dirname, './public');
 
@@ -11,6 +14,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use( express.static(publicFolderPath) );
 app.use('/', mainRoutes);
+app.use("/products", productsRoutes)
+app.use("/users",usersRoutes)
 
 app.listen(PORT, () => {
     console.log('servidor funcionando http://localhost:8000/');
