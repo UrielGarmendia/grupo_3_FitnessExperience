@@ -25,9 +25,10 @@ main {
     padding-bottom: 10px;
     box-shadow: 4px 4px 4px #000;
 }
-
+/* text-transform: uppercase// todo mayuscula-- con capitalize solo las letras iniciales */
 .NombreDeProducto h2 {
     font-size: 2em;
+    text-transform: uppercase;    
 }
 
 .contenedor-carrusel {
