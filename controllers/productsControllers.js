@@ -8,12 +8,13 @@ const productsList = JSON.parse(fs.readFileSync(productsListPath,"utf-8"));
 const productsControllers = {
     index: (req,res) => {
         //enviara la lista de todos los productos
+        res.render('index', { productos: productsList });
     },
 
 
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
-        res.render("formulario-de-carga");
+        res.render("products/formulario-de-carga");
     },
 
     productsId: (req, res) => {
@@ -26,6 +27,15 @@ const productsControllers = {
 
     newProducts: (req,res) => {
         //recepcion de informacion cargada en el form  de "createProducts"
+        let product = req.body;
+
+        product.id = uuid();
+
+        productsList.push(product);
+
+        fs.writeFileSync(productsListPath, JSON.stringify(productsList,null, 2));
+
+        res.redirect('/products')
     },
     modifyProducts: (req,res) =>{
         // envio del formulario para modificar el producto
