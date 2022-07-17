@@ -15,11 +15,11 @@
 
 <main>
     <div class="NombreDeProducto">
-        <h2><%= producto.name%></h2>
+        <h2><%= productos.name%></h2>
     </div>
     
     <section class="imagen-producto carrusel-mobile">
-        <img src="/images/<%= producto.image %>">
+        <img src="../data/<%= productos.image %>">
         <div class="icono-flex">
         <div class="icono"><i class="fa-solid fa-angles-left"></i></div>
         <div class="icono"><i class="fa-solid fa-angles-right"></i></div>
@@ -39,14 +39,14 @@
         <h3>Detalle del Producto</h3>
             <h4>DESCRIPCIÓN:</h4>
                 <div class="descripcion">
-                    <p><%= producto.description%></p>
+                    <p><%= productos.description%></p>
                 </div>
     </article> 
 
     <article class="precio-forma-de-pago">
         <div class="precio">
             <h3 >Precio</h3>
-            <p ><%= producto.price%></p>
+            <p ><%= productos.price%></p>
         </div>
 
         <div class="pago">
