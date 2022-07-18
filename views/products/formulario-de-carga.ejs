@@ -10,16 +10,14 @@
     <!-- HEADER -->
     <%- include('../partials/header')  %>
     <!-- FORMULARIO -->
-<form class="datos">
+<form class="datos" action="/products" method="post" enctype="multipart/form-data">
 <input class="controls imagen-producto" name="imagen-producto " type="file">
     <h2>Mas datos sobre el producto a subir</h2>
 <div class="datos-adicionales">
-    <input type="text" name="description" placeholder="Nombre del producto">
-    <input type="text" name="description" placeholder="Precio del producto (solo dolares)">
+    <input type="text" name="name" placeholder="Nombre del producto">
+    <input type="text" name="price" placeholder="Precio del producto (solo dolares)">
     <input type="text" name="description" placeholder="Descripcion del producto">
 </div>
-
-</section>
 <input class="button" type="submit" value="Subir">
 </form>
 

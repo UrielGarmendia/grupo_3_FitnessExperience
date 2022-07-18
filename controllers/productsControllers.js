@@ -8,7 +8,7 @@ const productsList = JSON.parse(fs.readFileSync(productsListPath,"utf-8"));
 const productsControllers = {
     index: (req,res) => {
         //enviara la lista de todos los productos
-        res.render('index', { productos: productsList });
+        res.render('home-shop', { productos: productsList });
     },
 
 
@@ -19,8 +19,8 @@ const productsControllers = {
 
     productsId: (req, res) => {
         //enviara la informacion de un producto segun su ID
-        const id = req.params.id;
-        const producto = productsList.find(producto => producto.id == id);
+        let id = req.params.id;
+        let producto = productsList.find(producto => producto.id == id);
         // console.log('------Si aparece: Cannot read properties of undefined. Ignorar el error--------');
         res.render("detalle-producto", { producto, productos: productsList });
     },
@@ -29,21 +29,39 @@ const productsControllers = {
         //recepcion de informacion cargada en el form  de "createProducts"
         let product = req.body;
 
-        product.id = uuid();
+        product.id = uuidv4();
 
         productsList.push(product);
 
-        fs.writeFileSync(productsListPath, JSON.stringify(productsList,null, 2));
+        fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2));
 
-        res.redirect('/products')
+        res.redirect('/products');
     },
     modifyProducts: (req,res) =>{
         // envio del formulario para modificar el producto
-        res.send('edit products');
+       let id = req.params.id;
+       let producto = productsList.find(producto => producto.id == id);
+
+        res.render("products/formulario-de-edicion", { producto });
     },
 
     updateProducts: (req,res) => {
         //recepcion y procesado de las modificaciones del producto en el "modifyProducts"
+        let id = req.params.id;
+        let newProduct = req.body;
+
+        newProduct.id = id;
+
+        for (let index = 0; index < productsList.length; index++) {
+            const element = productsList[index];
+            if (element.id == id) {
+                productsList[index] = newProduct;
+            }
+        }
+
+        fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2));
+
+        res.redirect('/products');
     },
 
     deleteProducts: (req,res) => {

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/formulario-de-carga.css">
+    <title>Creación de producto</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <%- include('../partials/header')  %>
+    <!-- FORMULARIO -->
+<form class="datos" action="/products/edit/<%= producto.id ?? ''%>?_method=PUT" 
+    method="post">
+<input class="controls imagen-producto" name="imagen-producto " type="file">
+    <h2>Mas datos sobre el producto a editar</h2>
+<div class="datos-adicionales">
+    <input type="text" name="name" placeholder="Nombre del producto" value="<%= producto.name ?? ''%>">
+    <input type="text" name="price" placeholder="Precio del producto (solo dolares)" value="<%= producto.price ?? ''%>">
+    <input type="text" name="description" placeholder="Descripcion del producto" value="<%= producto.description ?? ''%>">
+</div>
+
+</section>
+<input class="button" type="submit" value="Subir">
+</form>
+
+</body>
+</html>

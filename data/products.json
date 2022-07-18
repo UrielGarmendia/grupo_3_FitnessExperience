@@ -203,7 +203,7 @@
     "description": "ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea",
     "image": "cuerdas.webp",
     "category": "maquinas",
-    "price": 12013.0,
+    "price": 12013,
     "discount": 29.18
   },
   {
@@ -429,7 +429,7 @@
     "image": "cuerdas.webp",
     "category": "kits de entrenamiento",
     "price": 38148.33,
-    "discount": 18.0
+    "discount": 18
   },
   {
     "id": 49,
@@ -824,7 +824,7 @@
     "description": "vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla",
     "image": "cuerdas.webp",
     "category": "kits de entrenamiento",
-    "price": 19923.0,
+    "price": 19923,
     "discount": 21.49
   },
   {
@@ -1005,7 +1005,7 @@
     "image": "cuerdas.webp",
     "category": "funcional",
     "price": 48719.41,
-    "discount": 19.0
+    "discount": 19
   },
   {
     "id": 113,
@@ -1013,7 +1013,7 @@
     "description": "nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc",
     "image": "cuerdas.webp",
     "category": "kits de entrenamiento",
-    "price": 30916.0,
+    "price": 30916,
     "discount": 20.52
   },
   {
@@ -1149,7 +1149,7 @@
     "image": "cuerdas.webp",
     "category": "maquinas",
     "price": 58666.42,
-    "discount": 18.0
+    "discount": 18
   },
   {
     "id": 129,
@@ -1356,7 +1356,7 @@
     "image": "cuerdas.webp",
     "category": "pilates/yoga",
     "price": 11850.76,
-    "discount": 24.0
+    "discount": 24
   },
   {
     "id": 152,
@@ -1373,7 +1373,7 @@
     "description": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in",
     "image": "cuerdas.webp",
     "category": "spinning",
-    "price": 37145.0,
+    "price": 37145,
     "discount": 24.28
   },
   {
@@ -2211,7 +2211,7 @@
     "image": "cuerdas.webp",
     "category": "banco de trabajo",
     "price": 51231.08,
-    "discount": 14.0
+    "discount": 14
   },
   {
     "id": 247,
@@ -2237,7 +2237,7 @@
     "description": "ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo",
     "image": "cuerdas.webp",
     "category": "pilates/yoga",
-    "price": 66866.0,
+    "price": 66866,
     "discount": 11.6
   },
   {
@@ -2552,7 +2552,7 @@
     "description": "consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat",
     "image": "cuerdas.webp",
     "category": "maquinas",
-    "price": 2831.0,
+    "price": 2831,
     "discount": 24.09
   },
   {
@@ -3020,7 +3020,7 @@
     "description": "erat id mauris vulputate elementum nullam varius nulla facilisi cras",
     "image": "cuerdas.webp",
     "category": "pilates/yoga",
-    "price": 25304.0,
+    "price": 25304,
     "discount": 10.77
   },
   {
@@ -3065,7 +3065,7 @@
     "description": "aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque",
     "image": "cuerdas.webp",
     "category": "spinning",
-    "price": 31031.0,
+    "price": 31031,
     "discount": 11.52
   },
   {
@@ -3165,7 +3165,7 @@
     "image": "cuerdas.webp",
     "category": "maquinas",
     "price": 37491.83,
-    "discount": 16.0
+    "discount": 16
   },
   {
     "id": 353,
