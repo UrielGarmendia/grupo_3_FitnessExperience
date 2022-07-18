@@ -39,6 +39,7 @@ const productsControllers = {
     },
     modifyProducts: (req,res) =>{
         // envio del formulario para modificar el producto
+        res.send('edit products');
     },
 
     updateProducts: (req,res) => {
