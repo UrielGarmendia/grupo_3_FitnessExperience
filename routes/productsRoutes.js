@@ -8,6 +8,10 @@ const productsControllers = require ("../controllers/productsControllers");
 // requerir todos los productos
 
 router.get("/", productsControllers.index);
+
+// carrito de compras
+router.get('/carrito', productsControllers.carrito);
+
 // crear productos
 router.get('/create', productsControllers.createProducts);
 router.post("/",productsControllers.newProducts);

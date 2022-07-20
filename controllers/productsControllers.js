@@ -11,6 +11,9 @@ const productsControllers = {
         res.render('home-shop', { productos: productsList });
     },
 
+    carrito: (req, res) => {
+        res.render('carrito');
+    },
 
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
