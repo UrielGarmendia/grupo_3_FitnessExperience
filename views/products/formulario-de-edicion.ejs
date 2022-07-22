@@ -11,8 +11,8 @@
     <%- include('../partials/header')  %>
     <!-- FORMULARIO -->
 <form class="datos" action="/products/<%= producto.id ?? ''%>?_method=PUT" 
-    method="post">
-<input class="controls imagen-producto" name="image" type="file" enctype="multipart/form-data">
+    method="post" enctype="multipart/form-data">
+<input class="controls imagen-producto" name="image" type="file">
     <h2>Mas datos sobre el producto a editar</h2>
 <div class="datos-adicionales">
     <input type="text" name="name" placeholder="Nombre del producto" value="<%= producto.name ?? ''%>">

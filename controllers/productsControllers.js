@@ -54,6 +54,7 @@ const productsControllers = {
         //recepcion y procesado de las modificaciones del producto en el "modifyProducts"
         let id = req.params.id;
         let newProduct = req.body;
+        let image = req.file.filename;
 
         newProduct.id = id;
 
@@ -61,6 +62,7 @@ const productsControllers = {
             const element = productsList[index];
             if (element.id == id) {
                 productsList[index] = newProduct;
+                newProduct.image = image;
             }
         }
 

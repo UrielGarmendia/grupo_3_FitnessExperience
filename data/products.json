@@ -1,11 +1,11 @@
 [
   {
-    "image": "pesas-rojo.webp",
     "name": "kit de pesas",
     "price": "$15.000",
     "discount": "30%",
     "description": "leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper",
-    "id": "1"
+    "id": "1",
+    "image": "1658525269187.webp"
   },
   {
     "image": "discos.webp",
@@ -4494,21 +4494,5 @@
     "category": "pilates/yoga",
     "price": 64126.69,
     "discount": 17.09
-  },
-  {
-    "image": "",
-    "name": "una pizza",
-    "price": "50",
-    "discount": "30%",
-    "description": "Es algo lindo",
-    "id": "d304571f-b9fa-4418-adb7-956400ffcc97"
-  },
-  {
-    "image": "",
-    "name": "nuevo kit de pesas",
-    "price": "$12.000",
-    "discount": "23%",
-    "description": "conjunto de discos mas mancuernas ",
-    "id": "2a9f3572-eae6-406d-94ce-2ad56abb9f94"
   }
 ]
