@@ -31,8 +31,10 @@ const productsControllers = {
     newProducts: (req,res) => {
         //recepcion de informacion cargada en el form  de "createProducts"
         let product = req.body;
+        let image = req.file.filename;
 
         product.id = uuidv4();
+        product.image = image;
 
         productsList.push(product);
 

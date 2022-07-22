@@ -12,7 +12,7 @@
     <!-- FORMULARIO -->
 <form class="datos" action="/products/<%= producto.id ?? ''%>?_method=PUT" 
     method="post">
-<input class="controls imagen-producto" name="image" type="file">
+<input class="controls imagen-producto" name="image" type="file" enctype="multipart/form-data">
     <h2>Mas datos sobre el producto a editar</h2>
 <div class="datos-adicionales">
     <input type="text" name="name" placeholder="Nombre del producto" value="<%= producto.name ?? ''%>">
