@@ -23,5 +23,5 @@ app.use("/products", productsRoutes)
 app.use("/users",usersRoutes)
 
 app.listen(PORT, () => {
-    console.log('servidor funcionando http://localhost: ' + PORT);
+    console.log('servidor funcionando http://localhost:' + PORT);
 });
