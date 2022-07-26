@@ -11,6 +11,9 @@ const productsControllers = {
         res.render('home-shop', { productos: productsList });
     },
 
+    carrito: (req, res) => {
+        res.render('carrito');
+    },
 
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
@@ -28,8 +31,10 @@ const productsControllers = {
     newProducts: (req,res) => {
         //recepcion de informacion cargada en el form  de "createProducts"
         let product = req.body;
+        let image = req.file.filename;
 
         product.id = uuidv4();
+        product.image = image;
 
         productsList.push(product);
 
@@ -49,6 +54,7 @@ const productsControllers = {
         //recepcion y procesado de las modificaciones del producto en el "modifyProducts"
         let id = req.params.id;
         let newProduct = req.body;
+        let image = req.file.filename;
 
         newProduct.id = id;
 
@@ -56,6 +62,7 @@ const productsControllers = {
             const element = productsList[index];
             if (element.id == id) {
                 productsList[index] = newProduct;
+                newProduct.image = image;
             }
         }
 

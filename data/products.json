@@ -1,39 +1,35 @@
 [
   {
-    "id": 1,
-    "name": "bicileta fija",
+    "name": "kit de pesas",
+    "price": "$15.000",
+    "discount": "30%",
     "description": "leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper",
-    "image": "cuerdas.webp",
-    "category": "banco de trabajo",
-    "price": 35723.37,
-    "discount": 20.37
+    "id": "1",
+    "image": "1658525269187.webp"
   },
   {
-    "id": 2,
-    "name": "banda elastica",
+    "image": "discos.webp",
+    "name": "discos",
+    "price": "53026.58",
+    "discount": "40%",
     "description": "a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue",
-    "image": "cuerdas.webp",
-    "category": "kits de entrenamiento",
-    "price": 53026.58,
-    "discount": 11.52
+    "id": "2"
   },
   {
-    "id": 3,
-    "name": "soga de saltar",
+    "image": "banco-press.webp",
+    "name": "banco-press",
+    "price": "38788.24",
+    "discount": "23%",
     "description": "vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non",
-    "image": "cuerdas.webp",
-    "category": "funcional",
-    "price": 38788.24,
-    "discount": 23.59
+    "id": "3"
   },
   {
-    "id": 4,
+    "image": "multigimnasio.webp",
     "name": "multigimnasio",
+    "price": "9007.69",
+    "discount": "25%",
     "description": "eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin",
-    "image": "cuerdas.webp",
-    "category": "kits de entrenamiento",
-    "price": 9007.69,
-    "discount": 28.33
+    "id": "4"
   },
   {
     "id": 5,
