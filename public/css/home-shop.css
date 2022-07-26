@@ -131,6 +131,13 @@ article .main-article .div-precio-descuento {
     font-size: 12px;
 }
 
+.boton-eliminar {
+    background-color: rgb(240, 44, 44);
+    color: #fff;
+    padding: 3px;
+    border: none;
+}
+
 
 
 /* MEDIA QUERYS */

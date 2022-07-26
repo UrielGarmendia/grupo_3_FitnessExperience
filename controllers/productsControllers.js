@@ -50,6 +50,11 @@ const productsControllers = {
         res.render("products/formulario-de-edicion", { producto });
     },
 
+    productsUser: (req, res) => {
+        // envio de la vista de los productos subidos por el usuario
+        res.render('mis-productos', { productos: productsList });
+    },
+
     updateProducts: (req,res) => {
         //recepcion y procesado de las modificaciones del producto en el "modifyProducts"
         let id = req.params.id;
@@ -71,8 +76,19 @@ const productsControllers = {
         res.redirect('/products');
     },
 
-    deleteProducts: (req,res) => {
-        //accion de borrado producto
+    deleteProducts: (req, res) => {
+        // proceso de eliminacion de productos
+        let id = req.params.id;
+        for (let index = 0; index < productsList.length; index++) {
+            const element = productsList[index];
+            if (element.id == id) {
+                productsList.splice(index, 1);
+            }
+        }
+
+        fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2));
+
+        res.redirect('/products/uploadedProducts');
     }
 }
 

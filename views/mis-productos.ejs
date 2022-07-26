@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+    <title>uploaded products</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/home-shop.css">
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGACION -->
+    <%- include('./partials/reducedHeader')  %> 
+    <!-- MAIN -->
+    <main>
+        <section class="ofertas">
+            <a href="#">
+                <h3>Productos subidos</h3>
+            </a>
+            <div class="productos">
+
+                <% for(let index = 0; index < 8; index++) { %>
+                    <article>  
+                        <a href="/products/<%= productos[index].id %>">
+                            <img src="/images/<%= productos[index].image %>" alt="pesas-negro">
+                            <div class="main-article">
+                                <div class="div-precio-descuento">
+                                    <p class="precio"><%= productos[index].price %></p>
+                                    <p class="descuento"><%= productos[index].discount %></p>
+                                </div>
+                                <h4 class="descripcion"><%= productos[index].name %></h4>
+                                 <form action="/products/<%= productos[index].id %>?_method=DELETE" method="post">
+                                  <button type="submit" class="boton-eliminar">Eliminar</button>
+                                </form>
+                            </div>
+                        </a>
+                </article>
+                <% } %>
+            </div>
+        </section>
+
+
+        
+    </main>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+    
+</body>
+
+</html>

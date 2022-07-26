@@ -7,7 +7,6 @@ const upload = require ("../middlewares/multer");
 const productsControllers = require ("../controllers/productsControllers");
 
 // requerir todos los productos
-
 router.get("/", productsControllers.index);
 
 // carrito de compras
@@ -17,15 +16,17 @@ router.get('/carrito', productsControllers.carrito);
 router.get('/create', productsControllers.createProducts);
 router.post("/", upload.single('image'), productsControllers.newProducts);
 
-
-router.get('/:id', productsControllers.productsId);
-//modificar productos
-router.get("/edit/:id",productsControllers.modifyProducts);
-router.put("/:id", upload.single('image') ,productsControllers.updateProducts);
+// productos del usuario
+router.get("/uploadedProducts", productsControllers.productsUser);
 
 //eliminar productos
 router.delete("/:id", productsControllers.deleteProducts);
 
 //requerir producto por id
+router.get('/:id', productsControllers.productsId);
+//modificar productos
+router.get("/edit/:id",productsControllers.modifyProducts);
+router.put("/:id", upload.single('image') ,productsControllers.updateProducts);
+
 
 module.exports = router;
