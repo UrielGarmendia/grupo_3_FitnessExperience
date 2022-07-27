@@ -224,6 +224,30 @@ main {
     display: none;
 }
 
+.add-cart {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    background-color: rgb(0, 38, 255);
+    border-radius: 8px;
+}
+
+.add-cart i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.add-cart h2 {
+    color: #fff;
+    margin-right: 10px;
+}
+
+button {
+    background: none;
+}
+
 /*  M    E    D    I    A    Q    U    E   R    Y     S */
 /* Escrtitorio */
 @media (min-width:1200px) {

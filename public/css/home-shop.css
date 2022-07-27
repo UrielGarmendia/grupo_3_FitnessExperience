@@ -103,14 +103,14 @@ main section article i,
     color: #39B54A;
 }
 
-article .main-article {
+.main-article {
     width: 100%;
     border-top: 2px solid #777;
     position: relative;
     padding: 5px;
 }
 
-article .main-article .div-precio-descuento {
+.main-article .div-precio-descuento {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -131,13 +131,39 @@ article .main-article .div-precio-descuento {
     font-size: 12px;
 }
 
-.boton-eliminar {
-    background-color: rgb(240, 44, 44);
-    color: #fff;
-    padding: 3px;
-    border: none;
+.contenedor-icono-eliminar {
+    height: 100%;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 4px;
 }
 
+.contenedor-icono-eliminar:hover {
+    background-color: rgba(206, 47, 47, 0.863);
+}
+
+.icono-eliminar {
+    position: static;
+    
+}
+
+button {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.icono-eliminar i {
+    color: #000;
+    font-size: 1.4rem;
+    
+}
+
+.icono-eliminar i:hover {
+    color: #000;
+}
 
 
 /* MEDIA QUERYS */

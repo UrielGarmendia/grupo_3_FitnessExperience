@@ -30,7 +30,11 @@
                                 </div>
                                 <h4 class="descripcion"><%= productos[index].name %></h4>
                                  <form action="/products/<%= productos[index].id %>?_method=DELETE" method="post">
-                                  <button type="submit" class="boton-eliminar">Eliminar</button>
+                                    <button type="submit" class="boton-eliminar icono-eliminar">
+                                    <div class="contenedor-icono-eliminar">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
+                                </button>
                                 </form>
                             </div>
                         </a>

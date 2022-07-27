@@ -12,7 +12,7 @@ const productsControllers = {
     },
 
     carrito: (req, res) => {
-        res.render('carrito');
+        res.render('carrito', { productos: productsList });
     },
 
     createProducts: (req, res) => {
