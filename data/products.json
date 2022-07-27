@@ -1,32 +1,5 @@
 [
   {
-    "id": 11,
-    "name": "colchoneta",
-    "description": "ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus",
-    "image": "cuerdas.webp",
-    "category": "spinning",
-    "price": 27007.33,
-    "discount": 10.41
-  },
-  {
-    "id": 12,
-    "name": "barras",
-    "description": "integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus",
-    "image": "cuerdas.webp",
-    "category": "pilates/yoga",
-    "price": 28558.36,
-    "discount": 25.85
-  },
-  {
-    "id": 13,
-    "name": "tobilleras",
-    "description": "lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non",
-    "image": "cuerdas.webp",
-    "category": "kits de entrenamiento",
-    "price": 43076.32,
-    "discount": 21.14
-  },
-  {
     "id": 14,
     "name": "mancuerna",
     "description": "ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus",
@@ -34,33 +7,6 @@
     "category": "spinning",
     "price": 57114.17,
     "discount": 11.53
-  },
-  {
-    "id": 15,
-    "name": "rueda abdominal",
-    "description": "dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis",
-    "image": "cuerdas.webp",
-    "category": "banco de trabajo",
-    "price": 67085.74,
-    "discount": 14.61
-  },
-  {
-    "id": 16,
-    "name": "rueda abdominal",
-    "description": "proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem",
-    "image": "cuerdas.webp",
-    "category": "kits de entrenamiento",
-    "price": 4096.87,
-    "discount": 15.65
-  },
-  {
-    "id": 17,
-    "name": "rueda abdominal",
-    "description": "cursus urna ut tellus nulla ut erat id mauris vulputate",
-    "image": "cuerdas.webp",
-    "category": "kits de entrenamiento",
-    "price": 21874.16,
-    "discount": 13.72
   },
   {
     "id": 18,
@@ -115,15 +61,6 @@
     "category": "maquinas",
     "price": 12013,
     "discount": 29.18
-  },
-  {
-    "id": 24,
-    "name": "tobilleras",
-    "description": "dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede",
-    "image": "cuerdas.webp",
-    "category": "funcional",
-    "price": 12482.86,
-    "discount": 17.94
   },
   {
     "id": 25,

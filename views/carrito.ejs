@@ -26,70 +26,33 @@
             <button type="submit" class="boton-enviar">FINALIZAR COMPRA</button>
         </form>
         <!-- PRODUCTOS -->
+        <section class="ofertas">
+            <a href="#">
+                <h3>Productos agregados a tu carrito</h3>
+            </a>
+            <div class="productos">
 
-        <section class="section-productos">
-            <div class="producto">
-                <img src="/images/colchonetas.webp" alt="colchoneta">
-                <div class="textos">
-                    <div class="contenedor-icono-eliminar">
-                        <div class="icono-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-                    <h2 class="titulo">
-                        Colchoneta
-                    </h2>
-    
-                    <p class="cantidad">
-                        1 unidad
-                    </p>
-                    <p class="precio">
-                        $1000
-                    </p>
-                </div>
-            </div>
-    
-            <div class="producto">
-                <img src="/images/cuerdas.webp" alt="cuerda">
-                <div class="textos">
-                    <div class="contenedor-icono-eliminar">
-                        <div class="icono-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-                    <h2 class="titulo">
-                        Cuerda
-                    </h2>
-    
-                    <p class="cantidad">
-                        1 unidad
-                    </p>
-                    <p class="precio">
-                        $1000
-                    </p>
-                </div>
-            </div>
-    
-            <div class="producto">
-                <img src="/images/pesas(1).webp" alt="pesas">
-                <div class="textos">
-                    <div class="contenedor-icono-eliminar">
-                        <div class="icono-eliminar">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-                    <h2 class="titulo">
-                        Pesas
-                    </h2>
-    
-                    <p class="cantidad">
-                        1 unidad
-                    </p>
-                    <p class="precio">
-                        $1000
-                    </p>
-                </div>
-            </div>
+                <% for(let index = 0; index < 4; index++) { %>
+                    <article>  
+                        <a href="/products/<%= productos[index].id %>">
+                            <img src="/images/<%= productos[index].image %>" alt="pesas-negro">
+                            <div class="main-article">
+                                <div class="div-precio-descuento">
+                                    <p class="precio"><%= productos[index].price %></p>
+                                    <p class="descuento"><%= productos[index].discount %></p>
+                                </div>
+                                <h4 class="descripcion"><%= productos[index].name %></h4>
+                                 <form>
+                                    <button type="submit" class="boton-eliminar icono-eliminar">
+                                    <div class="contenedor-icono-eliminar">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
+                                </button>
+                                </form>
+                            </div>
+                        </a>
+                </article>
+                <% } %>
             </div>
         </section>
 

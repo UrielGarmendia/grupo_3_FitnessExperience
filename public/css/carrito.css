@@ -119,7 +119,8 @@ nav {
 
 /* M    A    I    N */
 main {
-    padding: 14px;
+    width: 90%;
+    margin: 15px auto;
 }
 
 
@@ -134,7 +135,6 @@ main {
 
 .boton-enviar {
 background: rgba(0, 0, 0, 0.793);
-
 color: #fff;
 font-size: 1em;
 font-weight: bold;
@@ -146,19 +146,6 @@ box-shadow: 4px 4px 4px #000;
 
 .boton-enviar:hover {
 color: rgb(255, 230, 2);
-}
-
-
-
-.icono-eliminar {
-    position: absolute;
-    right: 18px;
-    top: 10px;
-    font-size: 1.4em;
-}
-
-.icono-eliminar i:hover {
-    color: rgb(174, 0, 0);
 }
 
 .resumen-de-compra {
@@ -188,52 +175,70 @@ color: rgb(255, 230, 2);
     color: #fff;
 }
 
-
-.producto {
-    max-width: 400px;
-    margin: 50px auto;
-    margin-bottom: 8px;
-    background-color: rgba(255, 255, 255, 0.505);
-    border-radius: 2%;
-    border: 2px solid rgb(255, 230, 0);
-    box-shadow: 4px 4px 4px #000;
+section {
+    margin-bottom: 20px;
 }
 
-.producto:hover {
-    background-color: rgba(255, 255, 255);
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.titulo,
-.precio,
-.cantidad {
-    text-align: center;
-    display: block;
-    margin-bottom: 6px;
-    padding: 4px 6px;
+main section article {
+    background-color: #fff;
+    margin: 10px 0px;
+    margin-bottom: 20px;
+    outline: rgb(255, 230, 2) 1px solid;
+    width: 60%;
+    margin: 10px auto;
+    margin-bottom: 20px;
 }
 
-.producto img { 
+main section article a {
+    color: #000;
+}
+
+main section article {
+    width: 90%;
+}
+
+main section article p,
+main section article h4 {
+    font-size: 14px;
+}
+
+main section a {
+    text-decoration: none;
+}
+
+main section h3 {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+main section h3:hover {
+    color: rgb(255, 230, 2);
+}
+
+main section article img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 2%;
 }
 
-.producto p {
-    padding: 4px;
-    font-size: 1.4rem;
-
+main section article i,
+.descuento {
+    color: #39B54A;
 }
 
-.textos {
-    border-top:2px solid #777;
+.main-article {
+    width: 100%;
+    border-top: 2px solid #777;
     position: relative;
+    padding: 5px;
 }
 
-.producto h2 {
-    font-size: 1.8rem;
-}
-
-article .main-article .div-precio-descuento {
+.main-article .div-precio-descuento {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -254,12 +259,43 @@ article .main-article .div-precio-descuento {
     font-size: 12px;
 }
 
+.contenedor-icono-eliminar {
+    height: 100%;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 4px;
+}
+
+.contenedor-icono-eliminar:hover {
+    background-color: rgba(206, 47, 47, 0.863);
+}
+
+.icono-eliminar {
+    position: static;
+    
+}
+
+button {
+    background: none;
+    border: none;
+    width: 100%;
+}
+
+.icono-eliminar i {
+    color: #000;
+    font-size: 1.4rem;
+    
+}
+
+.icono-eliminar i:hover {
+    color: #000;
+}
+
 /* MEDIA QUERYS */
 
 @media (min-width: 420px) {
-main {
-    margin: 30px auto;
-}
 
 section {
     margin-bottom: 25px;
@@ -312,13 +348,6 @@ main section .productos article {
 }
 
 @media (min-width: 769px) {
-    main section .productos article {
-        width: 22%;
-    }
-
-    main section h3 {
-        font-size: 23px;
-    }
 
     .article-resumen-de-compra{
         max-width: 50%;
@@ -343,56 +372,13 @@ main section .productos article {
    .boton-enviar:hover {
     color: rgb(255, 230, 2);
    }
-
-    .section-productos {
-        max-width: none;
-        display: flex;
-        justify-content: space-around;
+   
+    main section .productos article {
+        width: 22%;
     }
 
-    .producto {
-        max-width: none;
-        margin: 8px;
-        border-radius: 0;
-    }
-
-    .producto img {
-        border-radius: 0;
-    }
-
-
-    .contenedor-icono-eliminar {
-        height: 100%;
-        padding: 5px 10px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        border-radius: 4px;
-    }
-    
-    .contenedor-icono-eliminar:hover {
-        background-color: rgba(206, 47, 47, 0.863);
-    }
-    
-    .icono-eliminar {
-        position: static;
-        
-    }
-    
-    button {
-        background: none;
-        border: none;
-        width: 100%;
-    }
-    
-    .icono-eliminar i {
-        color: #000;
-        font-size: 1.4rem;
-        
-    }
-    
-    .icono-eliminar i:hover {
-        color: #000;
+    main section h3 {
+        font-size: 23px;
     }
   
 }
