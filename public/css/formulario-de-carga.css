@@ -64,7 +64,7 @@ h2 {
     color: rgb(255, 251, 0);
 }
 
-.datos-adicionales input {
+.datos-adicionales .input {
     width: 100%;
     background: #333;
     padding: 10px;

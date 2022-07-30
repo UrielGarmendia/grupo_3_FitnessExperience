@@ -14,10 +14,16 @@
 <input class="controls imagen-producto" name="image" type="file">
     <h2>Mas datos sobre el producto a subir</h2>
 <div class="datos-adicionales">
-    <input type="text" name="name" placeholder="Nombre del producto">
-    <input type="text" name="price" placeholder="Precio del producto (solo dolares)">
-    <input type="text" name="discount" placeholder="Descuento del producto">
-    <input type="text" name="description" placeholder="Descripcion del producto">
+    <input type="text" name="name" placeholder="Nombre del producto" class="input">
+    <input type="text" name="price" placeholder="Precio del producto" class="input">
+    <select name="opciones-de-moneda" class="input selector-de-moneda" class="input">
+        <option value="Vendedor">ARS(Peso argentino)</option>
+        <option value="Comprador">EUR(Euro)</option>
+        <option value="Comprador">USD(Dolar)</option>
+        <option value="Comprador">GBP(Libra esterlina)</option>        
+    </select>
+    <input type="text" name="discount" placeholder="Descuento del producto" class="input">
+    <input type="text" name="description" placeholder="Descripcion del producto" class="input">
 </div>
 <input class="button" type="submit" value="Subir">
 </form>
