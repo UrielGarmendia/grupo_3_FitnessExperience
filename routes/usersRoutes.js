@@ -1,24 +1,17 @@
 const express = require('express');
 const router = express.Router();
-
-const mainController = require('../controllers/mainControllers');
+const upload = require ("../middlewares/userMulter");
 const usersControllers = require('../controllers/userControllers');
 
-
-// crear
-router.get('/register', usersControllers.register);
-
-
-//actualizar usuario
-
-
-//eliminar usuario
+// Mostrar el registro de usuario
+router.get('/register', usersControllers.createUser)
+router.post('/', upload
+.single('image'), usersControllers.newUser);
 
 //ingresar
 router.get('/login', usersControllers.login);
 
 //buscar usuario por id
 
-//mostrar todos los usuarios registrados
 
 module.exports = router

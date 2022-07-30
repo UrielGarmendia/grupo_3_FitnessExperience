@@ -10,7 +10,7 @@
     <!-- HEADER -->
     <%- include('./partials/reducedHeader')  %>
     <!-- FORMULARIO -->
-  <form class="form-register">
+    <form class="form-register" action="/users" method="post" enctype="multipart/form-data">
     <h4>Formulario Registro</h4>
     <div class="user-name">
     <input class="controls" type="text" name="firstName" placeholder="Nombre de usuario" required><i class="fa-solid fa-user"></i>
@@ -25,8 +25,9 @@
     <input class="controls" type="password" name="password" placeholder="Contraseña" required><i class="fa-solid fa-key"></i>
     </div>
     <div class="contrasenia">
-        <input class="controls" type="password" name="password" placeholder="Confirme su contraseña" required><i class="fa-solid fa-key"></i>
+        <input class="controls" type="password" name="password-confirmed" placeholder="Confirme su contraseña" required><i class="fa-solid fa-key"></i>
         </div>
+        <input class="controls imagen-usuario" name="image" type="file">
         
     <input class="botons" type="submit" value="Registrar">
     <p><a href="/users/login">¿Ya tengo Cuenta?</a></p>
