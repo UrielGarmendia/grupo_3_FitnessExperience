@@ -78,45 +78,5 @@
     "email": "ethaine9@yellowbook.com",
     "password": "JNhSKgjoM",
     "image": "https://robohash.org/rerumerroreveniet.png?size=50x50&set=set1"
-  },
-  {
-    "id": 11,
-    "firstName": "Leigh",
-    "lastName": "Sorley",
-    "email": "lsorleya@fastcompany.com",
-    "password": "UFX1N9zxhkm",
-    "image": "https://robohash.org/quisquamdistinctiovel.png?size=50x50&set=set1"
-  },
-  {
-    "id": 12,
-    "firstName": "Kendell",
-    "lastName": "Beilby",
-    "email": "kbeilbyb@meetup.com",
-    "password": "dgtIq3",
-    "image": "https://robohash.org/cumquequostempore.png?size=50x50&set=set1"
-  },
-  {
-    "id": 13,
-    "firstName": "Pinchas",
-    "lastName": "Leed",
-    "email": "pleedc@comcast.net",
-    "password": "ERrNLFcJgF7",
-    "image": "https://robohash.org/odioquidemaut.png?size=50x50&set=set1"
-  },
-  {
-    "id": 14,
-    "firstName": "Annora",
-    "lastName": "Lehrmann",
-    "email": "alehrmannd@fastcompany.com",
-    "password": "0cZxjfvAcVD",
-    "image": "https://robohash.org/illumomnisdolorem.png?size=50x50&set=set1"
-  },
-  {
-    "id": 15,
-    "firstName": "Tawsha",
-    "lastName": "Bateup",
-    "email": "tbateupe@cyberchimps.com",
-    "password": "ktzAbXoo",
-    "image": "https://robohash.org/enimminusearum.png?size=50x50&set=set1"
   }
 ]
