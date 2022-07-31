@@ -131,6 +131,12 @@ main section article i,
     font-size: 12px;
 }
 
+.form-mis-productos {
+display: flex;
+justify-content: end;
+align-items: center;
+}
+
 .contenedor-icono-eliminar {
     height: 100%;
     padding: 5px 10px;
@@ -146,7 +152,6 @@ main section article i,
 
 .icono-eliminar {
     position: static;
-    
 }
 
 button {
@@ -158,11 +163,29 @@ button {
 .icono-eliminar i {
     color: #000;
     font-size: 1.4rem;
-    
 }
 
 .icono-eliminar i:hover {
     color: #000;
+    cursor: pointer;
+}
+
+.contenedor-icono-editar {
+    height: 100%;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 4px;
+}
+
+.contenedor-icono-editar:hover {
+    background-color: rgb(255, 230, 2);
+}
+
+.contenedor-icono-editar i {
+    color: #000;
+    font-size: 1.4rem;
 }
 
 

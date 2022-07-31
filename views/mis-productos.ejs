@@ -19,7 +19,7 @@
             </a>
             <div class="productos">
 
-                <% for(let index = 0; index < 8; index++) { %>
+                <% for(let index = 0; index < productos.length; index++) { %>
                     <article>  
                         <a href="/products/<%= productos[index].id %>">
                             <img src="/images/<%= productos[index].image %>" alt="pesas-negro">
@@ -29,12 +29,15 @@
                                     <p class="descuento"><%= productos[index].discount %></p>
                                 </div>
                                 <h4 class="descripcion"><%= productos[index].name %></h4>
-                                 <form action="/products/<%= productos[index].id %>?_method=DELETE" method="post">
+                                 <form action="/products/<%= productos[index].id %>?_method=DELETE" method="post" class="form-mis-productos">
                                     <button type="submit" class="boton-eliminar icono-eliminar">
                                     <div class="contenedor-icono-eliminar">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </div>
                                 </button>
+                                <div class="contenedor-icono-editar">
+                                    <a href="/products/edit/<%= productos[index].id %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                                </div>
                                 </form>
                             </div>
                         </a>

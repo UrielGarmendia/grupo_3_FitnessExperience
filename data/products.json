@@ -1,33 +1,15 @@
 [
   {
+    "name": "discos",
+    "price": "5324.51",
+    "opcionesDeMoneda": "Vendedor",
+    "discount": "27.91",
+    "description": "sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue",
     "id": 1,
-    "name": "mancuerna",
-    "description": "ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus",
-    "image": "cuerdas.webp",
-    "category": "spinning",
-    "price": 57114.17,
-    "discount": 11.53
+    "image": "/products/product-img-1659286194021.webp"
   },
   {
     "id": 2,
-    "name": "barras",
-    "description": "sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue",
-    "image": "cuerdas.webp",
-    "category": "maquinas",
-    "price": 5324.51,
-    "discount": 27.91
-  },
-  {
-    "id": 3,
-    "name": "colchoneta",
-    "description": "sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel",
-    "image": "cuerdas.webp",
-    "category": "banco de trabajo",
-    "price": 33973.69,
-    "discount": 14.4
-  },
-  {
-    "id": 4,
     "name": "rueda abdominal",
     "description": "blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem",
     "image": "cuerdas.webp",
@@ -36,7 +18,7 @@
     "discount": 14.87
   },
   {
-    "id": 5,
+    "id": 3,
     "name": "multigimnasio",
     "description": "in consequat ut nulla sed accumsan felis ut at dolor",
     "image": "cuerdas.webp",
@@ -45,7 +27,7 @@
     "discount": 12.86
   },
   {
-    "id": 6,
+    "id": 4,
     "name": "tobilleras",
     "description": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis",
     "image": "cuerdas.webp",
@@ -54,66 +36,37 @@
     "discount": 22.19
   },
   {
+    "name": "caminadora",
+    "price": "$10.000",
+    "discount": "30%",
+    "description": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis",
+    "id": 5,
+    "image": "/products/product-img-1659283775951.webp"
+  },
+  {
+    "name": "colchonetas",
+    "price": "$15.000",
+    "discount": "40%",
+    "description": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis",
+    "id": 6,
+    "image": "/products/product-img-1659283820620.webp"
+  },
+  {
+    "name": "cuerdas",
+    "price": "$10.000",
+    "opcionesDeMoneda": "Vendedor",
+    "discount": "30%",
+    "description": "blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem",
     "id": 7,
-    "name": "bancos",
-    "description": "ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea",
-    "image": "cuerdas.webp",
-    "category": "maquinas",
-    "price": 12013,
-    "discount": 29.18
+    "image": "/products/product-img-1659287299508.webp"
   },
   {
+    "name": "kit de pesas",
+    "price": "$10.000",
+    "opcionesDeMoneda": "Vendedor",
+    "discount": "23%",
+    "description": "sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue",
     "id": 8,
-    "name": "soga de saltar",
-    "description": "nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus",
-    "image": "cuerdas.webp",
-    "category": "maquinas",
-    "price": 47967.75,
-    "discount": 11.47
-  },
-  {
-    "id": 9,
-    "name": "colchoneta",
-    "description": "sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis",
-    "image": "cuerdas.webp",
-    "category": "maquinas",
-    "price": 49513.15,
-    "discount": 22.18
-  },
-  {
-    "id": 10,
-    "name": "mancuerna",
-    "description": "integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed",
-    "image": "cuerdas.webp",
-    "category": "spinning",
-    "price": 53050.01,
-    "discount": 12.92
-  },
-  {
-    "id": 11,
-    "name": "barras",
-    "description": "sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo",
-    "image": "cuerdas.webp",
-    "category": "funcional",
-    "price": 17253.72,
-    "discount": 18.77
-  },
-  {
-    "id": 12,
-    "name": "mancuerna",
-    "description": "morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel",
-    "image": "cuerdas.webp",
-    "category": "maquinas",
-    "price": 9225.03,
-    "discount": 12.08
-  },
-  {
-    "id": 13,
-    "name": "tobilleras",
-    "description": "augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea",
-    "image": "cuerdas.webp",
-    "category": "spinning",
-    "price": 24367.17,
-    "discount": 13.06
+    "image": "/products/product-img-1659287743097.webp"
   }
 ]
