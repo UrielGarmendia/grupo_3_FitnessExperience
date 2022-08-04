@@ -3,10 +3,13 @@ const router = express.Router();
 const upload = require ("../middlewares/userMulter");
 const usersControllers = require('../controllers/userControllers');
 
+const userValidations = require ('../middlewares/userValidations.js');
+
 // Mostrar el registro de usuario
 router.get('/register', usersControllers.createUser)
-router.post('/', upload
-.single('image'), usersControllers.newUser);
+
+// proceso del registro
+router.post('/', upload.single('image'), userValidations,  usersControllers.newUser);
 
 //ingresar
 router.get('/login', usersControllers.login);

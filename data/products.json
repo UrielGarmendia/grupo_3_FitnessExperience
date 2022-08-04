@@ -1,12 +1,12 @@
 [
   {
     "name": "discos",
-    "price": "5324.51",
+    "price": "8000",
     "opcionesDeMoneda": "Vendedor",
     "discount": "27.91",
     "description": "sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue",
-    "id": 1,
-    "image": "/products/product-img-1659286194021.webp"
+    "id": "1",
+    "image": "/products/product-img-1659536376530.webp"
   },
   {
     "id": 2,
