@@ -1,9 +1,10 @@
 const { v4: uuidv4 } = require ("uuid")
 const fs = require ("fs")
 const path = require('path');
-
 const productsListPath = path.join(__dirname,"../data/products.json");
 const productsList = JSON.parse(fs.readFileSync(productsListPath,"utf-8"));
+
+const { validationResult } = require('express-validator');
 
 const productsControllers = {
     index: (req,res) => {
@@ -30,17 +31,30 @@ const productsControllers = {
 
     newProducts: (req,res) => {
         //recepcion de informacion cargada en el form  de "createProducts"
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            res.render('/products/formulario-de-carga', { 
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        };
+
+
         let product = req.body;
         let image = req.file.filename;
 
         product.id = uuidv4();
         product.image = image;
 
-        productsList.push(product);
+        if (resultValidation.errors.length == 0) {
+            productsList.push(product);
 
-        fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2));
+            fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2))
 
-        res.redirect('/products');
+           
+            res.redirect('/products');
+        }
     },
     modifyProducts: (req,res) =>{
         // envio del formulario para modificar el producto

@@ -7,15 +7,15 @@
 }
 
 
-body{
+/* body{
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 51%, rgba(208,195,3,1) 97%);
     background-repeat: no-repeat;
     background-size: auto;
     border: 3px dashed red;
-}
+} */
 
-.seccion-encabezado{
+/* .seccion-encabezado{
     background-image: url(/images/pexels-victor-freitas-841130.jpg);
     position: absolute;
     background-size: cover;
@@ -56,98 +56,4 @@ img{
     position: relative;
     width: 100%;
     height: 75%;
-}
-
-
-
-
-/* .article-encabezado{
-    overflow: hidden;
-    display: grid;
-    position: relative;
-    align-items: center;
-    }
-     */
-    /* .article-encabezado{ */
-        /* background-image: url(/images/pexels-victor-freitas-841130.jpg);
-        position: relative;
-        background-size: cover;
-        background-position: center;
-        border: 2px dashed red;
-        height: 100%;
-         */
-    
-    
-/* .div-article-encabezado{
-            background-color: blue;
-            overflow: hidden;
-            width: 100%;
-        } */
-
-
-/* .encabezado-img{ */
-    /* background-image: url(/images/pexels-victor-freitas-841130.jpg);
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    border: 2px dashed red; */
-
-
-
-
-
-
-
-
-
-
-
-
-------------------------------------------
-
-
-
-
-/* body
-    width: 100%;
-    background-image: url(/images/pexels-victor-freitas-841130.jpg);
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-color: rgb(61, 61, 61);
-    border: 5px dashed red;
-
-
-/* .logo{
-    /* border: dashed 2px red; */
-    /* display: flex;
-    align-items: center;
-}
-
-.logo img{
-    width: 50px;
-    height: 50px;
-}
-
-header p{
-    position: relative;
-    color: white
-}
-
-
-M   A   I   N
-
-main {
-    width: 90%;
-    margin: 15px auto;
-    }
-
-.frase {
-    display: inline-block;
-    display: grid;
-    margin-bottom: 20px;
-}
-
-.frase-vos{
-    color: white;
-    position: relative;
-    
+} */

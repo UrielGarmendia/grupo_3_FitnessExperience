@@ -6,6 +6,8 @@ const upload = require ("../middlewares/productsMulter");
 
 const productsControllers = require ("../controllers/productsControllers");
 
+const productValidations = require('../middlewares/productValidator');
+
 // requerir todos los productos
 router.get("/", productsControllers.index);
 
@@ -14,7 +16,7 @@ router.get('/carrito', productsControllers.carrito);
 
 // crear productos
 router.get('/create', productsControllers.createProducts);
-router.post("/", upload.single('image'), productsControllers.newProducts);
+router.post("/", upload.single('image'),productValidations , productsControllers.newProducts);
 
 // productos del usuario
 router.get("/uploadedProducts", productsControllers.productsUser);

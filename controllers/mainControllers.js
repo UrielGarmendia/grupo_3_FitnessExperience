@@ -10,6 +10,9 @@ const mainControllers = {
     index: (req, res) => {
         res.render("home-shop", {productos: productsList});
     },
+    homePage: (req, res) => {
+        res.render('home-page');
+    }
 }
 
 module.exports = mainControllers;

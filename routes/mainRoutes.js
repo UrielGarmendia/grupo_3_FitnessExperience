@@ -5,6 +5,7 @@ const usersControllers = require('../controllers/userControllers');
 
 
 router.get('/', mainControllers.index);
+router.get('/home-page', mainControllers.homePage)
 
 // router.get('/detalle-producto/:id', mainController.detalle);
 // router.get('/carrito', mainController.carrito);

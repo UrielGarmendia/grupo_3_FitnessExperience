@@ -2,12 +2,10 @@ const express = require('express');
 const path = require('path');
 const { body } = require('express-validator');
 
-const userValidations = [
-    body('firstName').notEmpty().withMessage('*Tienes que escribir un nombre'),
-    body('email').notEmpty().withMessage('*Escribe un correo electrónico').bail()
-    .isEmail().withMessage('*Mail invalido'),
-    body('password').notEmpty().withMessage('*Escribe una contraseña'),
-    body('passwordConfirmed').notEmpty().withMessage('*Confirma tu contraseña'),
+const productValidations = [
+    body('name').notEmpty().withMessage('*Tienes que escribir un nombre al producto'),
+    body('price').notEmpty().withMessage('*Escribe un precio'),
+    body('description').notEmpty().withMessage('*Describe el producto a subir'),
     body('image').custom((value, { req }) => {
 		let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png'];
@@ -24,4 +22,4 @@ const userValidations = [
 	})
 ]
 
-module.exports = userValidations;
+module.exports = productValidations;

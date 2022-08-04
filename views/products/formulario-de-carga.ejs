@@ -10,22 +10,47 @@
     <!-- HEADER -->
     <%- include('../partials/header')  %>
     <!-- FORMULARIO -->
+
 <form class="datos" action="/products" method="post" enctype="multipart/form-data">
+
+    <% if (locals.errors && errors.image) { %>
+        <div class="text-danger">
+          <%= errors.image.msg %> 
+        </div>
+      <% } %>
 <input class="controls imagen-producto" name="image" type="file">
+
     <h2>Mas datos sobre el producto a subir</h2>
+
 <div class="datos-adicionales">
+
+    <% if (locals.errors && errors.name) { %>
+        <div class="text-danger">
+          <%= errors.name.msg %> 
+        </div>
+      <% } %>
     <input type="text" name="name" placeholder="Nombre del producto" class="input">
+
+    <% if (locals.errors && errors.price) { %>
+        <div class="text-danger">
+          <%= errors.price.msg %> 
+        </div>
+      <% } %>
     <input type="text" name="price" placeholder="Precio del producto" class="input">
-    <select name="opcionesDeMoneda" class="input selector-de-moneda" class="input">
-        <option value="Vendedor">ARS(Peso argentino)</option>
-        <option value="Comprador">EUR(Euro)</option>
-        <option value="Comprador">USD(Dolar)</option>
-        <option value="Comprador">GBP(Libra esterlina)</option>        
-    </select>
-    <input type="text" name="discount" placeholder="Descuento del producto" class="input">
+
+    <input type="text" name="discount" placeholder="Descuento del producto(opcional)" class="input">
+
+    <% if (locals.errors && errors.description) { %>
+        <div class="text-danger">
+          <%= errors.description.msg %> 
+        </div>
+      <% } %>
     <input type="text" name="description" placeholder="Descripcion del producto" class="input">
+
 </div>
+
 <input class="button" type="submit" value="Subir">
+
 </form>
 
 </body>
