@@ -23,6 +23,12 @@ body {
     color: white;
 }
 
+.text-danger {
+    color: rgb(245, 68, 68);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
 .button {
     width: 65%;
     padding: 10px;

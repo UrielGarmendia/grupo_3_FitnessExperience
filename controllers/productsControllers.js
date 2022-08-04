@@ -34,7 +34,7 @@ const productsControllers = {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            res.render('/products/formulario-de-carga', { 
+            res.render("products/formulario-de-carga", { 
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
