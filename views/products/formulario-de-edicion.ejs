@@ -17,12 +17,6 @@
 <div class="datos-adicionales">
     <input type="text" name="name" placeholder="Nombre del producto" value="<%= producto.name ?? ''%>" class="input">
     <input type="text" name="price" placeholder="Precio del producto" class="input" value="<%= producto.price ?? ''%>"">
-    <select name="opcionesDeMoneda" class="input selector-de-moneda" class="input" value="<%= producto.opcionesDeMoneda ?? ''%>"">
-        <option value="Vendedor">ARS(Peso argentino)</option>
-        <option value="Comprador">EUR(Euro)</option>
-        <option value="Comprador">USD(Dolar)</option>
-        <option value="Comprador">GBP(Libra esterlina)</option>        
-    </select>
     <input type="text" name="discount" placeholder="Descuento del producto" value="<%= producto.discount ?? ''%>" class="input">
     <input type="text" name="description" placeholder="Descripcion del producto" value="<%= producto.description ?? ''%>" class="input">
 </div>

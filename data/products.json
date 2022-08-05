@@ -68,13 +68,5 @@
     "description": "sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue",
     "id": 8,
     "image": "/products/product-img-1659287743097.webp"
-  },
-  {
-    "name": "buñuelo",
-    "price": "200.000",
-    "discount": "",
-    "description": "Pizza amasada por messi",
-    "id": "a08a910f-a295-464d-9573-5c0053906334",
-    "image": "/products/product-img-1659649563063.jpg"
   }
 ]

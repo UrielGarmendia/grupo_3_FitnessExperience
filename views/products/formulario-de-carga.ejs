@@ -29,14 +29,14 @@
           <%= errors.name.msg %> 
         </div>
       <% } %>
-    <input type="text" name="name" placeholder="Nombre del producto" class="input">
+    <input type="text" name="name" placeholder="Nombre del producto" class="input" value="<%= locals.oldData ? oldData.name : null %>">
 
     <% if (locals.errors && errors.price) { %>
         <div class="text-danger">
           <%= errors.price.msg %> 
         </div>
       <% } %>
-    <input type="text" name="price" placeholder="Precio del producto" class="input">
+    <input type="text" name="price" placeholder="Precio del producto" class="input" value="<%= locals.oldData ? oldData.price : null %>">
 
     <input type="text" name="discount" placeholder="Descuento del producto(opcional)" class="input">
 
@@ -45,7 +45,7 @@
           <%= errors.description.msg %> 
         </div>
       <% } %>
-    <input type="text" name="description" placeholder="Descripcion del producto" class="input">
+    <input type="text" name="description" placeholder="Descripcion del producto" class="input" value="<%= locals.oldData ? oldData.description : null %>">
 
 </div>
 
