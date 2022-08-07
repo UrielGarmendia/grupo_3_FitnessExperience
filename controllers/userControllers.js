@@ -1,6 +1,7 @@
 const { v4: uuidv4 } = require ("uuid")
 const fs = require ("fs")
 const path = require('path');
+const bcryptjs = require('bcryptjs')
 
 const { validationResult } = require('express-validator');
 
@@ -24,6 +25,15 @@ const usersControllers = {
 
         let user = req.body;
         let image = req.file.filename;
+
+        if (user.password == user.passwordConfirmed) {
+            user.password = bcryptjs.hashSync(user.password, 10);
+            if(bcryptjs.compareSync(user.passwordConfirmed, user.password)) {
+                user.passwordConfirmed = user.password;
+            }
+        } else {
+            throw new Error(`*Las credenciales son invalidas`);
+        }
 
         user.id = uuidv4();
         user.image = image;
