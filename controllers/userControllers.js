@@ -32,13 +32,20 @@ const usersControllers = {
                 user.passwordConfirmed = user.password;
             }
         } else {
-            throw new Error(`*Las credenciales son invalidas`);
+            res.render('register', { 
+                errors: {
+                    passwordConfirmed: {
+                        msg: 'La contraseña no coincide'
+                    }
+                },
+                oldData: req.body
+            });
         }
 
         user.id = uuidv4();
         user.image = image;
 
-        if (resultValidation.errors.length == 0) {
+        if (resultValidation.errors.length == 0 && user.password == user.passwordConfirmed) {
             usersList.push(user);
 
             fs.writeFileSync(usersListPath, JSON.stringify(usersList, null, 2))
