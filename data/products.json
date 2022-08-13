@@ -1,12 +1,11 @@
 [
   {
     "name": "discos",
-    "price": "8000",
-    "opcionesDeMoneda": "Vendedor",
+    "price": "7000",
     "discount": "27.91",
     "description": "sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue",
     "id": "1",
-    "image": "/products/product-img-1659536376530.webp"
+    "image": "/products/product-img-1660344189308.webp"
   },
   {
     "id": 2,
@@ -27,13 +26,12 @@
     "discount": 12.86
   },
   {
-    "id": 4,
-    "name": "tobilleras",
+    "name": "rodilleras",
+    "price": "34022.07",
+    "discount": "22.19",
     "description": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis",
-    "image": "cuerdas.webp",
-    "category": "banco de trabajo",
-    "price": 34022.07,
-    "discount": 22.19
+    "id": "4",
+    "image": "/products/product-img-1660403377459.webp"
   },
   {
     "name": "caminadora",
