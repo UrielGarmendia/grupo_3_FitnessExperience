@@ -9,16 +9,17 @@ const { validationResult } = require('express-validator');
 const productsControllers = {
     index: (req,res) => {
         //enviara la lista de todos los productos
-        res.render('home-shop', { productos: productsList });
+        console.log(req.session.userLogged);
+        res.render('home-shop', { productos: productsList, user: req.session.userLogged });
     },
 
     carrito: (req, res) => {
-        res.render('carrito', { productos: productsList });
+        res.render('carrito', { productos: productsList, user: req.session.userLogged });
     },
 
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
-        res.render("products/formulario-de-carga");
+        res.render("products/formulario-de-carga", { user: req.session.userLogged });
     },
 
     productsId: (req, res) => {
@@ -26,17 +27,19 @@ const productsControllers = {
         let id = req.params.id;
         let producto = productsList.find(producto => producto.id == id);
         // console.log('------Si aparece: Cannot read properties of undefined. Ignorar el error--------');
-        res.render("detalle-producto", { producto, productos: productsList });
+        res.render("detalle-producto", { producto, productos: productsList, user: req.session.userLogged });
     },
 
     newProducts: (req,res) => {
         //recepcion de informacion cargada en el form  de "createProducts"
+        console.log(req.session.userLogged);
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
             res.render("products/formulario-de-carga", { 
                 errors: resultValidation.mapped(),
-                oldData: req.body
+                oldData: req.body,
+                user: req.session.userLogged
             });
         };
 
@@ -61,12 +64,12 @@ const productsControllers = {
        let id = req.params.id;
        let producto = productsList.find(producto => producto.id == id);
 
-        res.render("products/formulario-de-edicion", { producto });
+        res.render("products/formulario-de-edicion", { producto, user: req.session.userLogged });
     },
 
     productsUser: (req, res) => {
         // envio de la vista de los productos subidos por el usuario
-        res.render('mis-productos', { productos: productsList });
+        res.render('mis-productos', { productos: productsList, user: req.session.userLogged });
     },
 
     updateProducts: (req,res) => {
