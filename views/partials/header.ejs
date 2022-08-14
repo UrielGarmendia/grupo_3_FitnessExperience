@@ -1,6 +1,6 @@
 <header>
     <nav>
-        <a href="/products" class="link-logo">
+        <a href="/" class="link-logo">
             <div class="logo">
                 <img src="/images/logoX.png">
                 <p>FitXperience</p>
@@ -13,30 +13,21 @@
         <div class="movil-icons">
             <a href="/products/carrito" class="icono-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="#" class="icono-bars"><i class="fa-solid fa-bars"></i></a>
-            <a href="/users/login" class="icono-user"><p>
-                <% if (locals.isLogged) {%>
-                <%= locals.userLogged.firstName %> 
-                <% } %>
-            </p><i class="fa-solid fa-circle-user"></i></a>
+            <a href="/users/login" class="icono-user"><i class="fa-solid fa-circle-user"></i></a>
         </div>
     </nav>
     <div class="sub-nav">
         <ul class="left-ul">
             <li><a href="#">Accesorios</a></li>
             <li><a href="#">Categorias</a></li>
+            <li><a href="#">Ofertas</a></li>
         </ul>
-        
         <ul class="right-ul">
-            <% if (locals.isLogged) {%>
-                <li><a href="/users/logout">Logout</a></li>
             <li><a href="/products/create">Crear producto</a></li>
+            <li><a href="/users/register">Creá tu cuenta</a></li>
             <li><a href="/products/uploadedProducts"><i class="fa-solid fa-arrow-up-from-bracket"></i></a></li>
             <li>
-                <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></i></a>
-            </li>
-                 <% } else { %>
-                    <li><a href="/users/register">Creá tu cuenta</a></li>
-                    <% } %>  
+                <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
         </ul>
     </div>
 </header>
@@ -229,17 +220,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     }
 
     .icono-user {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
+        display: block;
         font-size: 20px;
     }
 
-    .icono-user p {
-        margin-right: 5px;
-        font-size: 13px;
-        font-weight: bold;
-    }
 }
 
 @media (min-width: 769px) {
@@ -253,10 +237,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
     .sub-nav ul a {
         font-size: 14px;
-    }
-
-    .icono-user p {
-        font-size: 15px;
     }
 
 }

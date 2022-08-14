@@ -5,7 +5,6 @@ const bcryptjs = require('bcryptjs')
 
 const { validationResult } = require('express-validator');
 
-const User = require('../models/User')
 const usersListPath = path.join(__dirname,"../data/users.json");
 const usersList = JSON.parse(fs.readFileSync(usersListPath,"utf-8"));
 
@@ -43,19 +42,6 @@ const usersControllers = {
             });
         }
 
-        let userInDB = User.findByField('email', req.body.email);
-
-		if (userInDB) {
-			return res.render('register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-		}
-
         user.id = uuidv4();
         user.image = image;
 
@@ -69,38 +55,6 @@ const usersControllers = {
     },
     login: (req, res) => {
         res.render("login", { users: usersList });
-    },
-    loginProcess: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
-        
-        if(userToLogin) {
-            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
-            if (passwordOk) {
-                delete userToLogin.password;
-                delete userToLogin.passwordConfirmed;
-                req.session.userLogged = userToLogin;
-                return res.redirect('/products');
-            }
-            return res.render('login', {
-                errors: {
-                    email: {
-                        msg: 'Las credenciales son invalidas'
-                    }
-                }
-            })
-        }
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'El usuario que ingresó no está registrado'
-                }
-            }
-        })
-    },
-
-    logout: (req, res) => {
-        req.session.destroy();
-        return res.redirect('/');
     }
 }
 

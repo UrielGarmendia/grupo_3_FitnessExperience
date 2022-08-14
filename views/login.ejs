@@ -10,16 +10,11 @@
   <!-- HEADER -->
   <%- include('./partials/reducedHeader')  %>
   <!-- FORMULARIO -->
-  <form class="form-register" action="/users/login" method="post">
+  <form class="form-register">
     <h4>Inicio de Sesión</h4>
     <div class="correo-electronico">
     <input class="controls" type="email" name="email" placeholder=" Correo" required><i class="fa-solid fa-envelope"></i>
     </div>
-    <% if(locals.errors && errors.email) { %>
-      <div class="text-danger">
-        <%= errors.email.msg %> 
-      </div>
-   <% } %> 
     <div class="contrasenia">
     <input class="controls" type="password" name="password" placeholder="Contraseña" required><i class="fa-solid fa-key"></i>
     </div>

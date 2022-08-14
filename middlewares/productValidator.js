@@ -8,7 +8,7 @@ const productValidations = [
     body('description').notEmpty().withMessage('*Describe el producto a subir'),
     body('image').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.webp'];
+		let acceptedExtensions = ['.jpg', '.png'];
 		
 		if (!file) {
 			throw new Error('*Tienes que subir una imagen');

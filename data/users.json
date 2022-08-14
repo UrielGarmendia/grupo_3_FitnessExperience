@@ -78,21 +78,5 @@
     "email": "ethaine9@yellowbook.com",
     "password": "JNhSKgjoM",
     "image": "https://robohash.org/rerumerroreveniet.png?size=50x50&set=set1"
-  },
-  {
-    "firstName": "messi",
-    "email": "messi10@gmail.com",
-    "password": "$2a$10$8EqVwbCLrz0IqxzCiJnPdOjd4UN1hC9laKdAvCXsRf4HnE9PR5bN6",
-    "passwordConfirmed": "$2a$10$8EqVwbCLrz0IqxzCiJnPdOjd4UN1hC9laKdAvCXsRf4HnE9PR5bN6",
-    "id": "6983a446-660f-4bb9-8523-e766fd364ab9",
-    "image": "/users/user-img-1660260653215.jpg"
-  },
-  {
-    "firstName": "neymar",
-    "email": "neymar11@gmail.com",
-    "password": "$2a$10$mt62LgaNSvjgVGjmAI.nF.30qK8NajN61IWbIFICkiiRGAsYL2Gjm",
-    "passwordConfirmed": "$2a$10$mt62LgaNSvjgVGjmAI.nF.30qK8NajN61IWbIFICkiiRGAsYL2Gjm",
-    "id": "0ca40b68-f5e0-40ea-a978-81f7f4409012",
-    "image": "/users/user-img-1660261204791.jpg"
   }
 ]
