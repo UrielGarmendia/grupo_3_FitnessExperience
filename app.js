@@ -1,4 +1,7 @@
 const express = require('express');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
@@ -10,8 +13,21 @@ const usersRoutes = require('./routes/usersRoutes.js');
 const PORT = process.env.PORT || 8000;
 const publicFolderPath = path.join(__dirname, './public');
 
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+app.use(session({
+    secret: 'es un secreto',
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

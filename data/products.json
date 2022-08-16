@@ -27,13 +27,12 @@
     "discount": 12.86
   },
   {
-    "id": 4,
-    "name": "tobilleras",
+    "name": "banco-press",
+    "price": "34022.07",
+    "discount": "22.19",
     "description": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis",
-    "image": "cuerdas.webp",
-    "category": "banco de trabajo",
-    "price": 34022.07,
-    "discount": 22.19
+    "id": "4",
+    "image": "/products/product-img-1660684221699.webp"
   },
   {
     "name": "caminadora",

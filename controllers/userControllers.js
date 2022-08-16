@@ -5,7 +5,7 @@ const bcryptjs = require('bcryptjs')
 
 const { validationResult } = require('express-validator');
 
-const User = require('../models/User');
+const User = require('../models/User')
 const usersListPath = path.join(__dirname,"../data/users.json");
 const usersList = JSON.parse(fs.readFileSync(usersListPath,"utf-8"));
 
@@ -74,6 +74,13 @@ const usersControllers = {
         if(userToLogin) {
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if (passwordOk) {
+                delete userToLogin.password;
+                delete userToLogin.passwordConfirmed;
+                req.session.userLogged = userToLogin;
+
+                if(req.body.remember_user) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                }
                 return res.redirect('/products');
             }
             return res.render('login', {
@@ -91,6 +98,12 @@ const usersControllers = {
                 }
             }
         })
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/products');
     }
 }
 
