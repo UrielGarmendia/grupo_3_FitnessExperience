@@ -56,19 +56,6 @@
         <input class="controls" type="password" name="passwordConfirmed" placeholder="Confirme su contraseña"><i class="fa-solid fa-key"></i>
     </div>
 
-      
-    <% if (locals.errors && errors.image) { %>
-      <div class="text-danger">
-        <%= errors.image.msg %>
-      </div>
-    <% } %>
-
-    <div class="div-image">
-      <input class="controls imagen-usuario" name="image" type="file">
-      <i class="fa-solid fa-image"></i>
-    </div>
-
-    
     <input class="botons" type="submit" value="Registrar">
     <p><a href="/users/login">¿Ya tengo Cuenta?</a></p>
   </form>

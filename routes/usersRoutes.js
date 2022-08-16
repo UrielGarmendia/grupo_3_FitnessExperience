@@ -14,6 +14,9 @@ router.post('/', upload.single('image'), userValidations,  usersControllers.newU
 //ingresar
 router.get('/login', usersControllers.login);
 
+//proceso del login
+router.post('/login', usersControllers.loginProcess);
+
 //buscar usuario por id
 
 

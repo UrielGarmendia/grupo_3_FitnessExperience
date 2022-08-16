@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const express = require ("express");
 const router = express.Router();
-
 const upload = require ("../middlewares/productsMulter");
 
 const productsControllers = require ("../controllers/productsControllers");
@@ -26,6 +25,7 @@ router.delete("/:id", productsControllers.deleteProducts);
 
 //requerir producto por id
 router.get('/:id', productsControllers.productsId);
+
 //modificar productos
 router.get("/edit/:id",productsControllers.modifyProducts);
 router.put("/:id", upload.single('image') ,productsControllers.updateProducts);

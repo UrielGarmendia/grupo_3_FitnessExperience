@@ -39,6 +39,10 @@ i {
     background: linear-gradient(to bottom,#446ef7,#1f53c5);
 }
 
+.form-check-input {
+    margin-right: 5px;
+}
+
 @media (min-width: 769px) {
     .text-danger {
         font-size: 16px;
