@@ -6,155 +6,52 @@
 }
 
 body {
-    min-width: 320px;
+    
     background-color: #333;
 }
 
-section {
-    height: 400px;
+.banner-container img {
     width: 100%;
-    position: relative;
-}
-.banner {
-    width: 80%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    background-color: #111;
-    height: 300px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    padding: 20px 0;
-    box-shadow: 3px 3px 2px #fc0;
+    height: 700px;
 }
 
-.banner p {
-    border-radius: 10px;
-    width: 80%;
-    background: #000;
-    color: yellow;
-    padding: 10px;
-    text-shadow: 3px 3px #222;
-}
 
-.div-fit-x {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.banner .fit-x {
-    width: 300px;
-    text-align: center;
-    font-size: 30px;
-    background: #000;
-    color: yellow;
-    padding: 10px 20px;
-    font-style: italic;
-    font-weight: bold;
-    text-shadow: 5px 3px #222;
-}
-
-article {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 20px;
-}
-
-.button {
+.link-homeshop {
     display: inline-block;
-    padding: 5px;
-    background-color: yellow;
-    box-shadow: 10px 10px 2px #000;
+    position: absolute;
+    top: 450px;
+    left: 200px;
+    
 }
 
-.button a {
+.link-homeshop a {
+    box-shadow: 4px 4px 2px #000;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: rgba(239, 239, 239, 0.264);
     text-decoration: none;
     font-style: italic;
-    font-size: 30px;
+    font-size: 20px;
     color: #000;
+    transition: all 0.5s ease;
 }
 
-@media (min-width: 420px) {
-
-    .banner {
-        padding: 0;
-    }
-
-    .banner p {
-        font-size: 20px;
-    }
-
-    .banner .fit-x {
-        width: 500px;
-        font-size: 40px;
-    }
-
-}
-
-@media (min-width: 720px) {
-
-    .banner .fit-x {
-        font-size: 50px;
-    }
-
+.link-homeshop a:hover {
+    background-color: rgb(221, 221, 221);
+    filter: invert();
+    color: rgb(8, 0, 250);
+    
 }
 
 
-
-
-/* body{
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 51%, rgba(208,195,3,1) 97%);
-    background-repeat: no-repeat;
-    background-size: auto;
-    border: 3px dashed red;
-} */
-
-/* .seccion-encabezado{
-    background-image: url(/images/pexels-victor-freitas-841130.jpg);
+.paragraph {
+    display: inline-block;
     position: absolute;
-    background-size: cover;
-    background-position: center;
-    border: 2px dashed red;
-    height: 65%;
-    width: 100%;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: grid;
+    width: 500px;
+    padding: 6px;
+    top: 150px;
+    color: #fff;
+    left: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4em;
 }
-
-.contenedor-logo{
-    position: relative;
-    height: 25%;
-}
-
-.logo-img{
-    display: flex;
-    position: relative;
-    height: 10rem;
-}
-
-img{
-    margin: 1rem;
-    padding: 0;
-    max-width: 50%;
-    max-height: 50%;
-}
-
-.texto-fit{
-    padding-top: 2.5rem;
-}
-
-.vos-imgreso{
-    position: relative;
-    width: 100%;
-    height: 75%;
-} */
