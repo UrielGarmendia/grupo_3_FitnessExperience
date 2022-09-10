@@ -6,11 +6,11 @@
 
 
 |Integrantes :      |
+|--> Juan Bogliacino|
+|--> Uriel Garmendia|
 |--> Fiorella Aboy  |
 |--> Mila Hermida   |
 |--> Agustin Alsina |
-|--> Juan Bogliacino|
-|--> Uriel Garmendia|
 
 
 URL : https://github.com/UrielGarmendia/grupo-3

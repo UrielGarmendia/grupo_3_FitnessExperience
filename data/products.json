@@ -18,13 +18,12 @@
     "discount": 14.87
   },
   {
-    "id": 3,
     "name": "multigimnasio",
+    "price": "29821.61",
+    "discount": "30%",
     "description": "in consequat ut nulla sed accumsan felis ut at dolor",
-    "image": "cuerdas.webp",
-    "category": "banco de trabajo",
-    "price": 29821.61,
-    "discount": 12.86
+    "id": "3",
+    "image": "/products/product-img-1660700060364.webp"
   },
   {
     "name": "banco-press",
