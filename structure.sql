@@ -18,6 +18,7 @@ CREATE TABLE `fit_xperience`.`products` (
   `name` VARCHAR(150) NOT NULL,
   `price` int NOT NULL,
   `description` VARCHAR(1500) NOT NULL,
+  `discount` VARCHAR(4),
   `image` BLOB NOT NULL,
   PRIMARY KEY (`id`),
   foreign key(`id_user`) references users(`id`));
@@ -49,9 +50,9 @@ insert into `fit_xperience`.`users` (id, name, email, password) values (1, 'Kerm
 (10, 'Fern', 'fcleef9@washington.edu', 'gPS1SvQ60mW');
 -- ----------------------------------------------------------------------
 insert into products (id, id_user, name, price, description, image) values (1, 4, 'Colchoneta', '12876', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-', 'NonSodales.xls'),
+', '/public/images/colchoneta.webp'),
  (2, 3, 'Mancuerna', '79023', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-', 'SociisNatoquePenatibus.mov'),
+', ''),
  (3, 1, 'Discos', '30024', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 ', 'Elementum.mp3'),
  (4, 8, 'Cuerdas', '44392', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
