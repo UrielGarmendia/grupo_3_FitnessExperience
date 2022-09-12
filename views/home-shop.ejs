@@ -20,21 +20,23 @@
                 <h3>Productos en oferta</h3>
             </a>
             <div class="productos">
-
-                <% for(let index = 0; index < 8; index++) { %>
-                    <article>  
-                        <a href="/products/<%= productos[index].id %>">
-                            <img src="/images/<%= productos[index].image %>" alt="producto">
-                            <div class="main-article">
-                                <div class="div-precio-descuento">
-                                    <p class="precio"><%= productos[index].price %></p>
-                                    <p class="descuento"><%= productos[index].discount %></p>
+                <% if (productos.length) { %>
+                    <% for(let index = 0; index < 8; index++) { %>
+                        <article>  
+                            <a href="/products/<%= productos[index].id %>">
+                                <img src="/images/<%= productos[index].image %>" alt="producto">
+                                <div class="main-article">
+                                    <div class="div-precio-descuento">
+                                        <p class="precio"><%= productos[index].price %></p>
+                                        <p class="descuento"><%= productos[index].discount %></p>
+                                    </div>
+                                    <h4 class="descripcion"><%= productos[index].name %></h4>
                                 </div>
-                                <h4 class="descripcion"><%= productos[index].name %></h4>
-                            </div>
-                        </a>
-                </article>
+                            </a>
+                    </article>
+                    <% } %>
                 <% } %>
+                
             </div>
         </section>
 
