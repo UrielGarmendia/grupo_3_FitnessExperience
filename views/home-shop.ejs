@@ -21,10 +21,10 @@
             </a>
             <div class="productos">
 
-                <% for(let index = 0; index < productos.length; index++) { %>
+                <% for(let index = 0; index < 8; index++) { %>
                     <article>  
                         <a href="/products/<%= productos[index].id %>">
-                            <img src="/images/<%= productos[index].image %>" alt="pesas-negro">
+                            <img src="/images/<%= productos[index].image %>" alt="producto">
                             <div class="main-article">
                                 <div class="div-precio-descuento">
                                     <p class="precio"><%= productos[index].price %></p>
