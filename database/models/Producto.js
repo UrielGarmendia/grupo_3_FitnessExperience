@@ -1,3 +1,5 @@
+const Producto_Categoria = require("./Producto_Categoria");
+
 module.exports = function (sequelize,DataTypes) { 
     let alias = "Productos";
     let cols = {
@@ -5,26 +7,31 @@ module.exports = function (sequelize,DataTypes) {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement:true,
-            notNull:true
+            allowNull:false
         },
-        // id_user:{
-        //     type: DataTypes.INTEGER,
-        // } ,
+        id_user:{
+            type: DataTypes.INTEGER,
+            allowNull: false
+        } ,
         name: {
             type: DataTypes.STRING,
-            notNull:true
+            allowNull:false
         },
         price:{
             type: DataTypes.INTEGER,
-            notNull:true
+            allowNull:false
         } ,
         description: {
             type: DataTypes.STRING,
-            notNull:true
+            allowNull:false
+        },
+        discount: {
+            type: DataTypes.STRING,
+            allowNull: true
         },
         image: {
             type: DataTypes.BLOB,
-            notNull:true
+            allowNull:false
         }
     };
     let config = {
@@ -32,6 +39,23 @@ module.exports = function (sequelize,DataTypes) {
         timestamps:false
     };
     
-    const Producto = sequelize.define(alias,cols,config)
+    const Producto = sequelize.define(alias,cols,config);
+
+    Producto_Categoria.associate = (models) => {
+        Producto_Categoria.hasMany(models.Usuario, {
+            as: "usuarios",
+            foreignKey: "id_product"
+        });
+
+        Producto.belongsTo(models.Producto_Categoria, {
+            as: "productos-categoria",
+            through: "Producto_Categoria",
+            foreignKey: "id_product",
+            otherKey: "id_category",
+            timestamps: false
+        });
+    }
+
+
     return Producto;
 };
