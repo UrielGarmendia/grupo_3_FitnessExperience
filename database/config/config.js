@@ -1,6 +1,6 @@
 module.exports = {
   "development": {
-    "username": "grupo3",
+    "username": "root",
     "password": "root",
     "database": "fit_xperience",
     "host": "127.0.0.1",
