@@ -1,13 +1,15 @@
+const Usuario = require("./Usuario");
+
 module.exports = function (sequelize,DataTypes) { 
     let alias = "Productos-Categorias";
     let cols = {
         id_product: {
             type: DataTypes.INTEGER,
-            notNull:true
+            allowNull:false
         },
         id_category: {
             type: DataTypes.INTEGER,
-            notNull:true
+            allowNull:false
         },
     };
     let config = {
@@ -15,6 +17,16 @@ module.exports = function (sequelize,DataTypes) {
         timestamps:false
     };
     
-    const Producto_Categoria = sequelize.define(alias,cols,config)
+    const Producto_Categoria = sequelize.define(alias,cols,config);
+
+Usuario.associate = (models) => {
+    Usuario.belongsToMany(models.Producto, models.Categoria, {
+        as: "productos",
+        foreignKey: "id_product",
+        otherKey: "id_category",
+        timestamps: false
+    });
+}
+
     return Producto_Categoria;
 };
