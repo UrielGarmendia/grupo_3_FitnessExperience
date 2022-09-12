@@ -21,7 +21,7 @@ const productsControllers = {
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
         res.render("products/formulario-de-carga", { user: req.session.userLogged });
-    },
+    }, 
 
     productsId: (req, res) => {
         //enviara la informacion de un producto segun su ID
@@ -53,7 +53,7 @@ const productsControllers = {
                 description: req.body.description,
                 discount: req.body.discount,
             });
-            res.redirect('/products');
+            res.redirect('/products');     
         };
         // let product = req.body;
         // let image = req.file.filename;
