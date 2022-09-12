@@ -2,16 +2,25 @@ const { v4: uuidv4 } = require ("uuid")
 const fs = require ("fs")
 const path = require('path');
 const db = require('../database/models');
-const productsListPath = path.join(__dirname,"../structure.sql");
-const productsList = fs.readFileSync(productsListPath);
 
 const { validationResult } = require('express-validator');
 const { decodeBase64 } = require("bcryptjs");
 
 const productsControllers = {
-    index: (req,res) => {
+    index: async (req,res) => {
         //enviara la lista de todos los productos
-        res.render('home-shop', { productos: productsList, user: req.session.userLogged });
+        // console.log('estamos en index');
+        let productsList = [];
+        try {
+         productsList = await db.Productos.findAll();
+        //  console.log(productsList, 'Estoy en productsControllers en el metodo index');
+         res.render('home-shop', { productos: productsList, user: req.session.userLogged });   
+        } catch (error) {
+            // console.error(error);
+            res.render('home-shop', 
+            { productos: productsList, user: req.session.userLogged, error });
+        }
+        
     },
 
     carrito: (req, res) => {
@@ -25,7 +34,7 @@ const productsControllers = {
 
     productsId: (req, res) => {
         //enviara la informacion de un producto segun su ID
-        db.Producto.findByPk(req.params.id)
+        db.Productos.findByPk(req.params.id)
             .then((producto) => {
                 res.render("detalle-producto", { producto, productos: productsList, user: req.session.userLogged});
             })
@@ -46,14 +55,25 @@ const productsControllers = {
                 user: req.session.userLogged
             });
         } else {
-            db.Producto.create({
+            let newProduct = db.Productos.create({
                 name: req.body.name,
+                id_user:req.body.id_user || 1,
                 image: req.body.image,
                 price: req.body.price,
                 description: req.body.description,
                 discount: req.body.discount,
             });
-            res.redirect('/products');     
+
+            newProduct
+                .then((resultado) => {
+                    console.log(resultado);
+                    res.redirect('/products');
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+
+                 
         };
         // let product = req.body;
         // let image = req.file.filename;
@@ -74,7 +94,7 @@ const productsControllers = {
     modifyProducts: (req,res) => {
         // envio del formulario para modificar el producto
 
-        db.Producto.findByPk(req.params.id)
+        db.Productos.findByPk(req.params.id)
             .then((producto) => {
                 res.render("products/formulario-de-edicion", { producto, user: req.session.userLogged});
             })
@@ -89,7 +109,7 @@ const productsControllers = {
 
     updateProducts: (req,res) => {
         //recepcion y procesado de las modificaciones del producto en el "modifyProducts"
-        db.Producto.update({
+        db.Productos.update({
             name: req.body.name,
             image: req.body.image,
             price: req.body.price,
@@ -125,7 +145,7 @@ const productsControllers = {
 
     deleteProducts: (req, res) => {
         // proceso de eliminacion de productos
-        db.Producto.destroy({
+        db.Productos.destroy({
             where: {
                 id: req.params.id
             }
