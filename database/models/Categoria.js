@@ -1,3 +1,5 @@
+const Producto = require("./Producto");
+
 module.exports = function (sequelize,DataTypes) { 
     let alias = "Categorias";
     let cols = {
@@ -5,11 +7,11 @@ module.exports = function (sequelize,DataTypes) {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement:true,
-            notNull:true
+            allowNull:false
         },
         name: {
             type: DataTypes.STRING,
-            notNull:true
+            allowNull:false
         },
     };
     let config = {
@@ -17,6 +19,16 @@ module.exports = function (sequelize,DataTypes) {
         timestamps:false
     };
     
-    const Categoria = sequelize.define(alias,cols,config)
+    const Categoria = sequelize.define(alias,cols,config);
+
+    Producto.associate = (models) => {
+        Producto.hasMany(models.Producto, {
+            as: "productos",
+            through: "Producto",
+            foreignKey: "id_product",
+            timestamps: false
+        })
+    }
+
     return Categoria;
 };
