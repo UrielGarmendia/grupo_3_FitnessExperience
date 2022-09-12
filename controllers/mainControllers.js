@@ -1,8 +1,8 @@
 const fs = require ("fs")
 const path = require('path');
-
-const productsListPath = path.join(__dirname,"../data/products.json");
-const productsList = JSON.parse(fs.readFileSync(productsListPath,"utf-8"));
+const db = require('../database/models');
+const productsListPath = path.join(__dirname,"../structure.sql");
+const productsList = fs.readFileSync(productsListPath);
 
 
 
