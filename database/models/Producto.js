@@ -26,8 +26,7 @@ module.exports = function (sequelize,DataTypes) {
             allowNull:false
         },
         discount: {
-            type: DataTypes.STRING,
-            allowNull: true
+            type: DataTypes.STRING
         },
         image: {
             type: DataTypes.BLOB,
