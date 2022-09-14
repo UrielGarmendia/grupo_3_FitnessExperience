@@ -70,9 +70,9 @@
         <h4>Productos relacionados</h4>
             <div class="carrusel2">
                 <% for(let index = 0; index < 4 ; index++) { %>
-                    <a href="/products/<%= productos[index].id %>">
+                    <a href="/products/<%= producto %>">
                     <div class="product product_1">
-                        <img src="/images/<%= productos[index].image %>"">
+                        <img src="/images/<%= producto.image %>"">
                     </div>
                 </a>
                 <% } %>
