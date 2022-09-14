@@ -21,7 +21,7 @@
             </a>
             <div class="productos">
                 <% if (productos.length) { %>
-                    <% for(let index = 0; index < 8; index++) { %>
+                    <% for(let index = 0; index < productos.length; index++) { %>
                         <article>  
                             <a href="/products/<%= productos[index].id %>">
                                 <img src="/images/<%= productos[index].image %>" alt="producto">
