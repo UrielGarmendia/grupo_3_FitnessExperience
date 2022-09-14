@@ -1,4 +1,3 @@
-const { v4: uuidv4 } = require ("uuid")
 const fs = require ("fs")
 const path = require('path');
 const bcryptjs = require('bcryptjs')
@@ -55,15 +54,15 @@ const usersControllers = {
 			});
 		}
 
-        user.id = uuidv4()
+        // user.id = uuidv4()
 
-        if (resultValidation.errors.length == 0 && user.password == user.passwordConfirmed) {
-            usersList.push(user);
+        // if (resultValidation.errors.length == 0 && user.password == user.passwordConfirmed) {
+        //     usersList.push(user);
 
-            fs.writeFileSync(usersListPath, JSON.stringify(usersList, null, 2))
+        //     fs.writeFileSync(usersListPath, JSON.stringify(usersList, null, 2))
 
-            res.redirect('/users/login');
-        }
+        //     res.redirect('/users/login');
+        // }
     },
     login: (req, res) => {
         res.render("login", { users: usersList });
@@ -77,6 +76,8 @@ const usersControllers = {
                 delete userToLogin.password;
                 delete userToLogin.passwordConfirmed;
                 req.session.userLogged = userToLogin;
+                // req.session.userIdLogged = userToLogin;
+                
 
                 if(req.body.remember_user) {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
