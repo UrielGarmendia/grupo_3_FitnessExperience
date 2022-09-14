@@ -15,7 +15,7 @@
 
 <main>
     <div class="NombreDeProducto">
-        <h2><%= producto.name%></h2>
+        <h2><%= producto.name %></h2>
     </div>
     
     <section class="imagen-producto carrusel-mobile">
@@ -39,14 +39,14 @@
         <h3>Detalle del Producto</h3>
             <h4>DESCRIPCIÓN:</h4>
                 <div class="descripcion">
-                    <p><%= producto.description%></p>
+                    <p><%= producto.description %></p>
                 </div>
     </article> 
 
     <article class="precio-forma-de-pago">
         <div class="precio">
             <h3 >Precio</h3>
-            <p ><%= producto.price%></p>
+            <p ><%= producto.price %></p>
         </div>
 
         <div class="pago">
@@ -70,7 +70,7 @@
         <h4>Productos relacionados</h4>
             <div class="carrusel2">
                 <% for(let index = 0; index < 4 ; index++) { %>
-                    <a href="/products/<%= producto %>">
+                    <a href="/products/<%= producto.id %>">
                     <div class="product product_1">
                         <img src="/images/<%= producto.image %>"">
                     </div>
