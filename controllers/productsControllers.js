@@ -12,15 +12,14 @@ const productsControllers = {
         // console.log('estamos en index');
         let productsList = [];
         try {
-         productsList = await db.Productos.findAll();
+        productsList = await db.Productos.findAll();
         //  console.log(productsList, 'Estoy en productsControllers en el metodo index');
-         res.render('home-shop', { productos: productsList, user: req.session.userLogged });   
+        res.render('home-shop', { productos: productsList, user: req.session.userLogged });
         } catch (error) {
             // console.error(error);
-            res.render('home-shop', 
+            res.render('home-shop',
             { productos: productsList, user: req.session.userLogged, error });
         }
-        
     },
 
     carrito: (req, res) => {
@@ -30,7 +29,7 @@ const productsControllers = {
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
         res.render("products/formulario-de-carga", { user: req.session.userLogged });
-    }, 
+    },
 
     productsId: (req, res) => {
         //enviara la informacion de un producto segun su ID
