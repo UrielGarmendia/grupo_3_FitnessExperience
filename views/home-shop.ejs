@@ -21,14 +21,14 @@
             </a>
             <div class="productos">
                 <% if (productos.length) { %>
-                    <% for(let index = 0; index < 8; index++) { %>
+                    <% for(let index = 0; index < productos.length; index++) { %>
                         <article>  
                             <a href="/products/<%= productos[index].id %>">
                                 <img src="/images/<%= productos[index].image %>" alt="producto">
                                 <div class="main-article">
                                     <div class="div-precio-descuento">
                                         <p class="precio"><%= productos[index].price %></p>
-                                        <p class="descuento"><%= productos[index].discount %></p>
+                                        <p class="descuento"><%= productos[index].discount + '%' %></p>
                                     </div>
                                     <h4 class="descripcion"><%= productos[index].name %></h4>
                                 </div>
