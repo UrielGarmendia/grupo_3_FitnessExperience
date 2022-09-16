@@ -2,6 +2,8 @@
 const fs = require ("fs")
 const path = require('path');
 const db = require('../database/models');
+const sequelize = db.sequelize;
+const {op} = require ("sequelize");
 
 const { validationResult } = require('express-validator');
 const { decodeBase64 } = require("bcryptjs");
@@ -11,7 +13,17 @@ const upload = require('../middlewares/productsMulter')
 const productsList = require('../database/config/config')
 
 const productsControllers = {
-    index: async (req,res) => {
+    index: (req,res) =>{ // listar todos Agus
+    db.Productos.findAll({
+        order : [
+            ["id","desc"]
+        ]
+    })
+    .then (productos => {
+        res.render("home-shop",{productos})
+    }
+)},
+    index: async (req,res) => { // listar todos uri
         //enviara la lista de todos los productos
         // console.log('estamos en index');
         let productsList = [];
@@ -24,8 +36,57 @@ const productsControllers = {
             res.render('home-shop',
             { productos: productsList, user: req.session.userLogged, error });
         }
+    }, // Listar pproductos
+    
+    detail : (req,res) => { // detalle producto Agus
+        db.Productos.findByPk(req.params.id)
+        .then(producto =>{
+            res.render("detalle-producto",{producto})
+        })
+    },
+    detail: (req, res) => { // detalle producto Uri
+        //enviara la informacion de un producto segun su ID
+        db.Productos.findByPk(req.params.id)
+        .then ((data) => {
+        //  console.log('Estoy en productsControllers en el metodo productsId', data);
+        res.render('detalle-producto', { producto: data, user: req.session.userLogged });
+        })
+        // let id = req.params.id;
+        // let producto = productsList.find(producto => producto.id == id);
+        // console.log('------Si aparece: Cannot read properties of undefined. Ignorar el error--------');
+
     },
 
+// metodos para trabajar con el CRUD
+
+add : function (req , res){ // muestra form para carga de producto
+    res.render("products/formulario-de-carga", { user: req.session.userLogged });
+},
+create : (req,res) => { // proceso de form add. para nuevo producto
+    const resultValidation = validationResult(req);
+        console.log(file);
+
+        if (resultValidation.errors.length > 0) {
+            res.render("products/formulario-de-carga", {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                user: req.session.userLogged
+            });
+        } else {
+    db.Productos.create({
+        name: req.body.name,
+        image: req.upload.file.filename,
+        price: req.body.price,
+        description: req.body.description,
+        discount: req.body.discount,
+    })
+    .then(function(producto){
+        res.redirect("/products");
+    })
+    .catch (function(error){
+        console.log("Sin conexion", error);
+    })
+}},
     carrito: (req, res) => {
         res.render('carrito', { productos: productsList, user: req.session.userLogged });
     },
@@ -33,34 +94,14 @@ const productsControllers = {
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
         res.render("products/formulario-de-carga", { user: req.session.userLogged });
-    },
-
-    productsId: (req, res) => {
-        //enviara la informacion de un producto segun su ID
-        db.Productos.findByPk(req.params.id)
-        .then ((data) => {
-        //  console.log('Estoy en productsControllers en el metodo productsId', data);
-         res.render('detalle-producto', { producto: data, user: req.session.userLogged });   
-        })
-        // let id = req.params.id;
-        // let producto = productsList.find(producto => producto.id == id);
-        // console.log('------Si aparece: Cannot read properties of undefined. Ignorar el error--------');
-        
-    },
-
-    createProducts: (req, res) => {
-        //enviara el formulario para crear el producto
-        res.render("products/formulario-de-carga", { user: req.session.userLogged });
-    }, 
-
-
+    }, // envia form para crear producto.
     newProducts: (req,res) => {
         //recepcion de informacion cargada en el form  de "createProducts"
         const resultValidation = validationResult(req);
         console.log(file);
 
         if (resultValidation.errors.length > 0) {
-            res.render("products/formulario-de-carga", { 
+            res.render("products/formulario-de-carga", {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
                 user: req.session.userLogged
@@ -83,8 +124,6 @@ const productsControllers = {
             //     .catch((error) => {
             //         console.error(error);
             //     })
-
-                 
         };
         // let product = req.body;
         // let image = req.file.filename;
@@ -96,12 +135,13 @@ const productsControllers = {
         //     productsList.push(product);
 
         //     fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2))
-
-           
         //     res.redirect('/products');
         // }
-        
-    },
+    }, // procesa form. createProducts para crear producto
+
+
+
+
     modifyProducts: (req,res) => {
         // envio del formulario para modificar el producto
 
@@ -110,7 +150,7 @@ const productsControllers = {
                 res.render("products/formulario-de-edicion", { producto, user: req.session.userLogged});
             })
 
-    //    let producto = productsList.find(producto => producto.id == id);    
+    //    let producto = productsList.find(producto => producto.id == id);
     },
 
     productsUser: (req, res) => {
@@ -131,7 +171,6 @@ const productsControllers = {
                 id:req.params.id
             }
         })
-        
         res.redirect('/products/'+ req.params.id);
 
 
@@ -161,7 +200,6 @@ const productsControllers = {
                 id: req.params.id
             }
         })
-        
         res.redirect('/products/uploadedProducts')
 
 
