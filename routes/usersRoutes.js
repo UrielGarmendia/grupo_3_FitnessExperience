@@ -6,22 +6,19 @@ const usersControllers = require('../controllers/userControllers');
 const userValidations = require ('../middlewares/userValidations.js');
 const guestMiddleware = require ('../middlewares/guestMiddleware');
 
-// Mostrar el registro de usuario
+// registro de usuario
 router.get('/register', guestMiddleware, usersControllers.createUser);
+router.post('/register', upload.single('image'), userValidations,  usersControllers.newUser);
 
-// proceso del registro
-router.post('/', upload.single('image'), userValidations,  usersControllers.newUser);
-
-//ingresar
+//Login
 router.get('/login', guestMiddleware, usersControllers.login);
-
-//proceso del login
 router.post('/login', usersControllers.loginProcess);
 
 //Logout
 router.get('/logout', usersControllers.logout);
 
-//buscar usuario por id
+//Perfil
+//router.get("/profile",userController.profile)
 
 
 module.exports = router
