@@ -13,7 +13,7 @@ const upload = require("../middlewares/productsMulter");
 const productsList = require("../database/config/config");
 
 const productsControllers = {
-index: (req,res) =>{ // listar todos Agus
+index: (req,res) =>{ // listar todos
     db.Productos.findAll({
         order : [
             ["id","desc"]
