@@ -9,7 +9,7 @@ const productValidations = require('../middlewares/productValidator');
 const authMiddleware = require ('../middlewares/authMiddleware');
 
 
-// requerir todos los productos "LIST"
+// requerir todos los productos "LISTAR TODOS"
 router.get("/", productsControllers.index);
 
 // carrito de compras
@@ -23,13 +23,14 @@ router.post("/create", upload.single('image'), productValidations , productsCont
 router.get("/uploadedProducts", authMiddleware, productsControllers.productsUser);
 
 //eliminar productos
-router.delete("/:id", productsControllers.deleteProducts);
+router.get("/delete/:id",productsControllers.delete)
+router.post("/delete/:id", productsControllers.deleteProducts);
 
-//requerir producto por id DETALLE DE PRODUCTO
+//requerir producto por id "DETALLE DE PRODUCTO"
 router.get('/detail/:id', productsControllers.detail);
 
 //modificar productos
-router.get("/edit/:id", authMiddleware, productsControllers.modifyProducts);
+router.get("/edit/:id", authMiddleware, productsControllers.edit);
 router.put("/:id", upload.single('image') ,productsControllers.updateProducts);
 
 
