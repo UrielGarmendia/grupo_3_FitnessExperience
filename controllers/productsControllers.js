@@ -184,7 +184,7 @@ deleteProducts: (req, res) => { //procesa destroy del metodo delete.
     newProducts: (req,res) => {
         //recepcion de informacion cargada en el form  de "createProducts"
         const resultValidation = validationResult(req);
-        console.log(file);
+        // console.log(req.file);
 
         if (resultValidation.errors.length > 0) {
             res.render("products/formulario-de-carga", {
