@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <%- include('./partials/head') %>
-  <title>Register</title>
-  <link rel="stylesheet" href="/css/register.css">
-  
-</head>
-<body>
+  <head>
+    <%- include('./partials/head') %>
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/register.css" />
+  </head>
+  <body>
     <!-- HEADER -->
-    <%- include('./partials/reducedHeader')  %>
+    <%- include('./partials/reducedHeader') %>
     <!-- FORMULARIO -->
-    <form class="form-register" action="/users" method="post" enctype="multipart/form-data">
-    <h4>Formulario Registro</h4>
+    <form
+      class="form-register"
+      action="/users/register"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h4>Formulario Registro</h4>
 
-    <% if (locals.errors && errors.firstName) { %>
-      <div class="text-danger">
-        <%= errors.firstName.msg %> 
+      <% if (locals.errors && errors.firstName) { %>
+      <div class="text-danger"><%= errors.firstName.msg %></div>
+      <% } %>
+
+      <div class="user-name">
+        <input
+          class="controls"
+          type="text"
+          name="firstName"
+          placeholder="Nombre de usuario"
+          value="<%= locals.oldData ? oldData.firstName : null %>"
+        /><i class="fa-solid fa-user"></i>
       </div>
-    <% } %>
 
-    <div class="user-name">
-    <input class="controls" type="text" name="firstName" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.firstName : null %>"><i class="fa-solid fa-user"></i>
-    </div>
-  
+      <% if (locals.errors && errors.email) { %>
+      <div class="text-danger"><%= errors.email.msg %></div>
+      <% } %>
 
-    <% if (locals.errors && errors.email) { %>
-      <div class="text-danger">
-        <%= errors.email.msg %> 
+      <div class="correo-electronico">
+        <input
+          class="controls"
+          type="email"
+          name="email"
+          placeholder=" Correo"
+          value="<%= locals.oldData ? oldData.email : null %>"
+        /><i class="fa-solid fa-envelope"></i>
       </div>
-    <% } %>
 
-    <div class="correo-electronico">
-    <input class="controls" type="email" name="email" placeholder=" Correo" value="<%= locals.oldData ? oldData.email : null %>"><i class="fa-solid fa-envelope"></i>
-    </div>
+      <% if (locals.errors && errors.password) { %>
+      <div class="text-danger"><%= errors.password.msg %></div>
+      <% } %>
 
-    
-    <% if (locals.errors && errors.password) { %>
-      <div class="text-danger">
-        <%= errors.password.msg %> 
+      <div class="contrasenia">
+        <input
+          class="controls"
+          type="password"
+          name="password"
+          placeholder="Contraseña"
+        /><i class="fa-solid fa-key"></i>
       </div>
-    <% } %>
 
-    <div class="contrasenia">
-    <input class="controls" type="password" name="password" placeholder="Contraseña"><i class="fa-solid fa-key"></i>
-    </div>
+      <% if (locals.errors && errors.passwordConfirmed) { %>
+      <div class="text-danger"><%= errors.passwordConfirmed.msg %></div>
+      <% } %>
 
-
-    <% if (locals.errors && errors.passwordConfirmed) { %>
-      <div class="text-danger">
-        <%= errors.passwordConfirmed.msg %> 
+      <div class="contrasenia">
+        <input
+          class="controls"
+          type="password"
+          name="passwordConfirmed"
+          placeholder="Confirme su contraseña"
+        /><i class="fa-solid fa-key"></i>
       </div>
-    <% } %>
 
-    <div class="contrasenia">
-        <input class="controls" type="password" name="passwordConfirmed" placeholder="Confirme su contraseña"><i class="fa-solid fa-key"></i>
-    </div>
-
-    <input class="botons" type="submit" value="Registrar">
-    <p><a href="/users/login">¿Ya tengo Cuenta?</a></p>
-  </form>
-</body>
+      <input class="botons" type="submit" value="Registrar" />
+      <p><a href="/users/login">¿Ya tengo Cuenta?</a></p>
+    </form>
+  </body>
 </html>
