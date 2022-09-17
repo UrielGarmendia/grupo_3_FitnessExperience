@@ -17,7 +17,7 @@ const usersControllers = {
         const resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            res.render('register', { 
+            res.render('register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
@@ -31,7 +31,7 @@ const usersControllers = {
                 user.passwordConfirmed = user.password;
             }
         } else {
-            res.render('register', { 
+            res.render('register', {
                 errors: {
                     passwordConfirmed: {
                         msg: 'La contraseña no coincide'
