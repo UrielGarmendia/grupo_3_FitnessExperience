@@ -13,7 +13,7 @@ const upload = require('../middlewares/productsMulter')
 const productsList = require('../database/config/config')
 
 const productsControllers = {
-    index: (req,res) =>{ // listar todos Agus
+/*     index: (req,res) =>{ // listar todos Agus
     db.Productos.findAll({
         order : [
             ["id","desc"]
@@ -22,7 +22,7 @@ const productsControllers = {
     .then (productos => {
         res.render("home-shop",{productos})
     }
-)},
+)}, */
     index: async (req,res) => { // listar todos uri
         //enviara la lista de todos los productos
         // console.log('estamos en index');
@@ -37,7 +37,7 @@ const productsControllers = {
             { productos: productsList, user: req.session.userLogged, error });
         }
     }, // Listar pproductos
-    
+
     detail : (req,res) => { // detalle producto Agus
         db.Productos.findByPk(req.params.id)
         .then(producto =>{
@@ -58,7 +58,8 @@ const productsControllers = {
     },
 
 // metodos para trabajar con el CRUD
-
+//_____________________________________
+//crear producto
 add : function (req , res){ // muestra form para carga de producto
     res.render("products/formulario-de-carga", { user: req.session.userLogged });
 },
@@ -87,6 +88,92 @@ create : (req,res) => { // proceso de form add. para nuevo producto
         console.log("Sin conexion", error);
     })
 }},
+//_______________________________________
+//editar producto
+
+edit: (req,res) => { //muestra formulario para edicion de producto
+    // envio del formulario para modificar el producto
+
+    db.Productos.findByPk(req.params.id)
+        .then((producto) => {
+            res.render("products/formulario-de-edicion", { producto, user: req.session.userLogged});
+        })
+
+//    let producto = productsList.find(producto => producto.id == id);
+},
+updateProducts: (req,res) => { //procesa form edit y actualiza producto
+    //recepcion y procesado de las modificaciones del producto en el "modifyProducts"
+    db.Productos.update({
+        name: req.body.name,
+        image: req.body.image,
+        price: req.body.price,
+        description: req.body.description,
+        discount: req.body.discount,
+    },{
+        where: {
+            id:req.params.id
+        }
+    })
+    .then (function(producto){
+        res.redirect("/products");
+    })
+
+
+
+    // let id = req.params.id;
+    // let newProduct = req.body;
+    // let image = req.file.filename;
+
+    // newProduct.id = id;
+
+    // for (let index = 0; index < productsList.length; index++) {
+    //     const element = productsList[index];
+    //     if (element.id == id) {
+    //         productsList[index] = newProduct;
+    //         newProduct.image = image;
+    //     }
+    // }
+
+    // fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2));
+
+},
+
+//________________________________________
+// Eliminar producto
+delete : function(req,res){ // envia form para eliminar producto
+    db.Productos.findByPk(req.params.id)
+    .then ((producto) => {
+        res.render("productsDelete",{producto})
+    })
+},
+deleteProducts: (req, res) => { //procesa destroy del metodo delete.
+    // proceso de eliminacion de productos
+    db.Productos.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then (() =>{
+        res.redirect('/products/uploadedProducts')
+    })
+
+
+    // let id = req.params.id;
+    // for (let index = 0; index < productsList.length; index++) {
+    //     const element = productsList[index];
+    //     if (element.id == id) {
+    //         productsList.splice(index, 1);
+    //     }
+    // }
+
+    // fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2));
+
+    // ;
+},
+
+
+
+
     carrito: (req, res) => {
         res.render('carrito', { productos: productsList, user: req.session.userLogged });
     },
@@ -142,79 +229,12 @@ create : (req,res) => { // proceso de form add. para nuevo producto
 
 
 
-    modifyProducts: (req,res) => {
-        // envio del formulario para modificar el producto
 
-        db.Productos.findByPk(req.params.id)
-            .then((producto) => {
-                res.render("products/formulario-de-edicion", { producto, user: req.session.userLogged});
-            })
-
-    //    let producto = productsList.find(producto => producto.id == id);
-    },
 
     productsUser: (req, res) => {
         // envio de la vista de los productos subidos por el usuario
         res.render('mis-productos', { productos: productsList, user: req.session.userLogged});
     },
-
-    updateProducts: (req,res) => {
-        //recepcion y procesado de las modificaciones del producto en el "modifyProducts"
-        db.Productos.update({
-            name: req.body.name,
-            image: req.body.image,
-            price: req.body.price,
-            description: req.body.description,
-            discount: req.body.discount,
-        },{
-            where: {
-                id:req.params.id
-            }
-        })
-        res.redirect('/products/'+ req.params.id);
-
-
-
-        // let id = req.params.id;
-        // let newProduct = req.body;
-        // let image = req.file.filename;
-
-        // newProduct.id = id;
-
-        // for (let index = 0; index < productsList.length; index++) {
-        //     const element = productsList[index];
-        //     if (element.id == id) {
-        //         productsList[index] = newProduct;
-        //         newProduct.image = image;
-        //     }
-        // }
-
-        // fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2));
-
-    },
-
-    deleteProducts: (req, res) => {
-        // proceso de eliminacion de productos
-        db.Productos.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-        res.redirect('/products/uploadedProducts')
-
-
-        // let id = req.params.id;
-        // for (let index = 0; index < productsList.length; index++) {
-        //     const element = productsList[index];
-        //     if (element.id == id) {
-        //         productsList.splice(index, 1);
-        //     }
-        // }
-
-        // fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2));
-
-        // ;
-    }
 }
 
 
