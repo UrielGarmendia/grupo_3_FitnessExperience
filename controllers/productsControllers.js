@@ -13,8 +13,8 @@ const upload = require('../middlewares/productsMulter')
 const productsList = require('../database/config/config')
 
 const productsControllers = {
-/*     index: (req,res) =>{ // listar todos Agus
-    db.Productos.findAll({
+ //index: (req,res) =>{ // listar todos Agus */
+/*     db.Productos.findAll({
         order : [
             ["id","desc"]
         ]
@@ -143,7 +143,7 @@ updateProducts: (req,res) => { //procesa form edit y actualiza producto
 delete : function(req,res){ // envia form para eliminar producto
     db.Productos.findByPk(req.params.id)
     .then ((producto) => {
-        res.render("productsDelete",{producto})
+        res.render("./products/productsDelete",{producto : producto})
     })
 },
 deleteProducts: (req, res) => { //procesa destroy del metodo delete.
@@ -177,7 +177,6 @@ deleteProducts: (req, res) => { //procesa destroy del metodo delete.
     carrito: (req, res) => {
         res.render('carrito', { productos: productsList, user: req.session.userLogged });
     },
-
     createProducts: (req, res) => {
         //enviara el formulario para crear el producto
         res.render("products/formulario-de-carga", { user: req.session.userLogged });
@@ -225,12 +224,6 @@ deleteProducts: (req, res) => { //procesa destroy del metodo delete.
         //     res.redirect('/products');
         // }
     }, // procesa form. createProducts para crear producto
-
-
-
-
-
-
     productsUser: (req, res) => {
         // envio de la vista de los productos subidos por el usuario
         res.render('mis-productos', { productos: productsList, user: req.session.userLogged});
