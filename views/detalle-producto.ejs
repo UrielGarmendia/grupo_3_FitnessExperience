@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <%- include('./partials/head') %>
-        <title>Detalle de Productos</title>
-        <link rel="stylesheet" href="/css/detalle-producto.css">
-    
-    </head>
+<head>
+    <%- include('./partials/head') %>
+    <title>Detalle de Productos</title>
+    <link rel="stylesheet" href="/css/detalle-producto.css" />
+</head>
 
 <body>
     <!-- H    E    A    D     E    R -->
-<%- include('./partials/header')  %> 
+    <%- include('./partials/header') %>
 
-
-<main>
+    <main>
     <div class="NombreDeProducto">
         <h2><%= producto.name %></h2>
     </div>
-    
+
     <section class="imagen-producto carrusel-mobile">
-        <img src="/images/<%= producto.image %>">
+        <img src="/images/discos.webp" />
+        <!--         <img src="/images/<%= producto.image %>"> -->
         <div class="icono-flex">
         <div class="icono"><i class="fa-solid fa-angles-left"></i></div>
         <div class="icono"><i class="fa-solid fa-angles-right"></i></div>
-    </div>
-    </section>
-    
-    <section class="contenedor-carrusel">
-        <div class="flechas-carrusel">
-            <a href="#" class="left-arrow"><i class="fa-solid fa-angles-left"></i></a>
-            
-            <a href="#" class="right-arrow"><i class="fa-solid fa-angles-right"></i></a>
         </div>
     </section>
 
-<section class="detalle">
-    <article class="detalle-de-producto">
-        <h3>Detalle del Producto</h3>
-            <h4>DESCRIPCIÓN:</h4>
-                <div class="descripcion">
-                    <p><%= producto.description %></p>
-                </div>
-    </article> 
+    <section class="contenedor-carrusel">
+        <div class="flechas-carrusel">
+        <a href="#" class="left-arrow"
+            ><i class="fa-solid fa-angles-left"></i
+        ></a>
 
-    <article class="precio-forma-de-pago">
+        <a href="#" class="right-arrow"
+            ><i class="fa-solid fa-angles-right"></i
+        ></a>
+        </div>
+    </section>
+
+    <section class="detalle">
+        <article class="detalle-de-producto">
+        <h3>Detalle del Producto</h3>
+        <h4>DESCRIPCIÓN:</h4>
+        <div class="descripcion">
+            <p><%= producto.description %></p>
+        </div>
+        </article>
+
+        <article class="precio-forma-de-pago">
         <div class="precio">
-            <h3 >Precio</h3>
-            <p ><%= producto.price %></p>
+            <h3>Precio</h3>
+            <p>$ <%= producto.price %></p>
         </div>
 
         <div class="pago">
             <h3>Formas de Pago</h3>
-        <select name="Formas de pago" class="formas-de-pago">
+            <select name="Formas de pago" class="formas-de-pago">
             <option value="Tarjeta de credito">Tarjeta de Credito</option>
             <option value="Tarjeta de Debito">Tarjeta de Debito</option>
-            <option value="Transferencia Bancaria">Transferencia Bancaria</option>
-        </select>
+            <option value="Transferencia Bancaria">
+                Transferencia Bancaria
+            </option>
+            </select>
         </div>
         <button>
-        <div class="add-cart">
-            <h2>Agregar al carrito</h2><i class="fa-solid fa-cart-arrow-down"></i>
-        </div>
-    </button>
-    </article>
-</section>
-
-<section class="productos-relacionados-container">
-    <div class="productos-relacionados">
-        <h4>Productos relacionados</h4>
-            <div class="carrusel2">
-                <% for(let index = 0; index < 4 ; index++) { %>
-                    <a href="/products/<%= producto.id %>">
-                    <div class="product product_1">
-                        <img src="/images/<%= producto.image %>"">
-                    </div>
-                </a>
-                <% } %>
-                <a href="#"><i class="fa-solid fa-angles-right"></i></a>
+            <div class="add-cart">
+            <h2>Agregar al carrito</h2>
+            <i class="fa-solid fa-cart-arrow-down"></i>
             </div>
-    </div>
-</section>
+        </button>
+        </article>
+    </section>
 
-
-</main>
-
+    <section class="productos-relacionados-container">
+        <div class="productos-relacionados">
+        <h4>Productos relacionados</h4>
+        <div class="carrusel2">
+            <% for(let index = 0; index < 4 ; index++) { %>
+            <a href="/products/<%= producto.id %>">
+            <div class="product product_1">
+                <img src="/images/<%= producto.image %>"">
+            </div>
+            </a>
+            <% } %>
+            <a href="#"><i class="fa-solid fa-angles-right"></i></a>
+        </div>
+        </div>
+    </section>
+    </main>
 
     <!-- FOOTER -->
     <%- include('./partials/footer') %>
-    
 </body>
-
 </html>
