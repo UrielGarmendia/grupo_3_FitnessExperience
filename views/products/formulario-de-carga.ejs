@@ -11,7 +11,7 @@
     <%- include('../partials/header')  %>
     <!-- FORMULARIO -->
 
-<form class="datos" action="/products/create" method="post" enctype="multipart/form-data">
+<form class="datos" action="/products/create" method="POST" enctype="multipart/form-data">
 
     <% if (locals.errors && errors.image) { %>
         <div class="text-danger">

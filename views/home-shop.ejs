@@ -27,12 +27,14 @@
           productos.length; index++) { %>
           <article>
             <a href="/products/detail/<%= productos[index].id %>">
-              <img src="/images/discos.webp" alt="producto" />
-              <!-- <img src="/images/<%= productos[index].image %>" alt="producto" /> -->
+              <img
+                src="/images/products/<%= productos[index].image %>"
+                alt="producto"
+              />
               <div class="main-article">
                 <div class="div-precio-descuento">
-                  <p class="precio"> $ <%= productos[index].price %></p>
-<!--                   <p class="descuento">
+                  <p class="precio">$ <%= productos[index].price %></p>
+                  <!--                   <p class="descuento">
                     <%= productos[index].discount + '%' %>
                   </p> -->
                 </div>

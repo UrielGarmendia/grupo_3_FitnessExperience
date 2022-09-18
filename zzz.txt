@@ -1,0 +1,53 @@
+  metodo new product del productController.
+
+----  en la ruta Post de la creacion de producto agregar como middleware el "productValidations".
+
+  newProducts: async (req, res) => {
+    //recepcion de informacion cargada en el form  de "createProducts"
+/*     const resultValidation = validationResult(req);
+    // console.log(req.file);
+
+    if (resultValidation.errors.length > 0) {
+      res.render("products/formulario-de-carga", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+        user: req.session.userLogged,
+      });
+    } else { */
+      await db.Productos.create({
+        name: req.body.name,
+        id_user:req.body.id_user || 1,
+        image: req.file.filename,
+        price: req.body.price,
+        description: req.body.description,
+      })
+      .then(()=>{
+        res.redirect("products");
+      })
+      .catch((error)=>{
+        console.error(error);
+      }),
+
+      // newProduct
+      //     .then((resultado) => {
+      //         console.log(resultado);
+      //         res.redirect('/products');
+      //     })
+      //     .catch((error) => {
+      //         console.error(error);
+      //     })
+    // let product = req.body;
+    // let image = req.file.filename;
+
+    // product.id = uuidv4();
+    // product.image = image;
+
+    // if (resultValidation.errors.length == 0) {
+    //     productsList.push(product);
+
+    //     fs.writeFileSync(productsListPath, JSON.stringify(productsList, null, 2))
+    //     res.redirect('/products');
+    // }, // procesa form. createProducts para crear producto
+
+
+},

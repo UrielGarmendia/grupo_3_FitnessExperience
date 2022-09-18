@@ -34,6 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 app.use( express.static(publicFolderPath) );
+
 app.use('/', mainRoutes);
 app.use("/products", productsRoutes)
 app.use("/users",usersRoutes)

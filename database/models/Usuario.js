@@ -1,6 +1,6 @@
 const Producto = require("./Producto");
 
-module.exports = function (sequelize,DataTypes) { 
+module.exports = function (sequelize,DataTypes) {
     let alias = "Usuarios";
     let cols = {
         id: {
@@ -11,7 +11,7 @@ module.exports = function (sequelize,DataTypes) {
         },
         name: {
             type: DataTypes.STRING,
-            allowNull:false
+/*             allowNull:false */
         },
         email:{
             type: DataTypes.STRING,
@@ -29,12 +29,12 @@ module.exports = function (sequelize,DataTypes) {
     
     const Usuario = sequelize.define(alias,cols,config);
 
-    Producto.associate = (models) => {
-        Producto.belongsTo(models.Producto, {
+/*     Usuario.associate = (models) => {
+        Usuario.belongsTo(models.Producto, {
             as: "productos",
             foreignKey: "id_user"
         });
-    }
+    } */
 
     return Usuario;
 };

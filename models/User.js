@@ -1,10 +1,14 @@
 const fs = require('fs');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 const User = {
 	fileName: './data/users.json',
 
-	getData: function () {
-		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
+	getData: async function () {
+		let allUsers = await db.Usuarios.findAll();
+		return allUsers
 	},
 
 	findAll: function () {
@@ -13,7 +17,7 @@ const User = {
 
 	findByField: function (field, text) {
 		let allUsers = this.findAll();
-		let userFound = allUsers.find(oneUser => oneUser[field] === text);
+		let userFound = allUsers.findOne({where : {field : text}});
 		return userFound;
 	}
 }

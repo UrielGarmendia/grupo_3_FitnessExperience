@@ -29,7 +29,7 @@ module.exports = function (sequelize,DataTypes) {
             type: DataTypes.STRING
         }, */
         image: {
-            type: DataTypes.BLOB,
+            type: DataTypes.STRING,
             allowNull:false
         }
     };
@@ -40,7 +40,7 @@ module.exports = function (sequelize,DataTypes) {
     
     const Producto = sequelize.define(alias,cols,config);
 
-    Producto_Categoria.associate = (models) => {
+/*     Producto_Categoria.associate = (models) => {
         Producto_Categoria.hasMany(models.Usuario, {
             as: "usuarios",
             foreignKey: "id_product"
@@ -53,7 +53,7 @@ module.exports = function (sequelize,DataTypes) {
             otherKey: "id_category",
             timestamps: false
         });
-    }
+    } */
 
 
     return Producto;
