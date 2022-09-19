@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <%- include('./partials/head') %>
-  <title>Login</title>
-  <link rel="stylesheet" href="/css/register.css">
-  <link rel="stylesheet" href="header.css">
-</head>
-<body>
-  <!-- HEADER -->
-  <%- include('./partials/reducedHeader')  %>
-  <!-- FORMULARIO -->
-  <form class="form-register" action="/users/login" method="post">
-    <h4>Inicio de Sesión</h4>
-    <div class="correo-electronico">
-    <input class="controls" type="email" name="email" placeholder=" Correo" required><i class="fa-solid fa-envelope"></i>
-    </div>
-    <% if(locals.errors && errors.email) { %>
-      <div class="text-danger">
-        <%= errors.email.msg %> 
+  <head>
+    <%- include('./partials/head') %>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="header.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <%- include('./partials/reducedHeader') %>
+    <!-- FORMULARIO -->
+    <form class="form-register" action="/users/login" method="post">
+      <h4>Inicio de Sesión</h4>
+      <div class="correo-electronico">
+        <input
+          class="controls"
+          type="email"
+          name="email"
+          placeholder=" Correo"
+          required
+        /><i class="fa-solid fa-envelope"></i>
       </div>
-   <% } %> 
-    <div class="contrasenia">
-    <input class="controls" type="password" name="password" placeholder="Contraseña" required><i class="fa-solid fa-key"></i>
-    </div>
-    <div class="checkbutton">
-      <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario
-    </div>
-    <input class="botons" type="submit" value="Ingresar">
-    <p><a href="/users/register">Crear cuenta</a></p>
-  </form>
+      <% if(locals.errors && errors.email) { %>
+      <div class="text-danger"><%= errors.email.msg %></div>
+      <% } %>
+      <div class="contrasenia">
+        <input
+          class="controls"
+          type="password"
+          name="password"
+          placeholder="Contraseña"
+          required
+        /><i class="fa-solid fa-key"></i>
+      </div>
+      <div class="checkbutton">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          name="remember_user"
+        />Recordar mi usuario
+      </div>
+      <input class="botons" type="submit" value="Ingresar" />
+      <p><a href="/users/register">Crear cuenta</a></p>
+    </form>
 
-  <!-- FOOTER -->
- 
-  
-
-</body>
+    <!-- FOOTER -->
+  </body>
 </html>
