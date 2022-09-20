@@ -197,11 +197,8 @@ const productsControllers = {
 
   createProducts: (req, res) => {
     //enviara el formulario para crear el producto
-    res.render("products/formulario-de-carga",/*  {
+    res.render("products/formulario-de-carga",{
       user: req.session.userLogged,
-    } */)
-    .catch((error)=>{
-      console.error(error);
     })
   }, // envia form para crear producto.
 
@@ -209,12 +206,12 @@ const productsControllers = {
       await db.Productos.create({
         name: req.body.name,
         id_user:req.body.id_user || 1,
-        image: req.file.filename,
+        image: req.file.filename ,
         price: req.body.price,
         description: req.body.description,
       })
       .then(()=>{
-        res.redirect("/");
+        res.redirect("/products");
       })
       .catch((error)=>{
         console.error(error);

@@ -15,7 +15,7 @@
             <a href="#" class="icono-bars"><i class="fa-solid fa-bars"></i></a>
             <a href="/users/login" class="icono-user"><p>
                 <% if (locals.isLogged) {%>
-                <%= locals.userLogged.Name %> 
+                <%= locals.userLogged.Name %>
                 <% } %>
             </p><i class="fa-solid fa-circle-user"></i></a>
         </div>
@@ -25,7 +25,6 @@
             <li><a href="#">Accesorios</a></li>
             <li><a href="#">Categorias</a></li>
         </ul>
-        
         <ul class="right-ul">
             <% if (locals.isLogged) {%>
                 <li><a href="/users/logout">Logout</a></li>
@@ -34,9 +33,9 @@
             <li>
                 <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></i></a>
             </li>
-                 <% } else { %>
+                <% } else { %>
                     <li><a href="/users/register">Creá tu cuenta</a></li>
-                    <% } %>  
+                    <% } %>
         </ul>
     </div>
 </header>

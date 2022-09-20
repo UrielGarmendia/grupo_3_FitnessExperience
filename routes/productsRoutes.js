@@ -17,7 +17,7 @@ router.get('/carrito', authMiddleware, productsControllers.carrito);
 router.get('/detail/:id', productsControllers.detail);
 
 // crear productos
-router.get('/add',/*  authMiddleware, */ productsControllers.createProducts);
+router.get('/add', authMiddleware, productsControllers.createProducts);
 router.post("/create", upload.single('image'), productsControllers.newProducts);
 
 // Editar  productos
@@ -29,7 +29,7 @@ router.get("/uploadedProducts", authMiddleware, productsControllers.productsUser
 
 //eliminar productos
 router.get("/delete/:id",productsControllers.delete)
-router.delete("/delete/:id", productsControllers.deleteProducts);
+router.post("/delete/:id", productsControllers.deleteProducts);
 
 
 
