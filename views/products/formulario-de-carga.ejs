@@ -11,14 +11,20 @@
     <%- include('../partials/header')  %>
     <!-- FORMULARIO -->
 
-<form class="datos" action="/products/create" method="POST" enctype="multipart/form-data">
+    
+    <form class="datos" action="/products/create" method="POST" enctype="multipart/form-data">
+  <section class="errores">
+    <ul>
+
+    </ul>
+  </section>
 
     <% if (locals.errors && errors.image) { %>
         <div class="text-danger">
           <%= errors.image.msg %>
         </div>
       <% } %>
-<input class="controls imagen-producto prueba" name="image" type="file">
+<input class="controls imagen-producto" name="image" type="file">
 
     <h2>Mas datos sobre el producto a subir</h2>
 
@@ -29,14 +35,14 @@
           <%= errors.name.msg %> 
         </div>
       <% } %>
-    <input type="text" name="name" placeholder="Nombre del producto" class="input" value="<%= locals.oldData ? oldData.name : null %>">
+    <input type="text" name="name" placeholder="Nombre del producto" class="input nombreProducto" value="<%= locals.oldData ? oldData.name : null %>">
 
     <% if (locals.errors && errors.price) { %>
         <div class="text-danger">
           <%= errors.price.msg %> 
         </div>
       <% } %>
-    <input type="text" name="price" placeholder="Precio del producto" class="input" value="<%= locals.oldData ? oldData.price : null %>">
+    <input type="text" name="price" placeholder="Precio del producto" class="input precioProducto" value="<%= locals.oldData ? oldData.price : null %>">
 
     <input type="text" name="discount" placeholder="Descuento del producto(opcional)" class="input">
 
@@ -45,7 +51,7 @@
           <%= errors.description.msg %> 
         </div>
       <% } %>
-    <input type="text" name="description" placeholder="Descripcion del producto" class="input" value="<%= locals.oldData ? oldData.description : null %>">
+    <input type="text" name="description" placeholder="Descripcion del producto" class="input descripcionProducto" value="<%= locals.oldData ? oldData.description : null %>">
 
 </div>
 
