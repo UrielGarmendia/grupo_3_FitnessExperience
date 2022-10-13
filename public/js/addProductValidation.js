@@ -22,17 +22,14 @@ window.addEventListener("load", function () {
 
     let descripcionProducto = document.querySelector(".descripcionProducto");
 
-    if(descripcionProducto.value == ""){
-        errores.push("Debes realizar una descripcion del producto")
+    if (descripcionProducto.value == "") {
+      errores.push("Debes realizar una descripcion del producto");
     } else if (descripcionProducto.value.lenght < 20) {
       errores.push(
         "Debes realizar una DESCRIPCION de al menos 20 caracteres del producto"
       );
 
-    let imagenProducto = document.querySelector(".imagen-producto");
-
-
-
+      let imagenProducto = document.querySelector(".imagen-producto");
     } else if (errores.lenght > 0) {
       e.preventDefault();
       let ulErrores = document.querySelector(".errores ul");

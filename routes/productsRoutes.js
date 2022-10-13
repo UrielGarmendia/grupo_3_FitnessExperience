@@ -21,7 +21,7 @@ router.get('/add', /* authMiddleware, */ productsControllers.createProducts);
 router.post("/create", upload.single('image'), productsControllers.newProducts);
 
 // Editar  productos
-router.get("/edit/:id", authMiddleware, productsControllers.edit );
+router.get("/edit/:id", /* authMiddleware */ productsControllers.edit );
 router.put("/:id", upload.single('image') ,productsControllers.updateProducts);
 
 // productos del usuario
