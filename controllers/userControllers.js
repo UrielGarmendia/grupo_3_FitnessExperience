@@ -38,7 +38,7 @@ const usersControllers = {
           req.session.userLogged = user;
           if (req.body.remember_me) {
             res.cookie("userEmail", userToLogin.email, {
-              maxAge: 1000 * 60 * 60 * 24 * 7,
+              maxAge: 10000 * 600 * 600 * 240 * 70,
             });
           }
           res.redirect("/products");
