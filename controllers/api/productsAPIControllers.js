@@ -19,6 +19,19 @@ productList: async (req, res) => {
     .catch((error) => {
         console.error(error);
     });
+},
+productDetail: async (req, res) => {
+    await db.Productos.findByPk(req.params.id)
+    .then((producto) => {
+        res.status(200).json({
+                data: producto,
+                status: 200
+            }
+        );
+      })
+      .catch((error)=>{
+        console.error(error);
+      });
 }
 
 };
