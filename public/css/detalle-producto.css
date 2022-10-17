@@ -248,6 +248,26 @@ button {
     background: none;
 }
 
+.contenedor-icono-editar a {
+    text-decoration: none;
+    color:rgb(251, 255, 0);
+    font-size: 1.7em;
+}
+
+.boton-eliminar {
+    color: rgb(159, 0, 0);
+    font-size: 1.7em;
+}
+
+.form-mis-productos {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    align-items: flex-end;
+}
+
+
 /*  M    E    D    I    A    Q    U    E   R    Y     S */
 /* Escrtitorio */
 @media (min-width:1200px) {
