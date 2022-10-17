@@ -6,9 +6,9 @@ const upload = require('../../middlewares/productsMulter');
 
 // lista de productos
 router.get('/', productsApiControllers.productList)
-/* // Detalle de prodcuto por ID
+// Detalle de prodcuto por ID
 router.get("/details/:id", productsApiControllers.productDetail);
-// crear producto
+/*// crear producto
 router.post("/create", upload.single('image'), productsApiControllers.saveProduct);
 // ultimo producto creado
 router.get('/last', productsApiControllers.lastCreated);
