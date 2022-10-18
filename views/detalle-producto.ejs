@@ -67,19 +67,21 @@
             </div>
         </button>
         <form action="/products/delete/<%= producto.id%>" method="get" class="form-mis-productos">
+            <div class="contenedor-icono-editar">
+                
+                <a href="/products/edit/<%= producto.id %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                
+            </div>
             <button type="submit" class="boton-eliminar icono-eliminar">
             <div class="contenedor-icono-eliminar">
                 <i class="fa-solid fa-trash-can"></i>
             </div>
         </button>
-        <div class="contenedor-icono-editar">
-            <a href="/products/edit/<%= producto.id %>"><i class="fa-solid fa-pen-to-square"></i></a>
-        </div>
         </form>
         </article>
     </section>
 
-    <section class="productos-relacionados-container">
+    <!-- <section class="productos-relacionados-container">
         <div class="productos-relacionados">
         <h4>Productos relacionados</h4>
         <div class="carrusel2">
@@ -93,7 +95,7 @@
             <a href="#"><i class="fa-solid fa-angles-right"></i></a>
         </div>
         </div>
-    </section>
+    </section> -->
     </main>
 
     <!-- FOOTER -->

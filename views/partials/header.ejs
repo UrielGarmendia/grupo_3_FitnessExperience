@@ -11,8 +11,6 @@
             <a href="#"><i class="fa-solid fa-search"></i></a>
         </div>
         <div class="movil-icons">
-            <a href="/products/carrito" class="icono-carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#" class="icono-bars"><i class="fa-solid fa-bars"></i></a>
             <a href="/users/login" class="icono-user"><p>
                 <% if (locals.isLogged) {%>
                 <%= locals.userLogged.Name %>
@@ -121,17 +119,65 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .icono-user {
-    display: none;
+    /* display: none; */
     color: #fff;
 }
 
-.sub-nav {
+header {
+        width: 100%;
+        position: sticky;
+        z-index: 999;
+        top: 0;
+    }
+
+    .sub-nav {
+        display: flex;
+        justify-content: space-between;
+        background: #555;
+        border-bottom: 2px solid rgb(255, 230, 0);
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .sub-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .sub-nav li {
+        margin: 0 5px;
+    }
+
+    .sub-nav li i {
+        margin-left: 3px;
+        font-size: .9em;
+    }
+
+    .sub-nav ul a {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 5px 0;
+        font-size: .7em;
+        font-weight: bold;
+        text-shadow: 2px 2px #000;
+    }
+
+    .sub-nav ul a:hover {
+        color: rgb(255, 230, 2)
+    }
+
+
+/* .sub-nav {
     display: none;
-}
+} */
 
 /* MEDIA QUERYS */
 
 @media (min-width: 420px) {
+
 
     header {
         width: 100%;
@@ -162,6 +208,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
     .sub-nav li i {
         margin-left: 3px;
+        font-size: .9em;
     }
 
     .sub-nav ul a {
@@ -169,10 +216,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         color: #fff;
         display: inline-block;
         padding: 5px 0;
-        font-size: 11px;
+        font-size: .9em;
         font-weight: bold;
         text-shadow: 2px 2px #000;
     }
+
+    
 
     .sub-nav ul a:hover {
         color: rgb(255, 230, 2)
@@ -236,7 +285,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
     .icono-user p {
         margin-right: 5px;
-        font-size: 13px;
+        font-size: 18px;
         font-weight: bold;
     }
 }
@@ -250,13 +299,19 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         top: 0;
     }
 
-    .sub-nav ul a {
-        font-size: 14px;
+    .sub-nav i {
+        font-size: .9em;
+    }
+
+    .sub-nav a {
+        font-size: .9em;
     }
 
     .icono-user p {
         font-size: 15px;
     }
+
+    
 
 }
 </style>

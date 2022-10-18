@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head') %>
     <title>Document</title>
 </head>
 <body>
-    <figure>
-        <img src="/images/logoX.png" alt="Logo Fit-Xperience">
-    </figure>
-    <h1>¿Estas seguro de querer borrar este producto? : <%= producto.name %></h1>
+    <%- include('../partials/header') %>
+    
+    <h1>¿Estas seguro de querer borrar este producto? :<b> <%= producto.name %></b></h1>
     <p>
         <form action="/products/delete/<%= producto.id %>" method="POST">
             <br>
-            <p> <button class="botonBorrar" type="submit">Borrar producto</button>
-
-            <a  class="botonVolver" href="/products">Listado de Productos</a></p>
+            <p> <button class="botonBorrar" type="submit">Borrar producto</button></p>
 
         </form>
     </p>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #3f3f3f;
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        h1 {
+            color: rgb(255, 255, 0);
+        }
+
+        h1 b {
+            color: rgb(255, 0, 0);
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+        }
+
+        a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        button {
+            padding: 8px;
+            font-size: 1em;
+            margin-left: 6px;
+            transition: all ease 0.5s;
+            font-family: monospace;
+        }
+
+        button:hover {
+            background-color: #000;
+            color:rgb(255, 255, 0)
+        }
+
+    </style>
 </body>
 </html>
